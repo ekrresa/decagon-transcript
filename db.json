@@ -52,5 +52,13 @@
       "email": "john@doe.com",
       "password": "dsfdhfsdfdjk4343r"
     }
+  ],
+  "user-access": [
+    {
+      "id": 1,
+      "user_id": 3,
+      "login_time": "date",
+      "logout_time": "date"
+    }
   ]
 }
