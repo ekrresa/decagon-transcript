@@ -1,0 +1,23 @@
+{
+  "name": "decagon-transcript",
+  "version": "1.0.0",
+  "description": "Online transcript platform where alumni can request for transcript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ochuko56/decagon-transcript.git"
+  },
+  "keywords": [],
+  "authors": [
+    "Ochuko Ekrresa",
+    "Benjamin Mark"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ochuko56/decagon-transcript/issues"
+  },
+  "homepage": "https://github.com/ochuko56/decagon-transcript#readme"
+}
