@@ -1,0 +1,44 @@
+body{
+    margin:0;
+    padding: 0;
+    background:none;
+}
+
+.banner{
+    background: url(../images/brooke-cagle-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.navbar-nav a{
+    color:#fff !important;
+    font-size:16px;
+}
+.navbar-nav a:hover{
+    color:#34a853 !important;
+}
+.overlay-effect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow:hidden;
+  }
+  .navbar .navbar-brand img{
+    width: auto;
+    height: 50px;
+  }
+  .login {
+    margin-top: 100px;
+    color: #fff;
+  }
+  .page-title h1{
+    text-align: center;
+    font-size: 48px;
+  }
+  .page-title h3{
+    text-align: center;
+  }
