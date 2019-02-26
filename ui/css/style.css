@@ -11,11 +11,11 @@ body{
     position: relative;
 }
 .navbar-nav a{
-    color:#fff !important;
+    color:#fff;
     font-size:16px;
 }
 .navbar-nav a:hover{
-    color:#34a853 !important;
+    color:#34a853 ;
 }
 .overlay-effect {
     position: absolute;
@@ -82,18 +82,20 @@ body{
     .navbar-toggler{
         margin: 10px -10px 10px 30px;
         background-color: #34a853;
-        color: #fff !important;
+        color: #fff;
     }
     .navbar-toggler:hover, .navbar-toggler:focus{
         background-color:#fff;
         border-color:#34a853;
     }
     .navbar-nav li a{
+        color: #000;
         text-align: center;
-        background-color: aliceblue;
+        background-color: rgba(240, 248, 255, 0.5);
     }
     .navbar-nav li a:hover{
-        background-color: #34a853;
+        background-color: rgba(51, 167, 82,0.5);
+        color: #fff;
     }
 }
 @media(max-width:768px){
