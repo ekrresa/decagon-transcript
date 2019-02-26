@@ -23,3 +23,7 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     overflow:hidden;
   }
+  .navbar .navbar-brand img{
+    width: auto;
+    height: 50px;
+  }
