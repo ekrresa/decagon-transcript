@@ -100,10 +100,21 @@ body{
 }
 /* CSS for student dashboard */
 .nav-pills .nav-link{
-    padding:50px;
+    padding:30px;
     margin:20px;
+    width: 170px;
     background: rgba(256, 256, 256, 1);
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+    -moz-box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+}
+.nav-pills .nav-link i{
+    display: block;
+    font-size:50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.nav-pills .nav-link span{
+    display: block;
+    text-align: center;
 }
