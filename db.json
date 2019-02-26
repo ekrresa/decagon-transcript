@@ -22,8 +22,15 @@
       "student_id": "2"
     }
   ],
-  "transcripts-history": {
-    "name": "typicode"
-  },
+  "transcripts-history": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "transcript_id": 3,
+      "createdAt": "date",
+      "updatedAt": "date"
+    }
+  ],
+
   "payments": []
 }
