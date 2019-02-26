@@ -32,13 +32,34 @@ body{
     height: 50px;
   }
   .login {
-    margin-top: 100px;
+    margin-top: 150px;
     color: #fff;
   }
   .page-title h1{
     text-align: center;
     font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
   .page-title h3{
     text-align: center;
   }
+  .login .student-login{
+      margin-top: 40px;
+      text-align: center;
+  }
+  .login-button{
+    font-size: 14px;
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #34a853;
+    padding: 10px 22px;
+    border: 2px solid #34a853;
+}
+.login-button:hover{
+    color:#000;
+    background: #fff;
+}
