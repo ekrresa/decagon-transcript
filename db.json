@@ -11,6 +11,7 @@
       "faculty": "engineering",
       "year_of_admission": "2009",
       "graduation_year": "2015",
+      "cgpa": "3.75",
       "class_of_degree": "second-class upper",
       "course_duration": "6",
       "createdAt": "date",
@@ -20,7 +21,6 @@
   "transcripts": [
     {
       "id": 1,
-      "cgpa": "3.75",
       "student_id": "2"
     }
   ],
