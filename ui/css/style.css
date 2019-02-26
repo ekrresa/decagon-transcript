@@ -12,6 +12,10 @@ body{
 }
 .navbar-nav a{
     color:#fff !important;
+    font-size:16px;
+}
+.navbar-nav a:hover{
+    color:#34a853 !important;
 }
 .overlay-effect {
     position: absolute;
