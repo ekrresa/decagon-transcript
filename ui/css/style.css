@@ -10,12 +10,12 @@ body{
     height: 100vh;
     position: relative;
 }
-.navbar-nav a{
-    color:#fff;
+.navbar-nav li a{
+    color:#fff !important;
     font-size:16px;
 }
 .navbar-nav a:hover{
-    color:#34a853 ;
+    color:#34a853 !important ;
 }
 .overlay-effect {
     position: absolute;
@@ -89,15 +89,13 @@ body{
         border-color:#34a853;
     }
     .navbar-nav li a{
-        color: #000;
+        color: #000 !important;
         text-align: center;
         background-color: rgba(240, 248, 255, 0.5);
     }
     .navbar-nav li a:hover{
         background-color: rgba(51, 167, 82,0.5);
-        color: #fff;
+        color: #fff !important;
     }
 }
-@media(max-width:768px){
-    
-}
+/* CSS for student dashboard */
