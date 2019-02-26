@@ -33,13 +33,24 @@
       "updatedAt": "date"
     }
   ],
-
   "payments": [
     {
       "id": 1,
       "student_id": "2",
       "amount": "3000.00",
       "payment_date": "date"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "email": "text@example.com",
+      "password": "dsfdhfsdfdjk4343r"
+    },
+    {
+      "id": 2,
+      "email": "john@doe.com",
+      "password": "dsfdhfsdfdjk4343r"
     }
   ]
 }
