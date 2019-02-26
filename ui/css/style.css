@@ -31,3 +31,14 @@ body{
     width: auto;
     height: 50px;
   }
+  .login {
+    margin-top: 100px;
+    color: #fff;
+  }
+  .page-title h1{
+    text-align: center;
+    font-size: 48px;
+  }
+  .page-title h3{
+    text-align: center;
+  }
