@@ -10,3 +10,6 @@ body{
     height: 100vh;
     position: relative;
 }
+.navbar-nav a{
+    color:#fff !important;
+}
