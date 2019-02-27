@@ -12,6 +12,7 @@ $(document).ready(function() {
     let adm_year = $("#adm-year").val();
     let grad_year = $("#grad-year").val();
     let cgpa = $("#cgpa").val();
+    const url = $(this).attr("action");
 
     let formdata = {
       firstname,
@@ -23,10 +24,21 @@ $(document).ready(function() {
       faculty,
       adm_year,
       grad_year,
-      cgpa
+      cgpa,
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
 
-    const url = $(this).attr("action");
-    console.log(url);
+    $.ajax({
+      type: "POST",
+      url,
+      data: formdata
+    })
+      .done(res => {
+        console.log("data saved", res);
+      })
+      .fail(err => {
+        console.log("error", err);
+      });
   });
 });
