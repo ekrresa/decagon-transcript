@@ -5,6 +5,9 @@ body {
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
   color: #fff;
 }
+a {
+  color: #fff;
+}
 form {
   width: 66%;
   margin: 0 auto;
@@ -33,6 +36,8 @@ header {
   width: 15%;
   padding-top: 30px;
 }
-a {
-  color: #fff;
+.content {
+  background-color: #fff;
+  width: 85%;
+  padding-top: 42px;
 }
