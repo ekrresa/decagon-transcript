@@ -51,6 +51,11 @@
       "id": 2,
       "email": "john@doe.com",
       "password": "dsfdhfsdfdjk4343r"
+    },
+    {
+      "email": "slimchukky@gmail.com",
+      "password": "asdasdsad",
+      "id": 3
     }
   ],
   "user-access": [

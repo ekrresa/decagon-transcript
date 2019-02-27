@@ -32,6 +32,9 @@ header {
 .mt {
   margin-top: 175px;
 }
+.error {
+  color: red;
+}
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
