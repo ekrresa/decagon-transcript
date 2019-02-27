@@ -4,16 +4,14 @@
       "id": 1,
       "firstname": "ochuko",
       "lastname": "ekrresa",
-      "phone": "07036161822",
       "email": "ekrresaochuko@gmail.com",
       "matric_number": "U2009:3015310",
+      "gender": "male",
       "department": "electrical engineering",
       "faculty": "engineering",
       "year_of_admission": "2009",
       "graduation_year": "2015",
       "cgpa": "3.75",
-      "class_of_degree": "second-class upper",
-      "course_duration": "6",
       "createdAt": "date",
       "updatedAt": "date"
     }

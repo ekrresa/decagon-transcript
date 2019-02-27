@@ -25,6 +25,8 @@ $(document).ready(function() {
       grad_year,
       cgpa
     };
-    console.log(formdata);
+
+    const url = $(this).attr("action");
+    console.log(url);
   });
 });
