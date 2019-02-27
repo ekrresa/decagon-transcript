@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Admin | Add Student</title>
     <script src="./js/start.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (!urlParams.has("email")) {
+        window.location.href = "./dashboard.html";
+      }
+    </script>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="admin.css" />
   </head>
