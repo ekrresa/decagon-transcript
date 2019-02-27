@@ -12,7 +12,7 @@ $(document).ready(function() {
       if (data.length === 0) {
         errorDiv
           .text("Invalid email/password details. Please try again")
-          .fadeIn();
+          .fadeIn()
           .fadeOut(5000);
       } else if (data[0].email === email && data[0].password === password) {
         window.location.replace("../admin/dashboard.html");
