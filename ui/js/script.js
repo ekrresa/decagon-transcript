@@ -10,5 +10,5 @@ $(document).ready(function(){
 
         }
     });
-    $('#academic #right,#academic #left').hide();
+    // $('#academic #right,#academic #left').hide();
 });
