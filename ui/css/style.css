@@ -156,4 +156,7 @@ body{
 .navbar-nav li.logout-button a:hover{
     color: #fff !important;
 }
+#pills-profile .img-thumbnail{
+    margin-bottom: 10px;
+}
 
