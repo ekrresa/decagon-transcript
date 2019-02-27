@@ -119,6 +119,15 @@ body{
         display: block;
         text-align: center;
     }
+    .navbar-nav li.logout-button{
+        font-size: 14px;
+        color:#fff;
+        text-decoration: none;
+        background: #34a853;
+        padding: 0px 20px;
+        margin-left:30px;
+        border-radius: 10px;
+    }
 }
 @media (max-width:992px){
     .nav-pills .nav-link i{
@@ -144,11 +153,7 @@ body{
 .menu-container .container{
     max-width: 1221px;
 }
-.navbar-nav li a.logout-button{
-    font-size: 14px;
-    color:#fff;
-    text-decoration: none;
-    background: #34a853;
-    padding: 10px 22px 9px;
+.navbar-nav li.logout-button a:hover{
+    color: #fff !important;
 }
 
