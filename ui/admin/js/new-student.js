@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  let successDiv = $(".success");
+  let errorDiv = $(".error");
+  console.log(successDiv);
+
   const student_form = $("form");
   student_form.submit(function(e) {
     e.preventDefault();
@@ -35,10 +39,10 @@ $(document).ready(function() {
       data: formdata
     })
       .done(res => {
-        console.log("data saved", res);
+        successDiv.fadeIn().text("Student Added Successfully");
       })
       .fail(err => {
-        console.log("error", err);
+        errorDiv.fadeIn().text("There was an error. Please try again");
       });
   });
 });
