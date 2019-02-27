@@ -191,4 +191,13 @@ body{
     letter-spacing: 1px;
     background: #fff;
 }
-
+input[type="submit"].transcript-button{
+    margin-top:0px;
+}
+.apply-content{
+    text-align: center;
+    margin-top: 109px;
+}
+.apply-form{
+    margin-top: 56px;
+}
