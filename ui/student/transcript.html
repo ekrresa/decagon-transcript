@@ -52,14 +52,22 @@
         <h4 class="transcript-instruct">kindly select the purpose of your request application</h4>
         <div class="apply-form">
             <form action="#" method="POST">
-                <label>Transcript Purpose</label>
-                <select name="purpose">
-                    <option value="personal">Personal</option>
-                    <option value="others">Academic/Company</option>
-                </select><br>
-                <label>Email</label>
-                <input type="email" name="personal-email" placeholder="abc@gmail.com"><br>
-                <input type="submit" class="transcript-button" value="Request">
+                <table class="table table-borderless" align="center">
+                        <tbody>
+                            <tr>
+                            <td id="right"><label>Transcript Purpose</label></td>
+                            <td id="left"><select name="purpose">
+                                    <option value="personal">Personal</option>
+                                    <option value="others">Academic/Company</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                            <td id="right"><label>Email</label></td>
+                            <td id="left"><input type="email" name="personal-email" placeholder="abc@gmail.com"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" class="transcript-button" value="Request">
             </form>
         </div>
     </div>

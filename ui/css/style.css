@@ -202,3 +202,13 @@ input[type="submit"].transcript-button{
 .apply-form{
     margin-top: 56px;
 }
+.apply-form table {
+    width: 40%;
+  }
+  .apply-form .table-borderless td#right{
+      text-align: right;
+  }
+  .apply-form .table-borderless td#left{
+    text-align: left;
+}
+  
