@@ -4,6 +4,8 @@ $(document).ready(function(){
     var nos = 1;
     $("span#email_error_message").hide();
     var error_email = false;
+    var email2 = 'abc@gmail.com';
+    var email3 = 'abc@gmail.com';
 
     $("select.purpose").change(function(){
         selectedPurpose = $(this).children("option:selected").val();
@@ -11,7 +13,6 @@ $(document).ready(function(){
             nos=1;
             $('#label').text("Email "+nos);
             $("#add-btn").css("display","inline-block");
-            $("'input[name='personal-email-3']").remove();
             $('div.hide-amount').text(nos);
         }else{
             $("tr#academic_2").remove();
@@ -28,23 +29,30 @@ $(document).ready(function(){
     
     $("#add-btn").click(function(){
         nos++;
-        var tr = '<tr id="academic_'+nos+'"><td id="right"><label>Email '+nos+'</label></td><td id="left"><input type="email" name="personal-email-'+nos+'"+placeholder="abc@abc.com"></td></tr>';
+        var tr = '<tr id=\"academic_'+nos+'\"><td id=\"right\"><label>Email '+nos+'</label></td><td id=\"left\"><input type=\"email\" id=\"email-'+nos+'\" name=\"email-'+nos+'\" placeholder=\"abc@abc.com\"></td></tr>';
         $(".apply-form table tbody").append(tr);
         $('div.hide-amount').text(nos);
         if(nos === 3){
             $("#add-btn").attr("disabled", "disabled");
         }
-        check_email();
     });
 
     $('input[type="email"]').focusout(function(){
         check_email();
     });
+    $(document).on('focusout',"#email-2" ,function() {
+        email2 = $(this).val();
+        check_email();
+    });
+    $(document).on('focusout',"#email-3" ,function() {
+        email3 = $(this).val();
+        check_email();
+    });  
 
     function check_email(){
         var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var email = $('input[type="email"]').val();
-        if(pattern.test(email) && email !== ''){
+        if((pattern.test(email) && email !== '') && (pattern.test(email2) && email2 !== '') && (pattern.test(email3) && email3 !== '')){
             $("span#email_error_message").hide();
             $('input[type="email"]').css("border-bottom","2px solid #34f458");
         }else{

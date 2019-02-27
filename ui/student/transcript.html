@@ -51,7 +51,7 @@
         <h2>Transcript Application</h2>
         <h4 class="transcript-instruct">kindly select the purpose of your request application</h4>
         <div class="apply-form">
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <table class="table table-borderless" align="center">
                         <tbody>
                             <tr>
@@ -63,14 +63,14 @@
                             </tr>
                             <tr id="academic">
                                 <td id="right"><label id="label">Email</label></td>
-                                <td id="left"><input type="email" name="personal-email-1" placeholder="abc@abc.com">
+                                <td id="left"><input type="email" id="email-1" name="personal-email-1" placeholder="abc@abc.com">
                                     <button type="button" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
                             </tr>
                         </tbody>
                         
                     </table>
                     <div class="error"><span class="error-form" id="email_error_message"></span></div>
-                    <center><div id="paypal-button-container"></div></center>
+                    <center><div id="paypal-button-container" onclick="javascript:this.parentNode.submit()"></div></center>
             </form>
         </div>
     </div>
