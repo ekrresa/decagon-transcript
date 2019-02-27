@@ -219,4 +219,7 @@ input[type="submit"].transcript-button{
 .apply-form table #academic_1{
     display: none;
 }
+#paypal-button-container{
+    width:150px;
+}
   
