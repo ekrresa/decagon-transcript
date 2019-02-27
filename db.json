@@ -14,6 +14,21 @@
       "cgpa": "3.75",
       "createdAt": "date",
       "updatedAt": "date"
+    },
+    {
+      "id": 2,
+      "firstname": "sarah",
+      "lastname": "otto",
+      "email": "mark@gmail.com",
+      "matric_number": "3015310",
+      "gender": "female",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "year_of_admission": "2009",
+      "graduation_year": "2015",
+      "cgpa": "4.75",
+      "createdAt": "date",
+      "updatedAt": "date"
     }
   ],
   "transcripts": [
