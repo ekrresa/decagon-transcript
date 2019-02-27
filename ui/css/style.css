@@ -120,3 +120,8 @@ body{
         text-align: center;
     }
 }
+.dashbord-tabs h3.page-title{
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 60px;
+}
