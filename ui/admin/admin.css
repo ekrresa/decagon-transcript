@@ -8,6 +8,10 @@ form {
   width: 66%;
   margin: 0 auto;
 }
+label {
+  display: flex;
+  justify-content: flex-end;
+}
 .login-btn {
   padding-left: 5px;
 }
