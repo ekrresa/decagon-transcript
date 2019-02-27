@@ -1,6 +1,7 @@
 $.get("http://localhost:3000/students", function(data) {
   let tableBody = $("#tableBody");
   for (const student of data) {
+    // Create nodes for table
     let id = createNode("th", student.id);
     let firstname = createNode("td", student.firstname);
     let lastname = createNode("td", student.lastname);
@@ -12,24 +13,26 @@ $.get("http://localhost:3000/students", function(data) {
     let adm = createNode("td", student.year_of_admission);
     let grad = createNode("td", student.graduation_year);
     let cgpa = createNode("td", student.cgpa);
+    // Create edit node and append to column
     let edit = createNode("td");
-    let remove = createNode("td");
     let editLink = createNode("a");
-    let removeLink = createNode("a");
     let editIcon = createNode("li");
-    let removeIcon = createNode("li");
     editLink.href = `http://localhost:3000/students?email=${student.email}`;
+    editIcon.classList.add("fas", "fa-edit");
+    append(editLink, editIcon);
+    append(edit, editLink);
+    // Create delete node and append to column
+    let remove = createNode("td");
+    let removeLink = createNode("a");
+    let removeIcon = createNode("li");
     removeLink.href = `http://localhost:3000/students?email=${
       student.email
     }&delete=1`;
-    editIcon.classList.add("fas", "fa-edit");
     removeIcon.classList.add("fas", "fa-trash-alt");
-    append(editLink, editIcon);
     append(removeLink, removeIcon);
-    append(edit, editLink);
     append(remove, removeLink);
-    // console.log(editLink);
 
+    // Append nodes to column
     let tableRow = createNode("tr");
     append(tableRow, id);
     append(tableRow, firstname);
@@ -44,11 +47,12 @@ $.get("http://localhost:3000/students", function(data) {
     append(tableRow, edit);
     append(tableRow, remove);
 
+    // Append row to table body
     tableBody.append(tableRow);
-    // append(tableBody, tableRow);
   }
 });
 
+// Create html element with textContent
 function createNode(element, text) {
   let node = document.createElement(element);
   if (text) {
@@ -56,7 +60,7 @@ function createNode(element, text) {
   }
   return node;
 }
-
+// Append child to parent
 function append(parent, el) {
   return parent.appendChild(el);
 }
