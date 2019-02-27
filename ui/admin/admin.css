@@ -26,3 +26,10 @@ label {
 .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
 }
+.sidebar {
+  width: 15%;
+  padding-top: 30px;
+}
+a {
+  color: #fff;
+}
