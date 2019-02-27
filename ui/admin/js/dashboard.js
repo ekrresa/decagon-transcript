@@ -17,7 +17,7 @@ $.get("http://localhost:3000/students", function(data) {
     let edit = createNode("td");
     let editLink = createNode("a");
     let editIcon = createNode("li");
-    editLink.href = `http://localhost:3000/students?email=${student.email}`;
+    editLink.href = `./student.html?email=${student.email}`;
     editIcon.classList.add("fas", "fa-edit");
     append(editLink, editIcon);
     append(edit, editLink);
