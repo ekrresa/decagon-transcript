@@ -6,23 +6,25 @@ $(document).ready(function(){
         $("#loading").html('<img src="../decagon-transcript/ui/images/giphy.gif" width="40px">').fadeIn('fast');
 
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "http://localhost:3000/students",
-            dataType: "json",
             success: function(data){
                 $('#loading').fadeOut('fast');
 
                 $.each(data,function(key,value){
-                    if(user == value.email || user == value.matric){
+                    if(user == value.email || user == value.matric_number){
                         error = false;
                     }
                 });
                 if(error == false){
-                    document.location = "save_ss.php?user_login="+user;
+                    alert("user is there");
+                    // document.location = "save_ss.php?user_login="+user;
                 }else{
-                    $(#)
+                    $("#student-login").sliderUp('slow').slideDown('slow');
+                    $('#student').val('');
                 }
             }
         });
+        return false;
     });
 });
