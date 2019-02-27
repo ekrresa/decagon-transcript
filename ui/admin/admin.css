@@ -62,3 +62,7 @@ header {
 thead th {
   font-weight: 400;
 }
+.fa-edit,
+.fa-trash-alt {
+  color: #6c6c6c;
+}
