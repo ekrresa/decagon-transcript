@@ -216,10 +216,7 @@ input[type="submit"].transcript-button{
   .apply-form .table-borderless td#left{
     text-align: left;
 }
-.apply-form table #academic #left i{
-    margin-left: 5px;
-}
-.apply-form table #academic{
+.apply-form table #academic_1{
     display: none;
 }
   
