@@ -141,3 +141,14 @@ body{
     -webkit-box-shadow: 1px 1px 3px 3px rgba(68,74,78,0.75);
     -moz-box-shadow: 1px 1px 2px 2px rgba(68,74,78,0.75);
 }
+.menu-container .container{
+    max-width: 1221px;
+}
+.navbar-nav li a.logout-button{
+    font-size: 14px;
+    color:#fff;
+    text-decoration: none;
+    background: #34a853;
+    padding: 10px 22px 9px;
+}
+
