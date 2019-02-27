@@ -72,36 +72,36 @@
                             </tr>
                         </tbody>
                     </table>
-                    <input type="submit" class="transcript-button" value="Request"><br>
-                    <div id="paypal-button-container"></div>
+                    <center><div id="paypal-button-container"></div></center>
             </form>
         </div>
     </div>
+    <div class="hide-amount">1</div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
 
-    <!-- Set up a container element for the button -->
-    <div id="paypal-button-container"></div>
-
     <!-- Include the PayPal JavaScript SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AeQYSgKtX5JmEvxV1w3wi-diAl-7Lq9lXoUFDim6-F1-iRS7HgTIgMFDeJrrgb2G8fi8v1FKFWuc_XME&currency=USD"></script>
 
     <script>
+        var amt = 30;
+        amt = $('div.hide-amount').val();
+        console.log(amt);
         // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
+                            paypal.Buttons({
 
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '0.01'
-                        }
-                    }]
-                });
-            },
+                    // Set up the transaction
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '30'
+                                }
+                            }]
+                        });
+                    },
 
             // Finalize the transaction
             onApprove: function(data, actions) {

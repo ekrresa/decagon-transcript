@@ -221,5 +221,9 @@ input[type="submit"].transcript-button{
 }
 #paypal-button-container{
     width:150px;
+    margin-left: -36px
+}
+.hide-amount{
+    visibility: hidde;
 }
   
