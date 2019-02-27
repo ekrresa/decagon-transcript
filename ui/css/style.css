@@ -71,6 +71,12 @@ body{
     padding: 8px 10px;
 }
 
+.mx-auto#loading{
+    background: url("../images/giphy.gif") no-repeat;
+    width:40px;
+    height: 40px;
+}
+
 @media (max-width:1200px){
     
 }
@@ -229,4 +235,5 @@ input[type="submit"].transcript-button{
 #add-btn{
     display: none;
 }
+
   
