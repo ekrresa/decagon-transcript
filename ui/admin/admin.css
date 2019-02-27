@@ -42,6 +42,9 @@ header {
   padding: 42px 40px 0px 40px;
   color: #6c6c6c;
 }
+.active {
+  color: #34a853;
+}
 .total {
   display: flex;
   align-items: center;
