@@ -9,14 +9,17 @@ $(document).ready(function() {
     const getUrl = url + `?email=${email}`;
 
     $.get(getUrl, function(data) {
-      if (data[0].email === email && data[0].password === password) {
-        window.location.replace("../admin/dashboard.html");
-      } else {
+      if (data.length === 0) {
         errorDiv
           .text("Invalid email/password details. Please try again")
           .fadeIn();
-
-        console.log("Invalid email/password details. Please try again");
+      } else if (data[0].email === email && data[0].password === password) {
+        window.location.replace("../admin/dashboard.html");
+      } else {
+        errorDiv
+          .fadeIn()
+          .text("Invalid email/password details. Please try again")
+          .fadeOut(5000);
       }
     });
   });
