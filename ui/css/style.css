@@ -103,7 +103,7 @@ body{
     .nav-pills .nav-link{
         padding:30px;
         margin:20px;
-        width: 170px;
+        width: 180px;
         background: rgba(256, 256, 256, 1);
         box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
         -webkit-box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
@@ -133,7 +133,11 @@ body{
 }
 .dashbord-tabs h3.page-title{
     text-align: left;
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-bottom: 15px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.nav-pills .nav-link:hover{
+    box-shadow: 1px 1px 2px 2px rgba(68,74,78,0.75);
+    -webkit-box-shadow: 1px 1px 3px 3px rgba(68,74,78,0.75);
+    -moz-box-shadow: 1px 1px 2px 2px rgba(68,74,78,0.75);
 }
