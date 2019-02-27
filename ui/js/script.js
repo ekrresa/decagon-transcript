@@ -2,6 +2,10 @@ $(document).ready(function(){
 
     var selectedPurpose = 'personal';
     var nos = 2;
+    
+    $("span#email_error_message").hide();
+    var error_email = false;
+    
     $("select.purpose").change(function(){
         selectedPurpose = $(this).children("option:selected").val();
         if(selectedPurpose == 'academic'){
@@ -18,6 +22,7 @@ $(document).ready(function(){
             nos = 1;
             $('div.hide-amount').text(nos);
         }
+        check_email();
     });
 
     
@@ -29,7 +34,26 @@ $(document).ready(function(){
         if(nos === 3){
             $("#add-btn").attr("disabled", "disabled");
         }
+        check_email();
     });
+
+    $('input[type="email"]').focusout(function(){
+        check_email();
+    });
+
+    function check_email(){
+        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var email = $('input[type="email"]').val();
+        if(pattern.test(email) && email !== ''){
+            $("span#email_error_message").hide();
+            $('input[type="email"]').css("border-bottom","2px solid #34f458");
+        }else{
+            $("span#email_error_message").html("Invalid Email");
+            $("span#email_error_message").show();
+            $('input[type="email"]').css("border-bottom","2px solid #F90A0A");
+            error_email = true;
+        }
+    }
     
 
 });
