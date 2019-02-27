@@ -39,6 +39,23 @@ header {
 .content {
   background-color: #fff;
   width: 85%;
-  padding-top: 42px;
+  padding: 42px 40px 0px 40px;
   color: #6c6c6c;
+}
+.total {
+  display: flex;
+  align-items: center;
+}
+.total h5 {
+  margin: 0;
+}
+.total span {
+  margin-left: 6px;
+  font-size: 19px;
+  font-weight: bold;
+}
+.student-search {
+  width: 25%;
+  margin: 0;
+  margin-left: auto;
 }
