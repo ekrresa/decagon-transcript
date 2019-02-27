@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Decagon Transcript Request</title>
     <link rel="stylesheet" href="../decagon-transcript/ui/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../decagon-transcript/ui/css/font-awesome.min.css">
     <link rel="stylesheet" href="../decagon-transcript/ui/css/style.css">
 </head>
 <body>
@@ -11,9 +12,9 @@
         <div class="overlay-effect h-100 w-100">
             <header>
                 <div class="container">
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#"><img src="../decagon-transcript/ui/images/logo-light-small.png"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,10 +38,10 @@
                     <h1 class="title">Decagon University</h1>
                     <h3 class="sub-title">Transcipt Request</h3>
                 </div>
-                <div>
+                <div class="student-login">
                     <form action="#" method="post" name="student-login">
-                        <label>Email/Matric No</label>&nbsp;<input type="text" name="username">
-                        <input type="submit" >
+                        <input type="text" class="login-text" name="username" placeholder="Email/Matric No">
+                        <input type="submit" class="login-button" value="Login">
                     </form>
                 </div>
             </div>
@@ -49,6 +50,6 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="../decagon-transcript/ui/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="../decagon-transcript/ui/js/script.js"></script>
 </body>
 </html>

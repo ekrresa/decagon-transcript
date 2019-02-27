@@ -10,12 +10,12 @@ body{
     height: 100vh;
     position: relative;
 }
-.navbar-nav a{
+.navbar-nav li a{
     color:#fff !important;
     font-size:16px;
 }
 .navbar-nav a:hover{
-    color:#34a853 !important;
+    color:#34a853 !important ;
 }
 .overlay-effect {
     position: absolute;
@@ -32,13 +32,191 @@ body{
     height: 50px;
   }
   .login {
-    margin-top: 100px;
+    margin-top: 150px;
     color: #fff;
   }
   .page-title h1{
     text-align: center;
     font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
   .page-title h3{
     text-align: center;
+    letter-spacing: 1px;
   }
+  .login .student-login{
+      margin-top: 40px;
+      text-align: center;
+  }
+  .login-button{
+    font-size: 14px;
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #34a853;
+    padding: 10px 22px 9px;
+    border: 2px solid #34a853;
+    margin-left: -5px;
+}
+.login-button:hover{
+    color:#000;
+    background: #b8d344;
+}
+.login-text{
+    border: 2px solid #34a853;
+    width: 250px;
+    padding: 8px 10px;
+}
+
+@media (max-width:1200px){
+    
+}
+@media (max-width:992px){
+    .page-title h1{
+        font-size: 32px;
+        letter-spacing: 2px;
+      }
+    .navbar-toggler{
+        margin: 10px -10px 10px 30px;
+        background-color: rgb(52, 168, 83);
+        color: #fff;
+    }
+    .navbar-toggler:hover, .navbar-toggler:focus{
+        background-color:#fff;
+        border-color:#34a853;
+    }
+    .navbar-nav li a{
+        color: #000 !important;
+        text-align: center;
+        background-color: rgba(240, 248, 255, 0.5);
+    }
+    .navbar-nav li a:hover{
+        background-color: rgba(51, 167, 82,0.5);
+        color: #fff !important;
+    }
+}
+/* CSS for student dashboard */
+@media (min-width:992px){
+    .nav-pills .nav-link{
+        padding:30px;
+        margin:20px;
+        width: 180px;
+        background: rgba(256, 256, 256, 1);
+        box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+        -webkit-box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+        -moz-box-shadow: 0px 0px 1px 1px rgba(68,74,78,0.75);
+    }
+    .nav-pills .nav-link i{
+        display: block;
+        font-size:50px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #34a853;
+    }
+    .nav-pills .nav-link.active i{
+        color: #fff !important;
+    }
+    .nav-pills .nav-link span{
+        display: block;
+        text-align: center;
+        color: #34a853;
+    }
+    .nav-pills .nav-link.active span{
+        color: #fff !important;
+    }
+    .navbar-nav li.logout-button{
+        font-size: 14px;
+        color:#fff;
+        text-decoration: none;
+        background: #34a853;
+        padding: 0px 20px;
+        margin-left:30px;
+        border-radius: 10px;
+    }
+    .nav-pills .nav-link.active{
+        background: rgba(52, 168, 83, 1) !important;
+    }
+}
+@media (max-width:992px){
+    .nav-pills .nav-link i{
+        font-size:18px;
+        text-align: center;
+        margin-right: 4px;
+        color: #34a853;
+    }
+    .nav-pills .nav-link span{
+        text-align: center;
+        font-size:18px;
+        color: #34a853;
+    }
+}
+.dashbord-tabs h3.page-title{
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.nav-pills .nav-link:hover{
+    box-shadow: 1px 1px 2px 2px rgba(68,74,78,0.75);
+    -webkit-box-shadow: 1px 1px 3px 3px rgba(68,74,78,0.75);
+    -moz-box-shadow: 1px 1px 2px 2px rgba(68,74,78,0.75);
+}
+.menu-container .container{
+    max-width: 1221px;
+}
+.navbar-nav li.logout-button a:hover{
+    color: #fff !important;
+}
+#pills-profile .img-thumbnail{
+    margin-bottom: 10px;
+}
+.transcript-button{
+    font-size: 14px;
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: #34a853;
+    padding: 10px 22px 9px;
+    border: 2px solid #34a853;
+    margin-top: 30px;
+}
+.transcript-button:hover{
+    font-size: 14px;
+    color:#34a853;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: #fff;
+}
+input[type="submit"].transcript-button{
+    margin-top:5px;
+    padding:6px 16px; 
+}
+.apply-content{
+    text-align: center;
+    margin-top: 109px;
+}
+.apply-form table{
+    border-collapse: unset;
+    margin-top: 56px;
+    border: 1px solid #cfcfcf;
+    padding: 50px 50px;
+    border-radius: 10px;
+    background: #cfcfcf;
+}
+.apply-form table {
+    width: 40%;
+  }
+  .apply-form .table-borderless td#right{
+      text-align: right;
+  }
+  .apply-form .table-borderless td#left{
+    text-align: left;
+}
+.apply-form table #academic_1{
+    display: none;
+}
+  
