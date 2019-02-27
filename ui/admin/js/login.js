@@ -16,6 +16,7 @@ $(document).ready(function() {
           .fadeOut(5000);
       } else if (data[0].email === email && data[0].password === password) {
         localStorage.setItem("email", email);
+        localStorage.setItem("name", data[0].name);
         window.location.replace("../admin/dashboard.html");
       } else {
         errorDiv
