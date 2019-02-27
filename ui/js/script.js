@@ -1,23 +1,23 @@
 $(document).ready(function(){
 
     var selectedPurpose = 'personal';
-    var nos = 2;
-    
+    var nos = 1;
     $("span#email_error_message").hide();
     var error_email = false;
-    
+
     $("select.purpose").change(function(){
         selectedPurpose = $(this).children("option:selected").val();
         if(selectedPurpose == 'academic'){
             nos=1;
-            $('.apply-form table #academic_1').show();
-            $('.apply-form table #personal').hide();
+            $('#label').text("Email "+nos);
+            $("#add-btn").css("display","inline-block");
+            $("'input[name='personal-email-3']").remove();
             $('div.hide-amount').text(nos);
         }else{
-            $('.apply-form table #personal').show();
-            $('.apply-form table #academic_1').hide();
-            $('.apply-form table #academic_2').hide();
-            $('.apply-form table #academic_3').hide();
+            $("tr#academic_2").remove();
+            $("tr#academic_3").remove();
+            $('#label').text("Email");
+            $("#add-btn").css("display","none");
             $("#add-btn").removeAttr("disabled");
             nos = 1;
             $('div.hide-amount').text(nos);

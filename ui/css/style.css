@@ -226,4 +226,7 @@ input[type="submit"].transcript-button{
 .hide-amount{
     visibility: hidden;
 }
+#add-btn{
+    display: none;
+}
   
