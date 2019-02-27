@@ -199,8 +199,13 @@ input[type="submit"].transcript-button{
     text-align: center;
     margin-top: 109px;
 }
-.apply-form{
+.apply-form table{
+    border-collapse: unset;
     margin-top: 56px;
+    border: 1px solid #cfcfcf;
+    padding: 50px 50px;
+    border-radius: 10px;
+    background: #cfcfcf;
 }
 .apply-form table {
     width: 40%;
