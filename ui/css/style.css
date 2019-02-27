@@ -120,8 +120,20 @@ body{
         text-align: center;
     }
 }
+@media (max-width:992px){
+    .nav-pills .nav-link i{
+        font-size:18px;
+        text-align: center;
+        margin-right: 4px;
+    }
+    .nav-pills .nav-link span{
+        text-align: center;
+        font-size:18px;
+    }
+}
 .dashbord-tabs h3.page-title{
     text-align: left;
     margin-top: 30px;
     margin-left: 60px;
+    margin-bottom: 15px;
 }
