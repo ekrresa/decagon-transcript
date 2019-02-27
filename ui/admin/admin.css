@@ -20,7 +20,11 @@ header {
   background-color: #302b63;
 }
 .login-btn {
-  padding-left: 5px;
+  padding-left: 8px;
+}
+.login-btn > .btn-primary {
+  background-color: #34a853;
+  border: transparent;
 }
 .page-title {
   font-size: 3rem;
