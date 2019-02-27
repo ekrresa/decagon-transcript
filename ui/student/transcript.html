@@ -86,18 +86,16 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AeQYSgKtX5JmEvxV1w3wi-diAl-7Lq9lXoUFDim6-F1-iRS7HgTIgMFDeJrrgb2G8fi8v1FKFWuc_XME&currency=USD"></script>
 
     <script>
-        var amt = 30;
-        amt = $('div.hide-amount').val();
-        console.log(amt);
         // Render the PayPal button into #paypal-button-container
                             paypal.Buttons({
 
                     // Set up the transaction
                     createOrder: function(data, actions) {
+                        var amt = $('.hide-amount').text() * 30;
                         return actions.order.create({
                             purchase_units: [{
                                 amount: {
-                                    value: '30'
+                                    value: amt
                                 }
                             }]
                         });
@@ -107,7 +105,7 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    alert('Transaction completed by ' + details + '!');
                 });
             }
 

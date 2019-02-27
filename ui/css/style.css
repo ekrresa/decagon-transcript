@@ -197,7 +197,7 @@ input[type="submit"].transcript-button{
 }
 .apply-content{
     text-align: center;
-    margin-top: 109px;
+    margin-top: 80px;
 }
 .apply-form table{
     border-collapse: unset;
@@ -224,6 +224,6 @@ input[type="submit"].transcript-button{
     margin-left: -36px
 }
 .hide-amount{
-    visibility: hidde;
+    visibility: hidden;
 }
   
