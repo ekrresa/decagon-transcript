@@ -192,7 +192,8 @@ body{
     background: #fff;
 }
 input[type="submit"].transcript-button{
-    margin-top:0px;
+    margin-top:5px;
+    padding:6px 16px; 
 }
 .apply-content{
     text-align: center;
