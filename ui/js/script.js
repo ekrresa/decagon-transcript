@@ -62,6 +62,17 @@ $(document).ready(function(){
             error_email = true;
         }
     }
+
+    $("#get-link").click(function(){
+        error_email = false;
+        check_email();
+        if(error_email === false){
+            $("#paypal-button-container").show();
+            $("#get-link").hide();
+        }else{
+            alert("Please fill the form correctly");
+        }
+    });
     
 
 });

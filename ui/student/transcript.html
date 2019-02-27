@@ -70,7 +70,8 @@
                         
                     </table>
                     <div class="error"><span class="error-form" id="email_error_message"></span></div>
-                    <center><div id="paypal-button-container" onclick="javascript:this.parentNode.submit()"></div></center>
+                    <center><button type="button" id="get-link" class="btn btn-success">Get Link to Pay</button><br>
+                        <div id="paypal-button-container" onclick="javascript:this.parentNode.submit()"></div></center>
             </form>
         </div>
     </div>
@@ -84,6 +85,7 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AeQYSgKtX5JmEvxV1w3wi-diAl-7Lq9lXoUFDim6-F1-iRS7HgTIgMFDeJrrgb2G8fi8v1FKFWuc_XME&currency=USD"></script>
 
     <script>
+        $("#paypal-button-container").hide();
         // Render the PayPal button into #paypal-button-container
                             paypal.Buttons({
 
