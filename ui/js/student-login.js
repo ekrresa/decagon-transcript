@@ -25,8 +25,7 @@ $(document).ready(function() {
           window.location =
             "../decagon-transcript/ui/student/student-dashboard.html?user-login=" +
             user;
-          alert("You have successful login to your dashboard !");
-          return false;
+          //   return false;
         } else {
           $(".student-login")
             .slideUp("slow")
