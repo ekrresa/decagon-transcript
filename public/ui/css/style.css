@@ -162,6 +162,9 @@ body{
         color: #fff !important;
         background-color: #34a853 !important;
     }
+    .navbar-toggler-icon:hover,.navbar-dark .navbar-toggler-icon:focus{
+        color:rgba(236, 25, 25, 0.5) !important;
+    }
 }
 .dashbord-tabs h3.page-title{
     text-align: left;
@@ -272,7 +275,7 @@ input[type="submit"].transcript-button{
   .scroll-text {
     position: absolute;
     white-space: nowrap;
-    color: rgb(221, 46, 46);
+    color: rgb(6, 238, 103);
     font-weight: 600;
     font-size: 18px;
   }
