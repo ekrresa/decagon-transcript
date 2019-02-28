@@ -156,6 +156,10 @@ body{
         font-size:18px;
         color: #34a853;
     }
+    .dropdown span#username{
+        text-transform: uppercase;
+        margin-left:0px;
+    }
 }
 .dashbord-tabs h3.page-title{
     text-align: left;
@@ -239,7 +243,7 @@ input[type="submit"].transcript-button{
 .dropdown-menu {
     position: absolute;
     top: 32px;
-    left: 9px;
+    left: 40px;
     display: none;
     min-width: 0;
     padding: 5px 10px;
@@ -248,4 +252,8 @@ input[type="submit"].transcript-button{
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+.dropdown span#username{
+    text-transform: uppercase;
+    margin-left:30px;
 }

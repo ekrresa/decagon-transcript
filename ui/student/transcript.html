@@ -92,7 +92,9 @@
     <script>
         var amt;
         var allemail = "";
+    //Hide the paypal button initially
         $("#paypal-button-container").hide();
+    //Getting all the email(s) to send to
         $('input[type="email"]#email-1').focusout(function(){
             var email1 = $(this).val();
             allemail += email1;
