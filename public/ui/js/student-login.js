@@ -25,10 +25,7 @@ $(document).ready(function() {
         if (error == false) {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
-          window.location =
-            "../decagon-transcript/ui/student/student-dashboard.html?user-login=" +
-            user;
-          //   return false;
+          window.location.href = "../ui/student/student-dashboard.html";
         } else {
           $(".student-login")
             .slideUp("slow")
