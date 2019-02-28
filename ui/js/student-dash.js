@@ -43,4 +43,9 @@ $(document).ready(function(){
             alert("something is wrong please reload the page");
         }
     });
+
+    $("#apply-btn").click(function(){
+        event.preventDefault();
+        window.location = "../decagon-transcript/ui/student/transcript.html?user-login="+user;
+    });
 });
