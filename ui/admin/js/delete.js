@@ -1,0 +1,1 @@
+$.get(getUrl, function(data) {});
