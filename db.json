@@ -30,6 +30,20 @@
       "quantity": 1,
       "studentId": 1,
       "date_issued": "date"
+    },
+    {
+      "email_to": "b@c.com",
+      "quantity": "1",
+      "studentId": "1",
+      "date_issued": "Thu Feb 28 2019 16:59:32 GMT-0500 (Eastern Standard Time)",
+      "id": 3
+    },
+    {
+      "email_to": "b@c.commqu@gmail.com",
+      "quantity": "2",
+      "studentId": "1",
+      "date_issued": "Thu Feb 28 2019 17:02:11 GMT-0500 (Eastern Standard Time)",
+      "id": 4
     }
   ],
   "payments": [
@@ -79,6 +93,12 @@
       "login_time": "Thu Feb 28 2019 19:09:11 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 12
+    },
+    {
+      "studentId": "1",
+      "login_time": "Thu Feb 28 2019 16:56:48 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 13
     }
   ]
 }
