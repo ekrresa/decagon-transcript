@@ -55,6 +55,7 @@ $(document).ready(function() {
   });
 
   let studentId = localStorage.getItem("studentId");
+  //   Payments Data
   $.get(
     `http://localhost:3000/payments?studentId=${studentId}&_expand=transcript`,
     function(data) {
@@ -78,6 +79,30 @@ $(document).ready(function() {
       }
     }
   );
+
+  // Transcripts Data
+  $.get(`http://localhost:3000/transcripts?studentId=${studentId}`, function(
+    data
+  ) {
+    let tableBody = $("#transBody");
+    let i = 0;
+    for (const row of data) {
+      let id = createNode("th", ++i);
+      let email = createNode("td", row.email_to);
+      let quantity = createNode("td", row.quantity);
+      let date = createNode("td", row.date_issued);
+
+      let tableRow = createNode("tr");
+
+      append(tableRow, id);
+      append(tableRow, email);
+      append(tableRow, quantity);
+      append(tableRow, date);
+
+      // Append row to table body
+      tableBody.append(tableRow);
+    }
+  });
 
   $("#apply-btn").click(function() {
     event.preventDefault();
