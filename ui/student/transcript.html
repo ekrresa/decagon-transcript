@@ -51,7 +51,7 @@
         <h2>Transcript Application</h2>
         <h4 class="transcript-instruct">kindly select the purpose of your request application</h4>
         <div class="apply-form">
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 <table class="table table-borderless" align="center">
                         <tbody>
                             <tr>
@@ -61,25 +61,78 @@
                                     <option value="academic">Academic/Company</option>
                                 </select></td>
                             </tr>
-                            <tr id="personal">
-                            <td id="right"><label>Email</label></td>
-                            <td id="left"><input type="email" name="personal-email" placeholder="abc@gmail.com"></td>
-                            </tr>
-                            <tr id="academic_1">
-                                <td id="right"><label>Email 1</label></td>
-                                <td id="left"><input type="email" name="personal-email-1" placeholder="abc@abc.com">
+                            <tr id="academic">
+                                <td id="right"><label id="label">Email</label></td>
+                                <td id="left"><input type="email" id="email-1" name="personal-email-1" placeholder="abc@abc.com">
                                     <button type="button" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
                             </tr>
                         </tbody>
+                        
                     </table>
-                    <input type="submit" class="transcript-button" value="Request">
+                    <div class="error"><span class="error-form" id="email_error_message"></span></div>
+                    <center><button type="button" id="get-link" class="btn btn-success">Get Link to Pay</button><br>
+                        <div id="paypal-button-container" onclick="javascript:this.parentNode.submit()"></div></center>
             </form>
         </div>
     </div>
+    <div class="hide-amount">1</div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
+
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AeQYSgKtX5JmEvxV1w3wi-diAl-7Lq9lXoUFDim6-F1-iRS7HgTIgMFDeJrrgb2G8fi8v1FKFWuc_XME&currency=USD"></script>
+
+    <script>
+        var amt;
+        var allemail = "";
+        $("#paypal-button-container").hide();
+        $('input[type="email"]#email-1').focusout(function(){
+            var email1 = $(this).val();
+            allemail += email1;
+        });
+        $(document).on('focusout',"#email-2" ,function() {
+            var email2 = $(this).val();
+            allemail += email2;
+        });
+        $(document).on('focusout',"#email-3" ,function() {
+            var email3 = $(this).val();
+            allemail += email3;
+        });
+        $("select.purpose").change(function(){
+        selectedPurpose = $(this).children("option:selected").val();
+        if(selectedPurpose == 'personal'){
+            var allemail = "";
+        }
+    });
+        // Render the PayPal button into #paypal-button-container
+                            paypal.Buttons({
+
+                    // Set up the transaction
+                    createOrder: function(data, actions) {
+                        amt = $('.hide-amount').text() * 30;
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: amt
+                                }
+                            }]
+                        });
+                    },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    
+                    alert('Transaction completed by ' + details + '!');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
 </body>
 
 </html>
