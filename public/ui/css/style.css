@@ -271,3 +271,8 @@ input[type="submit"].transcript-button{
     position: absolute;
     white-space: nowrap;
   }
+  .btn-primary{
+    color: #fff ;
+    background-color: #34a853 !important;
+    border-color: #34a853 !important;
+  }
