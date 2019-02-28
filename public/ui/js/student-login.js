@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     $("#loading")
       .html(
-        '<img src="../decagon-transcript/ui/images/giphy.gif" width="40px">'
+        '<img src="../ui/images/giphy.gif" width="40px">'
       )
       .fadeIn("fast");
     let student_data;
@@ -26,7 +26,7 @@ $(document).ready(function() {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
           window.location =
-            "../decagon-transcript/ui/student/student-dashboard.html?user-login=" +
+            "../ui/student/student-dashboard.html?user-login=" +
             user;
           //   return false;
         } else {
