@@ -16,7 +16,9 @@ $(document).ready(function(){
                     }
                 });
                 if(error == false){
-                    // document.location = "save_ss.php?user_login="+user;
+                    window.location = "../decagon-transcript/ui/student/student-dashboard.html?user-login="+user;
+                    alert("You have successfull login to your dashboard !");
+                    return false;
                 }else{
                     $(".student-login").slideUp('slow').slideDown('slow');
                     $(".login-text#student").val('');
