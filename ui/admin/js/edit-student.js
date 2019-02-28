@@ -60,6 +60,7 @@ $(document).ready(function() {
     })
       .done(res => {
         successDiv.fadeIn().text("Student Updated Successfully");
+        //Empty form fields
       })
       .fail(err => {
         errorDiv.fadeIn().text("There was an error. Please try again");
