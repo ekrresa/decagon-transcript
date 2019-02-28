@@ -35,9 +35,10 @@
   "payments": [
     {
       "id": 1,
-      "student_id": "2",
+      "studentId": 1,
       "amount": "3000.00",
-      "payment_date": "date"
+      "payment_date": "date",
+      "transcriptId": 1
     }
   ],
   "admin": [

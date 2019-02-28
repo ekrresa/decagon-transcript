@@ -9,7 +9,7 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.email_to);
     let quantity = createNode("td", row.quantity);
-    let date = createNode("td", row.date);
+    let date = createNode("td", row.date_issued);
     let fullname = createNode("td", names);
 
     let tableRow = createNode("tr");
