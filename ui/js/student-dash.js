@@ -1,10 +1,9 @@
-$(document).ready(function(){
     var user;
+    var firstName;
     function processForm(){
         var param = location.search.substring(1).split("&");
         var temp = param[0].split("=");
         user = unescape(temp[1]);
-        alert("welcome @ "+user);
     }
     processForm();
 
@@ -14,7 +13,7 @@ $(document).ready(function(){
         success: function(data){
             $.each(data,function(key,value){
                 if(user == value.email || user == value.matric_number){
-                    var firstName = value.firstname;
+                    firstName = value.firstname;
                     var lastName = value.lastname;
                     var email = value.email;
                     var matric_number = value.matric_number;
@@ -34,18 +33,21 @@ $(document).ready(function(){
                     $("tr #graduation_year").text(graduation_year);
                     $("tr #class_of_degree").text(class_of_degree);
                     $("tr #gender").text(gender);
-                    
                 }
             });
-            
         },
         error: function(){
             alert("something is wrong please reload the page");
         }
+        
     });
-
+    
     $("#apply-btn").click(function(){
         event.preventDefault();
         window.location = "../student/transcript.html?user-login="+user;
     });
+    
+
+$(document).ready(function(){
+    alert("welcome @ "+firstName);
 });
