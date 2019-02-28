@@ -46,6 +46,6 @@ $(document).ready(function(){
 
     $("#apply-btn").click(function(){
         event.preventDefault();
-        window.location = "../decagon-transcript/ui/student/transcript.html?user-login="+user;
+        window.location = "../student/transcript.html?user-login="+user;
     });
 });

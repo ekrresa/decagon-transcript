@@ -209,7 +209,7 @@ input[type="submit"].transcript-button{
     border: 1px solid #cfcfcf;
     padding: 50px 50px;
     border-radius: 10px;
-    background: #cfcfcf;
+    background: #f1f1f1;
 }
 .apply-form table {
     width: 40%;
