@@ -136,7 +136,7 @@
         $("select.purpose").change(function(){
         selectedPurpose = $(this).children("option:selected").val();
         if(selectedPurpose == 'personal'){
-            var allemail = "";
+            allemail = "";
         }
     });
         // Render the PayPal button into #paypal-button-container
@@ -158,11 +158,23 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
+                    var studentId = localStorage.getItem('studentId');
+            //Saving transcript history
                     var payment = {
-                        "student_id": "2",
-                        "amount": "3000.00",
-                        "payment_date": "date"
+                        "email_to": allemail,
+                        "quantity": $('.hide-amount').text(),
+                        "studentId": 1,
+                        "date_issued": new Date()
+                        };
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:3000/transcripts",
+                        data: payment,
+                        success: function(data){
+                            
                         }
+                    });
+
                     
                     alert('Transaction completed by ' + details + '!');
                 });
