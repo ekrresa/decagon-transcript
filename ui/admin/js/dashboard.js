@@ -25,9 +25,7 @@ $.get("http://localhost:3000/students", function(data) {
     let remove = createNode("td");
     let removeLink = createNode("a");
     let removeIcon = createNode("li");
-    removeLink.href = `http://localhost:3000/students?email=${
-      student.email
-    }&delete=1`;
+    removeLink.href = `./delete.html?email=${student.email}`;
     removeIcon.classList.add("fas", "fa-trash-alt");
     append(removeLink, removeIcon);
     append(remove, removeLink);
