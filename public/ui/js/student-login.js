@@ -4,7 +4,13 @@ $(document).ready(function() {
     var error = true;
 
     $("#loading")
+<<<<<<< HEAD:public/ui/js/student-login.js
       .html('<img src="../ui/images/giphy.gif" width="40px">')
+=======
+      .html(
+        '<img src="../ui/images/giphy.gif" width="40px">'
+      )
+>>>>>>> develop:public/ui/js/student-login.js
       .fadeIn("fast");
     let student_data;
     let student_name;
@@ -25,6 +31,7 @@ $(document).ready(function() {
         if (error == false) {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
+<<<<<<< HEAD:public/ui/js/student-login.js
           localStorage.setItem("studentId", studentId);
           let data = {
             studentId,
@@ -37,6 +44,12 @@ $(document).ready(function() {
             data
           });
           window.location.href = "../ui/student/student-dashboard.html";
+=======
+          window.location =
+            "../ui/student/student-dashboard.html?user-login=" +
+            user;
+          //   return false;
+>>>>>>> develop:public/ui/js/student-login.js
         } else {
           $(".student-login")
             .slideUp("slow")
