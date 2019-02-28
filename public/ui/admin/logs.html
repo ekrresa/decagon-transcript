@@ -78,7 +78,7 @@
               <h5>
                 Total:
               </h5>
-              <span>400</span>
+              <span class="numRows"></span>
             </div>
             <form class="form-inline my-2 my-lg-0 student-search">
               <input
@@ -101,41 +101,12 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">full name</th>
-                  <th scope="col">email</th>
+                  <th scope="col">matric</th>
                   <th scope="col">login</th>
                   <th scope="col">logout</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark Otto</td>
-                  <td>mark@example.com</td>
-                  <td>datetime</td>
-                  <td>datetime</td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Sarah Paulson</td>
-                  <td>sarah@example.com</td>
-                  <td>datetime</td>
-                  <td>datetime</td>
-                </tr>
-                <tr>
-                  <td scope="row">3</td>
-                  <td>Lakeith Stanfield</td>
-                  <td>ekrresaochuko@gmail.com</td>
-                  <td>datetime</td>
-                  <td>datetime</td>
-                </tr>
-                <tr>
-                  <td scope="row">3</td>
-                  <td>Amy Adams</td>
-                  <td>amy@gmail.com</td>
-                  <td>datetime</td>
-                  <td>datetime</td>
-                </tr>
-              </tbody>
+              <tbody id="tableBody"></tbody>
             </table>
           </div>
         </div>
@@ -189,6 +160,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/logs.js"></script>
     <script src="./js/logout.js"></script>
   </body>
 </html>
