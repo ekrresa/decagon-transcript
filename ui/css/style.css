@@ -261,3 +261,13 @@ input[type="submit"].transcript-button{
     float: right;
     margin-right: 50px;
 }
+.scroll-box {
+    width: 100px;
+    height: 1.2em;
+    overflow: hidden;
+    position: relative;
+  }
+  .scroll-text {
+    position: absolute;
+    white-space: nowrap;
+  }
