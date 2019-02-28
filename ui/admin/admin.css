@@ -35,6 +35,9 @@ header {
 .error {
   color: red;
 }
+.success {
+  color: #34a853;
+}
 .navbar-light .navbar-brand,
 .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
