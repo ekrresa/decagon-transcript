@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-    let nav_name = $("#username");
+    var nav_name = $("span#username");
+    var student_name = localStorage.getItem('student_name');
+    nav_name.text(student_name);
+    
 
     var selectedPurpose = 'personal';
     var nos = 1;
