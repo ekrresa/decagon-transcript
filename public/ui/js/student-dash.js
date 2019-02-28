@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var user;
-  var firstName;
   function processForm() {
     var param = location.search.substring(1).split("&");
     var temp = param[0].split("=");
@@ -8,53 +7,40 @@ $(document).ready(function() {
   }
   processForm();
   user = localStorage.getItem("student_email");
+  let studentId = localStorage.getItem("studentId");
   $.ajax({
     type: "GET",
-    url: "http://localhost:3000/students",
+    url: `http://localhost:3000/students?id=${studentId}`,
     success: function(data) {
-      $.each(data, function(key, value) {
-        if (user == value.email || user == value.matric_number) {
-          firstName = value.firstname;
-          var lastName = value.lastname;
-          var email = value.email;
-          var matric_number = value.matric;
-          var department = value.department;
-          var faculty = value.faculty;
-          var year_of_admission = value.adm_year;
-          var graduation_year = value.grad_year;
-          var cgpa = value.cgpa;
-          var gender = value.gender;
+      let cgpa = data[0].cgpa;
 
-          $("#name").text(firstName + " " + lastName);
-          $("tr #email").text(email);
-          $("tr #matric").text(matric_number);
-          $("tr #department").text(department);
-          $("tr #faculty").text(faculty);
-          $("tr #admission_year").text(year_of_admission);
-          $("tr #graduation_year").text(graduation_year);
-          $("tr #gender").text(gender);
+      $("#name").text(`${data[0].firstname} ${data[0].lastname}`);
+      $("tr #email").text(`${data[0].email}`);
+      $("tr #matric").text(`${data[0].matric}`);
+      $("tr #department").text(`${data[0].department}`);
+      $("tr #faculty").text(`${data[0].faculty}`);
+      $("tr #admission_year").text(`${data[0].adm_year}`);
+      $("tr #graduation_year").text(`${data[0].grad_year}`);
+      $("tr #gender").text(`${data[0].gender}`);
 
-          if (cgpa >= 4.5) {
-            class_of_degree = "First Class";
-          } else if (cgpa >= 3.5 && cgpa < 4.5) {
-            class_of_degree = "Second Class (upper)";
-          } else if (cgpa >= 2.5 && cgpa < 3.5) {
-            class_of_degree = "Second Class (lower)";
-          } else if (cgpa >= 1.5 && cgpa < 2.5) {
-            class_of_degree = "Third Class";
-          } else {
-            class_of_degree = "Fail";
-          }
-          $("tr #class_of_degree").text(class_of_degree);
-        }
-      });
+      if (cgpa >= 4.5) {
+        class_of_degree = "First Class";
+      } else if (cgpa >= 3.5 && cgpa < 4.5) {
+        class_of_degree = "Second Class (upper)";
+      } else if (cgpa >= 2.5 && cgpa < 3.5) {
+        class_of_degree = "Second Class (lower)";
+      } else if (cgpa >= 1.5 && cgpa < 2.5) {
+        class_of_degree = "Third Class";
+      } else {
+        class_of_degree = "Fail";
+      }
+      $("tr #class_of_degree").text(class_of_degree);
     },
     error: function() {
       alert("something is wrong with the server, please reload the page");
     }
   });
 
-  let studentId = localStorage.getItem("studentId");
   //   Payments Data
   $.get(
     `http://localhost:3000/payments?studentId=${studentId}&_expand=transcript`,
