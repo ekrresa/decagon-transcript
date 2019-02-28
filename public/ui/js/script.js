@@ -34,7 +34,7 @@ $(document).ready(function(){
     
     $("#add-btn").click(function(){
         nos++;
-        var tr = '<tr id=\"academic_'+nos+'\"><td id=\"right\"><label>Email '+nos+'</label></td><td id=\"left\"><input type=\"email\" id=\"email-'+nos+'\" name=\"email-'+nos+'\" placeholder=\"abc@abc.com\"></td></tr>';
+        var tr = '<tr id=\"academic_'+nos+'\"><td id=\"right\"><label>Email '+nos+'</label></td><td id=\"left\"><input type=\"email\" id=\"email-'+nos+'\" name=\"email-'+nos+'\" placeholder=\"abc@yahoo.com\"></td></tr>';
         $(".apply-form table tbody").append(tr);
         $('div.hide-amount').text(nos);
         if(nos === 3){

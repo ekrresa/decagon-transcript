@@ -71,7 +71,7 @@
                             </tr>
                             <tr id="academic">
                                 <td id="right"><label id="label">Email</label></td>
-                                <td id="left"><input type="email" id="email-1" name="personal-email-1" placeholder="abc@abc.com">
+                                <td id="left"><input type="email" id="email-1" name="personal-email-1" placeholder="abc@yahoo.com">
                                     <button type="button" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
                             </tr>
                         </tbody>
@@ -111,6 +111,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AeQYSgKtX5JmEvxV1w3wi-diAl-7Lq9lXoUFDim6-F1-iRS7HgTIgMFDeJrrgb2G8fi8v1FKFWuc_XME&currency=USD"></script>
@@ -159,6 +160,7 @@
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
                     var studentId = localStorage.getItem('studentId');
+                    var student_email = localStorage.getItem('student_email');
                     var date_issued = new Date(),
             //Saving to transcript history
                     var transcript = {
@@ -173,9 +175,6 @@
                         data: transcript,
                         success: function(data){
                             var transcriptId = data.id;
-                        },
-                        error: function(){
-                            
                         }
                     });
 
@@ -189,18 +188,23 @@
                     $.ajax({
                         type: "POST",
                         url: "http://localhost:3000/payments",
-                        data: transcript,
+                        data: payment,
                         success: function(data){
-                        },
-                        error: function(){
-                            
+                            var paymentId = data.id;
                         }
                     });
 
-            // Sending Receipt to student email
-
-
-            // End of sending receipt to student email
+        // Sending Receipt to student email
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "decagon.transcript@gmail.com",
+                Password : "decagon123$",
+                To : student_email,
+                From : "support@decagonuniversity.com",
+                Subject : "Transcript Receipt - Decagon",
+                Body : "And this is the body"
+            });
+        // End of sending receipt to student email
 
                     alert('Transcript has been sent to email(s)');
                     // alert('Transaction completed by ' + details + '!');
