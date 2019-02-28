@@ -1,5 +1,7 @@
 $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   let tableBody = $("#tableBody");
+  let total = $(".numRows");
+  total.text(data.length);
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
