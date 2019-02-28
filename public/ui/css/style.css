@@ -264,14 +264,17 @@ input[type="submit"].transcript-button{
     margin-right: 50px;
 }
 .scroll-box {
-    width: 100px;
-    height: 1.2em;
+    width: 400px;
+    height: 1.4em;
     overflow: hidden;
     position: relative;
   }
   .scroll-text {
     position: absolute;
     white-space: nowrap;
+    color: rgb(221, 46, 46);
+    font-weight: 600;
+    font-size: 18px;
   }
   .btn-primary{
     color: #fff ;
