@@ -149,16 +149,18 @@ body{
         font-size:18px;
         text-align: center;
         margin-right: 4px;
-        color: #34a853;
     }
     .nav-pills .nav-link span{
         text-align: center;
         font-size:18px;
-        color: #34a853;
     }
     .dropdown span#username{
         text-transform: uppercase;
         margin-left:0px;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        color: #fff !important;
+        background-color: #34a853 !important;
     }
 }
 .dashbord-tabs h3.page-title{
@@ -276,3 +278,4 @@ input[type="submit"].transcript-button{
     background-color: #34a853 !important;
     border-color: #34a853 !important;
   }
+  
