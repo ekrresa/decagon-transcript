@@ -35,6 +35,9 @@ $(document).ready(function() {
             type: "POST",
             url: "http://localhost:3000/logs",
             data
+          }).done(res => {
+            localStorage.setItem("logId", res.id);
+            localStorage.setItem("loginTime", res.login_time);
           });
           window.location.href = "../ui/student/student-dashboard.html";
         } else {
