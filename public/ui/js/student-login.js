@@ -4,9 +4,7 @@ $(document).ready(function() {
     var error = true;
 
     $("#loading")
-      .html(
-        '<img src="../decagon-transcript/ui/images/giphy.gif" width="40px">'
-      )
+      .html('<img src="../ui/images/giphy.gif" width="40px">')
       .fadeIn("fast");
     let student_data;
     let student_name;
