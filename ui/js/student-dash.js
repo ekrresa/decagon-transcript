@@ -15,7 +15,26 @@ $(document).ready(function(){
             $.each(data,function(key,value){
                 if(user == value.email || user == value.matric_number){
                     var firstName = value.firstname;
-                    var lastname = value.lastname;
+                    var lastName = value.lastname;
+                    var email = value.email;
+                    var matric_number = value.matric_number;
+                    var department = value.department;
+                    var faculty = value.faculty;
+                    var year_of_admission = value.year_of_admission;
+                    var graduation_year = value.graduation_year;
+                    var class_of_degree = value.class_of_degree;
+                    var gender = value.gender;
+
+                    $("tr #name").text(firstName+' '+lastName);
+                    $("tr #email").text(email);
+                    $("tr #matric").text(matric_number);
+                    $("tr #department").text(department);
+                    $("tr #faculty").text(faculty);
+                    $("tr #admission_year").text(year_of_admission);
+                    $("tr #graduation_year").text(graduation_year);
+                    $("tr #class_of_degree").text(class_of_degree);
+                    $("tr #gender").text(gender);
+                    
                 }
             });
             
