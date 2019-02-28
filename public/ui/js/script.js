@@ -2,25 +2,6 @@ var nav_name = $("span#username");
 var student_name = localStorage.getItem('student_name');
 nav_name.text(student_name);
 
-var startAni = function () {
-    var elem = $('.scroll-box');
-    var boxWidth = elem.width();
-    var textWidth = $('.scroll-text', elem).width();
-    if (textWidth > boxWidth) {
-        var animSpeed = textWidth * 9;
-        elem.animate({
-            scrollLeft: (textWidth - boxWidth)
-        }, animSpeed, function () {
-            elem.animate({
-                scrollLeft: 0
-            }, animSpeed, function () {
-                startAni();
-            });
-        });
-    }
-}
-
-startAni();
 
 $(document).ready(function(){ 
 
