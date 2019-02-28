@@ -259,4 +259,5 @@ input[type="submit"].transcript-button{
 }
 .bread-crumb .scroll-box{
     float: right;
+    margin-right: 50px;
 }
