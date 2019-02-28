@@ -27,6 +27,7 @@ $(document).ready(function() {
         if (error == false) {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
+          localStorage.setItem("studentId", studentId);
           let data = {
             studentId,
             login_time: new Date(),
