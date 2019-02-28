@@ -10,6 +10,7 @@ $(document).ready(function() {
       .fadeIn("fast");
     let student_data;
     let student_name;
+    let studentId;
     $.ajax({
       type: "GET",
       url: "http://localhost:3000/students",
@@ -20,11 +21,22 @@ $(document).ready(function() {
             error = false;
             student_data = value.email;
             student_name = value.firstname;
+            studentId = value.id;
           }
         });
         if (error == false) {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
+          let data = {
+            studentId,
+            login_time: new Date(),
+            logout_time: null
+          };
+          $.ajax({
+            type: "POST",
+            url: "http://localhost:3000/logs",
+            data
+          });
           window.location.href = "../ui/student/student-dashboard.html";
         } else {
           $(".student-login")
