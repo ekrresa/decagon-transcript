@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Student Dashboard</title>
+    <script>
+        if(!localStorage.student_email){
+            window.location = "../decagon-transcript/index.html";
+        }
+    </script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
