@@ -64,7 +64,7 @@
   "logs": [
     {
       "id": 1,
-      "student_id": 3,
+      "studentId": 1,
       "login_time": "date",
       "logout_time": "date"
     }
