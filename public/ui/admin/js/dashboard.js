@@ -1,5 +1,8 @@
 $.get("http://localhost:3000/students", function(data) {
   let tableBody = $("#tableBody");
+  let total = $(".numRows");
+  total.text(data.length);
+
   for (const student of data) {
     // Create nodes for table
     let id = createNode("th", student.id);

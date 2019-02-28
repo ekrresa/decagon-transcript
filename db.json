@@ -16,20 +16,29 @@
       "id": 1
     }
   ],
-  "transcripts-history": [
+  "transcripts": [
     {
       "id": 1,
-      "student_id": 2,
-      "createdAt": "date",
-      "updatedAt": "date"
+      "email_to": "fasdasdas@gmail.com, asdfafsafasfas",
+      "quantity": 2,
+      "studentId": 1,
+      "date_issued": "date"
+    },
+    {
+      "id": 2,
+      "email_to": "fasdasdas@gmail.com",
+      "quantity": 1,
+      "studentId": 1,
+      "date_issued": "date"
     }
   ],
   "payments": [
     {
       "id": 1,
-      "student_id": "2",
+      "studentId": 1,
       "amount": "3000.00",
-      "payment_date": "date"
+      "payment_date": "date",
+      "transcriptId": 1
     }
   ],
   "admin": [
@@ -52,12 +61,24 @@
       "id": 3
     }
   ],
-  "user-access": [
+  "logs": [
     {
-      "id": 1,
-      "student_id": 3,
-      "login_time": "date",
-      "logout_time": "date"
+      "studentId": "1",
+      "login_time": "Thu Feb 28 2019 18:52:51 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Thu Feb 28 2019 18:54:33 GMT+0100 (West Africa Standard Time)",
+      "id": 10
+    },
+    {
+      "studentId": "1",
+      "login_time": "Thu Feb 28 2019 18:55:58 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Thu Feb 28 2019 18:56:07 GMT+0100 (West Africa Standard Time)",
+      "id": 11
+    },
+    {
+      "studentId": "1",
+      "login_time": "Thu Feb 28 2019 19:09:11 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "",
+      "id": 12
     }
   ]
 }

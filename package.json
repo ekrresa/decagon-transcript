@@ -15,6 +15,9 @@
     "Ochuko Ekrresa",
     "Benjamin Mark"
   ],
+  "engines": {
+    "node": "8.x"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ochuko56/decagon-transcript/issues"
