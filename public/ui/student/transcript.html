@@ -159,19 +159,20 @@
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
                     var studentId = localStorage.getItem('studentId');
+                    var date_issued = new Date(),
             //Saving to transcript history
                     var transcript = {
                         "email_to": allemail,
                         "quantity": $('.hide-amount').text(),
                         "studentId": studentId,
-                        "date_issued": new Date()
+                        "date_issued": date_issued
                         };
                     $.ajax({
                         type: "POST",
                         url: "http://localhost:3000/transcripts",
                         data: transcript,
                         success: function(data){
-                            var paymentId = data.id;
+                            var transcriptId = data.id;
                         },
                         error: function(){
                             
@@ -179,6 +180,22 @@
                     });
 
             //Saving to payment history
+                    var payment = {
+                        "studentId": studentId,
+                        "amount": amt,
+                        "payment_date": date_issued,
+                        "transcriptId": transcriptId
+                        };
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:3000/payments",
+                        data: transcript,
+                        success: function(data){
+                        },
+                        error: function(){
+                            
+                        }
+                    });
 
             // Sending Receipt to student email
 
