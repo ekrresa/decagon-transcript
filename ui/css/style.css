@@ -233,5 +233,19 @@ input[type="submit"].transcript-button{
 #add-btn{
     display: none;
 }
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 32px;
+    left: 9px;
+    display: none;
+    min-width: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
-  
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

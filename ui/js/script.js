@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    let nav_name = $("#username");
+
     var selectedPurpose = 'personal';
     var nos = 1;
     $("span#email_error_message").hide();

@@ -9,6 +9,7 @@ $(document).ready(function() {
       )
       .fadeIn("fast");
     let student_data;
+    let student_name;
     $.ajax({
       type: "GET",
       url: "http://localhost:3000/students",
@@ -18,10 +19,12 @@ $(document).ready(function() {
           if (user == value.email || user == value.matric_number) {
             error = false;
             student_data = value.email;
+            student_name = value.firstname;
           }
         });
         if (error == false) {
           localStorage.setItem("student_email", student_data);
+          localStorage.setItem("student_name", student_name);
           window.location =
             "../decagon-transcript/ui/student/student-dashboard.html?user-login=" +
             user;
