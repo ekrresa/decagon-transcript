@@ -7,10 +7,19 @@ $.get("http://localhost:3000/logs?_expand=student", function(data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
     let id = createNode("th", row.id);
     let matric = createNode("td", row.student.matric);
-    let email = createNode("td", row.email_to);
-    let quantity = createNode("td", row.quantity);
-    let date = createNode("td", row.date_issued);
+    let login_time = createNode("td", row.login_time);
+    let logout_time = createNode("td", row.logout_time);
     let fullname = createNode("td", names);
+
+    let tableRow = createNode("tr");
+    append(tableRow, id);
+    append(tableRow, fullname);
+    append(tableRow, matric);
+    append(tableRow, login_time);
+    append(tableRow, logout_time);
+
+    // Append row to table body
+    tableBody.append(tableRow);
   }
 });
 
