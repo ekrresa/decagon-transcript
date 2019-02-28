@@ -52,7 +52,7 @@ $(document).ready(function(){
             });
         },
         error: function(){
-            alert("something is wrong with the server please reload the page");
+            alert("something is wrong with the server, please reload the page");
         }
         
     });
