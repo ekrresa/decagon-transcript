@@ -16,12 +16,18 @@
       "id": 1
     }
   ],
-  "transcripts-history": [
+  "transcripts": [
     {
       "id": 1,
-      "student_id": 2,
-      "createdAt": "date",
-      "updatedAt": "date"
+      "email_to": "fasdasdas@gmail.com, asdfafsafasfas",
+      "studentId": 1,
+      "date_issued": "date"
+    },
+    {
+      "id": 2,
+      "email_to": "fasdasdas@gmail.com",
+      "studentId": 1,
+      "date_issued": "date"
     }
   ],
   "payments": [
