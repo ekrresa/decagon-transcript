@@ -14,20 +14,6 @@
       "createdAt": "date",
       "updatedAt": "Thu Feb 28 2019 01:21:23 GMT+0100 (West Africa Standard Time)",
       "id": 1
-    },
-    {
-      "firstname": "sarah",
-      "lastname": "paulson",
-      "matric": "3015310",
-      "email": "mark@gmail.com",
-      "gender": "Female",
-      "department": "accounting",
-      "faculty": "social sciences",
-      "adm_year": "2009",
-      "grad_year": "2015",
-      "cgpa": "2015",
-      "updatedAt": "Thu Feb 28 2019 01:36:07 GMT+0100 (West Africa Standard Time)",
-      "id": 2
     }
   ],
   "transcripts": [
