@@ -6,12 +6,12 @@ $.get("http://localhost:3000/students", function(data) {
     let firstname = createNode("td", student.firstname);
     let lastname = createNode("td", student.lastname);
     let email = createNode("td", student.email);
-    let matric = createNode("td", student.matric_number);
+    let matric = createNode("td", student.matric);
     let gender = createNode("td", student.gender);
     let dept = createNode("td", student.department);
     let faculty = createNode("td", student.faculty);
-    let adm = createNode("td", student.year_of_admission);
-    let grad = createNode("td", student.graduation_year);
+    let adm = createNode("td", student.adm_year);
+    let grad = createNode("td", student.grad_year);
     let cgpa = createNode("td", student.cgpa);
     // Create edit node and append to column
     let edit = createNode("td");

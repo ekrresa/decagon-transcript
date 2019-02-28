@@ -20,13 +20,13 @@
       "lastname": "otto",
       "matric": "3015310",
       "email": "mark@gmail.com",
-      "gender": "Male",
+      "gender": "Female",
       "department": "accounting",
       "faculty": "social sciences",
       "adm_year": "2009",
       "grad_year": "2015",
       "cgpa": "2015",
-      "updatedAt": "Thu Feb 28 2019 01:15:33 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Thu Feb 28 2019 01:32:21 GMT+0100 (West Africa Standard Time)",
       "id": 2
     }
   ],
