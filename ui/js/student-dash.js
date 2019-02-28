@@ -1,3 +1,4 @@
+$(document).ready(function(){   
     var user;
     var firstName;
     function processForm(){
@@ -6,7 +7,7 @@
         user = unescape(temp[1]);
     }
     processForm();
-
+    user = localStorage.getItem('student_email');
     $.ajax({
         type: "GET",
         url: "http://localhost:3000/students",
@@ -16,12 +17,12 @@
                     firstName = value.firstname;
                     var lastName = value.lastname;
                     var email = value.email;
-                    var matric_number = value.matric_number;
+                    var matric_number = value.matric;
                     var department = value.department;
                     var faculty = value.faculty;
-                    var year_of_admission = value.year_of_admission;
-                    var graduation_year = value.graduation_year;
-                    var class_of_degree = value.class_of_degree;
+                    var year_of_admission = value.adm_year;
+                    var graduation_year = value.grad_year;
+                    var cgpa = value.cgpa;
                     var gender = value.gender;
 
                     $("#name").text(firstName+' '+lastName);
@@ -31,13 +32,27 @@
                     $("tr #faculty").text(faculty);
                     $("tr #admission_year").text(year_of_admission);
                     $("tr #graduation_year").text(graduation_year);
-                    $("tr #class_of_degree").text(class_of_degree);
                     $("tr #gender").text(gender);
+
+                    if(cgpa >= 4.5){
+                        class_of_degree = "First Class";
+                    }
+                    else if(cgpa >= 3.5 && cgpa < 4.5){
+                        class_of_degree = "Second Class (upper)";
+                    }
+                    else if(cgpa >= 2.5 && cgpa < 3.5){
+                        class_of_degree = "Second Class (lower)";
+                    }else if(cgpa >= 1.5 && cgpa < 2.5){
+                        class_of_degree = "Third Class";
+                    }else{
+                        class_of_degree =  "Fail";
+                    }
+                    $("tr #class_of_degree").text(class_of_degree);
                 }
             });
         },
         error: function(){
-            alert("something is wrong please reload the page");
+            alert("something is wrong with the server, please reload the page");
         }
         
     });
@@ -46,8 +61,5 @@
         event.preventDefault();
         window.location = "../student/transcript.html?user-login="+user;
     });
-    
 
-$(document).ready(function(){
-    alert("welcome @ "+firstName);
 });
