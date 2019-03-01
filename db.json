@@ -39,6 +39,13 @@
       "amount": "3000.00",
       "payment_date": "date",
       "transcriptId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "amount": "6000.00",
+      "payment_date": "date",
+      "transcriptId": 1
     }
   ],
   "admin": [

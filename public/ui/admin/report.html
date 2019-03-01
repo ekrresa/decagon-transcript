@@ -71,13 +71,27 @@
         </aside>
         <div class="content">
           <div class="row justify-content-center">
-            <span class="error"></span>
-          </div>
-          <div class="row justify-content-center">
-            <span class="success"></span>
-          </div>
-          <div class="row justify-content-center">
             <h3 class="page-title mb-4">Report</h3>
+          </div>
+          <div class="row justify-content-around">
+            <div class="col-sm-4">
+              <div class="row align-items-center">
+                <h5 style="margin: 0">Total Students:</h5>
+                <span class="reportTotal" id="totalStudents">34</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row align-items-center">
+                <h5 style="margin: 0">Transcripts Issued:</h5>
+                <span class="reportTotal" id="totalTranscripts">34</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row align-items-center">
+                <h5 style="margin: 0">Total Amount Received:</h5>
+                <span class="reportTotal" id="totalAmount">34</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -131,6 +145,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/new-student.js"></script>
+    <script src="./js/report.js"></script>
     <script src="./js/logout.js"></script>
   </body>
 </html>
