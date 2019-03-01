@@ -102,3 +102,7 @@ thead th {
   color: #226ac4;
   margin-left: 4px;
 }
+.sub-header {
+  font-weight: 400;
+  margin-top: 2rem;
+}

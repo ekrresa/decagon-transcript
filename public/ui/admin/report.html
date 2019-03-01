@@ -73,25 +73,89 @@
           <div class="row justify-content-center">
             <h3 class="page-title mb-4">Report</h3>
           </div>
-          <div class="row justify-content-around">
+          <div class="row justify-content-around mb-4">
             <div class="col-sm-4">
-              <div class="row align-items-center">
+              <div class="row align-items-center justify-content-center">
                 <h5 style="margin: 0">Total Students:</h5>
                 <span class="reportTotal" id="totalStudents">34</span>
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="row align-items-center">
+              <div class="row align-items-center justify-content-center">
                 <h5 style="margin: 0">Transcripts Issued:</h5>
                 <span class="reportTotal" id="totalTranscripts">34</span>
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="row align-items-center">
+              <div class="row align-items-center justify-content-center">
                 <h5 style="margin: 0">Total Amount Received:</h5>
                 <span class="reportTotal" id="totalAmount">34</span>
               </div>
             </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <h4 class="sub-header">Student Details</h4>
+          </div>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FIRSTNAME</th>
+                  <th scope="col">LASTNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">DEPT</th>
+                  <th scope="col">FACULTY</th>
+                  <th scope="col">ADM-YEAR</th>
+                  <th scope="col">GRAD-YEAR</th>
+                  <th scope="col">CGPA</th>
+                </tr>
+              </thead>
+              <tbody id="studentBody"></tbody>
+            </table>
+          </div>
+
+          <div class="row justify-content-center">
+            <h4 class="sub-header">Transcript Details</h4>
+          </div>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FULLNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">QUANTITY</th>
+                  <th scope="col">DATE ISSUED</th>
+                </tr>
+              </thead>
+              <tbody id="transcriptBody"></tbody>
+            </table>
+          </div>
+
+          <div class="row justify-content-center">
+            <h4 class="sub-header">Payment Details</h4>
+          </div>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FULLNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">AMOUNT</th>
+                  <th scope="col">DATE</th>
+                </tr>
+              </thead>
+              <tbody id="paymentBody"></tbody>
+            </table>
           </div>
         </div>
       </div>

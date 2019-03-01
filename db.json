@@ -19,7 +19,7 @@
   "transcripts": [
     {
       "id": 1,
-      "email_to": "fasdasdas@gmail.com, asdfafsafasfas",
+      "email_to": "fasdasdas@gmail.com",
       "quantity": 2,
       "studentId": 1,
       "date_issued": "date"
