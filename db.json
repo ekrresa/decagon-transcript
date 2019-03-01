@@ -34,7 +34,7 @@
   "transcripts": [
     {
       "id": 1,
-      "email_to": "fasdasdas@gmail.com, asdfafsafasfas",
+      "email_to": "fasdasdas@gmail.com",
       "quantity": 2,
       "studentId": 1,
       "date_issued": "date"
@@ -126,17 +126,11 @@
       "transcriptId": 1
     },
     {
-      "studentId": "2",
-      "amount": "30",
-      "payment_date": "Fri Mar 01 2019 03:56:00 GMT-0500 (Eastern Standard Time)",
-      "id": 2
-    },
-    {
-      "studentId": "2",
-      "amount": "30",
-      "payment_date": "Fri Mar 01 2019 04:10:07 GMT-0500 (Eastern Standard Time)",
-      "transcriptId": "",
-      "id": 3
+      "id": 2,
+      "studentId": 1,
+      "amount": "6000.00",
+      "payment_date": "date",
+      "transcriptId": 1
     }
   ],
   "admin": [
@@ -180,39 +174,15 @@
     },
     {
       "studentId": "1",
-      "login_time": "Thu Feb 28 2019 16:56:48 GMT-0500 (Eastern Standard Time)",
-      "logout_time": "Thu Feb 28 2019 23:58:32 GMT-0500 (Eastern Standard Time)",
+      "login_time": "Fri Mar 01 2019 09:26:09 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Fri Mar 01 2019 09:27:58 GMT+0100 (West Africa Standard Time)",
       "id": 13
     },
     {
-      "studentId": "2",
-      "login_time": "Thu Feb 28 2019 23:58:53 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "login_time": "Fri Mar 01 2019 09:53:06 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 14
-    },
-    {
-      "studentId": "1",
-      "login_time": "Fri Mar 01 2019 01:09:32 GMT-0500 (Eastern Standard Time)",
-      "logout_time": "",
-      "id": 15
-    },
-    {
-      "studentId": "1",
-      "login_time": "Fri Mar 01 2019 01:09:52 GMT-0500 (Eastern Standard Time)",
-      "logout_time": "",
-      "id": 16
-    },
-    {
-      "studentId": "1",
-      "login_time": "Fri Mar 01 2019 01:49:43 GMT-0500 (Eastern Standard Time)",
-      "logout_time": "Fri Mar 01 2019 02:48:07 GMT-0500 (Eastern Standard Time)",
-      "id": 17
-    },
-    {
-      "studentId": "2",
-      "login_time": "Fri Mar 01 2019 02:48:11 GMT-0500 (Eastern Standard Time)",
-      "logout_time": "",
-      "id": 18
     }
   ]
 }
