@@ -15,14 +15,15 @@ $(document).ready(function() {
       success: function(data) {
         $("#loading").fadeOut("fast");
         $.each(data, function(key, value) {
-          if (user == value.email || user == value.matric_number) {
+          if (user == value.email || user == value.matric) {
             error = false;
             student_data = value.email;
             student_name = value.firstname;
             studentId = value.id;
           }
         });
-        if (error == false) {
+
+        if (error === false) {
           localStorage.setItem("student_email", student_data);
           localStorage.setItem("student_name", student_name);
           localStorage.setItem("studentId", studentId);

@@ -86,6 +86,12 @@
       "login_time": "Thu Feb 28 2019 19:09:11 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 12
+    },
+    {
+      "studentId": "1",
+      "login_time": "Fri Mar 01 2019 09:26:09 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "",
+      "id": 13
     }
   ]
 }
