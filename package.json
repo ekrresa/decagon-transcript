@@ -4,7 +4,7 @@
   "description": "Online transcript platform where alumni can request for transcript",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
