@@ -162,6 +162,9 @@ body{
         color: #fff !important;
         background-color: #34a853 !important;
     }
+    .navbar-toggler-icon:hover,.navbar-dark .navbar-toggler-icon:focus{
+        color:rgba(236, 25, 25, 0.5) !important;
+    }
 }
 .dashbord-tabs h3.page-title{
     text-align: left;
@@ -207,7 +210,7 @@ input[type="submit"].transcript-button{
 }
 .apply-content{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .apply-form table{
     border-collapse: unset;
@@ -259,23 +262,53 @@ input[type="submit"].transcript-button{
     text-transform: uppercase;
     margin-left:30px;
 }
-.bread-crumb .scroll-box{
-    float: right;
-    margin-right: 50px;
-}
-.scroll-box {
-    width: 100px;
-    height: 1.2em;
-    overflow: hidden;
-    position: relative;
-  }
-  .scroll-text {
-    position: absolute;
-    white-space: nowrap;
-  }
+
   .btn-primary{
     color: #fff ;
     background-color: #34a853 !important;
     border-color: #34a853 !important;
+  }
+
+/* Marquee on transcript page */
+@keyframes scroll{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
+@-webkit-keyframes scroll{
+    0%{
+        -webkit-transform: translate(0,0);
+    }
+    100%{
+        -webkit-transform: translate(-100%,0);
+    }
+}
+@-moz-keyframes scroll{
+    0%{
+        -moz-transform: translate(0,0);
+    }
+    100%{
+        -moz-transform: translate(-100%,0);
+    }
+}
+.scroll-box{
+    margin-top: -16px;
+}
+.scroll-text {
+    display: block;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(201, 13, 13)
+  }
+  .scroll-text span{
+    display:inline-block;
+    padding-left: 100%;
+    animation: scroll 15s infinite linear;
+    -webkit-animation: scroll 15s infinite linear;
+    -moz-animation: scroll 15s infinite linear;
   }
   
