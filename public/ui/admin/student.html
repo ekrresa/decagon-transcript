@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin | Add Student</title>
+    <script src="./js/start.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Admin</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link admin-name" href="#">NAME</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="./dashboard.html">Students</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./student.html">Add Student</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./transcript.html"
+                >Transcripts History</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./payment.html">Payment History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./report.html">Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./logs.html">Logs</a>
+            </li>
+            <li class="nav-item logout-btn">
+              <button
+                type="button"
+                class="nav-link btn btn-primary"
+                data-toggle="modal"
+                data-target="#logoutModal"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </aside>
+        <div class="content">
+          <div class="row justify-content-center">
+            <span class="error"></span>
+          </div>
+          <div class="row justify-content-center">
+            <span class="success"></span>
+          </div>
+          <div class="row justify-content-center">
+            <h3 class="page-title mb-4">Add Student</h3>
+          </div>
+          <div class="row my-4 justify-content-center">
+            <h4>Basic Information</h4>
+          </div>
+          <div class="row">
+            <form
+              class="student-form"
+              action="http://localhost:3000/students"
+              method="post"
+            >
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="firstname"
+                  >First Name</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="firstname" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="lastname"
+                  >Last Name</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="lastname" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="matric"
+                  >Matric Number</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="matric" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="email">Email</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="email" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="gender"
+                  >Gender</label
+                >
+                <div class="col-sm-9">
+                  <select class="form-control" id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <h4>Educational Information</h4>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="department"
+                  >Department</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="department" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="faculty"
+                  >Faculty</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="faculty" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="adm-year"
+                  >Admission Year</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="adm-year" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="grad-year"
+                  >Graduation Year</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="grad-year" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="cgpa">CGPA</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="cgpa" />
+                </div>
+              </div>
+              <div class="col-sm-9 offset-sm-2 student-btn">
+                <button type="submit" class="btn btn-primary">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Click "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/new-student.js"></script>
+    <script src="./js/logout.js"></script>
+  </body>
+</html>

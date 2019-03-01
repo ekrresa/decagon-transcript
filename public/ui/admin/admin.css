@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background: #0f0c29; /* fallback for old browsers */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+form {
+  width: 66%;
+  margin: 0 auto;
+}
+label {
+  display: flex;
+  justify-content: flex-end;
+}
+header {
+  background-color: #302b63;
+}
+.login-btn {
+  padding-left: 8px;
+}
+.login-btn > .btn-primary {
+  background-color: #34a853;
+  border: transparent;
+}
+.page-title {
+  font-size: 3rem;
+}
+.mt {
+  margin-top: 175px;
+}
+.error {
+  color: red;
+}
+.success {
+  color: #34a853;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #fff !important;
+}
+.sidebar {
+  width: 12%;
+  padding-top: 30px;
+}
+.content {
+  background-color: #fff;
+  width: 88%;
+  padding: 42px 40px 30px 40px;
+  color: #6c6c6c;
+}
+.active {
+  color: #34a853;
+}
+.total {
+  display: flex;
+  align-items: center;
+}
+.total h5 {
+  margin: 0;
+}
+.total span {
+  margin-left: 6px;
+  font-size: 19px;
+  font-weight: bold;
+}
+.student-search {
+  width: 25%;
+  margin: 0;
+  margin-left: auto;
+}
+thead th {
+  font-weight: 400;
+}
+.fa-edit,
+.fa-trash-alt {
+  color: #6c6c6c;
+}
+.student-form {
+  margin: 0 auto;
+}
+.student-btn {
+  padding-left: 5px;
+}
+.logout-btn {
+  padding-left: 17px;
+  padding-top: 10px;
+}
+.logout-btn .btn-primary {
+  background-color: #34a853;
+  border: transparent;
+}
+.modal-content {
+  color: #6c6c6c;
+}
+.reportTotal {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #226ac4;
+  margin-left: 4px;
+}
+.sub-header {
+  font-weight: 400;
+  margin-top: 2rem;
+}
