@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Admin | Add Student</title>
     <script src="./js/start.js"></script>
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      if (!urlParams.has("email")) {
-        window.location.href = "./dashboard.html";
-      }
-    </script>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="admin.css" />
   </head>
@@ -80,111 +74,91 @@
         </aside>
         <div class="content">
           <div class="row justify-content-center">
-            <span class="error"></span>
+            <h3 class="page-title mb-4">Report</h3>
           </div>
+          <div class="row justify-content-around mb-4">
+            <div class="col-sm-4">
+              <div class="row align-items-center justify-content-center">
+                <h5 style="margin: 0">Total Students:</h5>
+                <span class="reportTotal" id="totalStudents">34</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row align-items-center justify-content-center">
+                <h5 style="margin: 0">Transcripts Issued:</h5>
+                <span class="reportTotal" id="totalTranscripts">34</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row align-items-center justify-content-center">
+                <h5 style="margin: 0">Total Amount Received:</h5>
+                <span class="reportTotal" id="totalAmount">34</span>
+              </div>
+            </div>
+          </div>
+
           <div class="row justify-content-center">
-            <span class="success"></span>
+            <h4 class="sub-header">Student Details</h4>
           </div>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FIRSTNAME</th>
+                  <th scope="col">LASTNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">DEPT</th>
+                  <th scope="col">FACULTY</th>
+                  <th scope="col">ADM-YEAR</th>
+                  <th scope="col">GRAD-YEAR</th>
+                  <th scope="col">CGPA</th>
+                </tr>
+              </thead>
+              <tbody id="studentBody"></tbody>
+            </table>
+          </div>
+
           <div class="row justify-content-center">
-            <h3 class="page-title mb-4">Edit Student Details</h3>
+            <h4 class="sub-header">Transcript Details</h4>
           </div>
-          <div class="row my-4 justify-content-center">
-            <h4>Basic Information</h4>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FULLNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">QUANTITY</th>
+                  <th scope="col">DATE ISSUED</th>
+                </tr>
+              </thead>
+              <tbody id="transcriptBody"></tbody>
+            </table>
           </div>
-          <div class="row">
-            <form
-              class="student-form"
-              action="http://localhost:3000/students"
-              method="post"
-            >
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="firstname"
-                  >First Name</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="firstname" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="lastname"
-                  >Last Name</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="lastname" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="matric"
-                  >Matric Number</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="matric" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="email">Email</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="email" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="gender"
-                  >Gender</label
-                >
-                <div class="col-sm-9">
-                  <select class="form-control" id="gender">
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <h4>Educational Information</h4>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="department"
-                  >Department</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="department" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="faculty"
-                  >Faculty</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="faculty" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="adm-year"
-                  >Admission Year</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="adm-year" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="grad-year"
-                  >Graduation Year</label
-                >
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="grad-year" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="cgpa">CGPA</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="cgpa" />
-                </div>
-              </div>
-              <div class="col-sm-9 offset-sm-2 student-btn">
-                <button type="submit" class="btn btn-primary">
-                  Submit
-                </button>
-              </div>
-            </form>
+
+          <div class="row justify-content-center">
+            <h4 class="sub-header">Payment Details</h4>
+          </div>
+
+          <div class="row mt-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">FULLNAME</th>
+                  <th scope="col">MATRIC</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">AMOUNT</th>
+                  <th scope="col">DATE</th>
+                </tr>
+              </thead>
+              <tbody id="paymentBody"></tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -237,7 +211,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/edit-student.js"></script>
+    <script src="./js/new-student.js"></script>
+    <script src="./js/report.js"></script>
     <script src="./js/logout.js"></script>
   </body>
 </html>

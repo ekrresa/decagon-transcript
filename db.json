@@ -19,7 +19,7 @@
   "transcripts": [
     {
       "id": 1,
-      "email_to": "fasdasdas@gmail.com, asdfafsafasfas",
+      "email_to": "fasdasdas@gmail.com",
       "quantity": 2,
       "studentId": 1,
       "date_issued": "date"
@@ -37,6 +37,13 @@
       "id": 1,
       "studentId": 1,
       "amount": "3000.00",
+      "payment_date": "date",
+      "transcriptId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "amount": "6000.00",
       "payment_date": "date",
       "transcriptId": 1
     }
@@ -79,6 +86,12 @@
       "login_time": "Thu Feb 28 2019 19:09:11 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 12
+    },
+    {
+      "studentId": "1",
+      "login_time": "Fri Mar 01 2019 09:26:09 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Fri Mar 01 2019 09:27:58 GMT+0100 (West Africa Standard Time)",
+      "id": 13
     }
   ]
 }

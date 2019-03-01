@@ -96,3 +96,13 @@ thead th {
 .modal-content {
   color: #6c6c6c;
 }
+.reportTotal {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #226ac4;
+  margin-left: 4px;
+}
+.sub-header {
+  font-weight: 400;
+  margin-top: 2rem;
+}
