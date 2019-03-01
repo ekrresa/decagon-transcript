@@ -161,7 +161,7 @@
                     // Show a success message to the buyer
                     var studentId = localStorage.getItem('studentId');
                     var student_email = localStorage.getItem('student_email');
-                    var date_issued = new Date(),
+                    var date_issued = new Date();
             //Saving to transcript history
                     var transcript = {
                         "email_to": allemail,
@@ -194,17 +194,19 @@
                         }
                     });
 
-        // Sending Receipt to student email
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "decagon.transcript@gmail.com",
-                Password : "decagon123$",
-                To : student_email,
-                From : "support@decagonuniversity.com",
-                Subject : "Transcript Receipt - Decagon",
-                Body : "And this is the body"
-            });
-        // End of sending receipt to student email
+            // Sending Receipt to student email
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "ekrresaochuko@gmail.com",
+                    Password : "Aurora@845",
+                    To : 'student_email',
+                    From : "support@decagonuniversity.com",
+                    Subject : "Transcript Payment - Receipt",
+                    Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+            // End of sending receipt to student email
 
                     alert('Transcript has been sent to email(s)');
                     // alert('Transaction completed by ' + details + '!');
