@@ -145,7 +145,8 @@
 
                     // Set up the transaction
                     createOrder: function(data, actions) {
-                        amt = $('.hide-amount').text() * 30;
+                        var quant = $('.hide-amount').text();
+                        amt = quant * 30;
                         return actions.order.create({
                             purchase_units: [{
                                 amount: {
@@ -161,6 +162,7 @@
                     // Show a success message to the buyer
                     var studentId = localStorage.getItem('studentId');
                     var student_email = localStorage.getItem('student_email');
+                    var student_name = localStorage.getItem('student_name');
                     var date_issued = new Date();
             //Saving to transcript history
                     var transcript = {
@@ -199,7 +201,7 @@
                     Host : "smtp.gmail.com",
                     Username : "ekrresaochuko@gmail.com",
                     Password : "Aurora@845",
-                    To : 'student_email',
+                    To : student_email,
                     From : "support@decagonuniversity.com",
                     Subject : "Transcript Payment - Receipt",
                     Body : `<!DOCTYPE html>
@@ -431,7 +433,7 @@
             #sums table tr:last-child th, #sums table tr:last-child td {
               font-size: 15px;
               font-weight: bold;
-              color: white;
+              color: #F4846F;
             }
             #invoice-info {
               float: left;
@@ -543,10 +545,10 @@
       <section id="client-info">
         <span>To:</span>
         <div>
-          <span class="bold">{client_name}</span>
+          <span class="bold">Mr. `+student_name+`</span>
         </div>
         <div>
-          <span>{client_email}</span>
+          <span>`+student_email+`</span>
         </div>
       </section>
       
@@ -567,9 +569,9 @@
           <tr >
             <td></td> <!-- Don't remove this column as it's needed for the row commands -->
             <td>1</td>
-            <td>{item_quantity}</td>
+            <td>`+quant+`</td>
             <td>#11,100</td>
-            <td>{item_line_total}</td>
+            <td>#`+(amt*11100)+`</td>
           </tr>
           
         </table>
@@ -581,14 +583,14 @@
         <table cellpadding="0" cellspacing="0">
           <tr class="amount-total">
             <th>TOTAL:</th>
-            <td>{amount_total}</td>
+            <td>#`+(amt*11100)+`</td>
           </tr>
           
           <!-- You can use attribute data-hide-on-quote="true" to hide specific information on quotes.
                For example Invoicebus doesn't need amount paid and amount due on quotes  -->
           <tr data-hide-on-quote="true">
             <th>PAID:</th>
-            <td>{amount_paid}</td>
+            <td>#`+(amt*11100)+`</td>
           </tr>
           
         </table>
@@ -601,7 +603,7 @@
 
       <section id="invoice-info">
         <div>
-          <span>{issue_date_label}</span> <span>{issue_date}</span>
+          <span>Date issued</span> <span>`+date_issued+`</span>
         </div>
       </section>
       
