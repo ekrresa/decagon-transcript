@@ -78,29 +78,29 @@
             <h4>Basic Information</h4>
           </div>
           <div class="row">
-            <form class="student-form" action="http://localhost:3000/students" method="post">
+            <form id="student_form" action="http://localhost:3000/students" method="post">
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="firstname">First Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="firstname" />
+                  <input type="text" class="form-control" id="firstname" name="firstname" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="lastname">Last Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="lastname" />
+                  <input type="text" class="form-control" id="lastname" name="lastname" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="matric">Matric Number</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="matric" />
+                  <input type="text" class="form-control" id="matric" name="matric" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="email">Email</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="email" />
+                  <input type="text" class="form-control" id="email" name="email" />
                 </div>
               </div>
               <div class="form-group row">
@@ -118,31 +118,31 @@
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="department">Department</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="department" />
+                  <input type="text" class="form-control" id="department" name="department" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="faculty">Faculty</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="faculty" />
+                  <input type="text" class="form-control" id="faculty" name="faculty" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="adm-year">Admission Year</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="adm-year" />
+                  <input type="text" class="form-control" id="adm-year" name="adm_year" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="grad-year">Graduation Year</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="grad-year" />
+                  <input type="text" class="form-control" id="grad-year" name="grad_year" />
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="cgpa">CGPA</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="cgpa" />
+                  <input type="text" class="form-control" id="cgpa" name="cgpa" />
                 </div>
               </div>
               <div class="col-sm-9 offset-sm-2 student-btn">
@@ -194,6 +194,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
     <script src="./js/sweetalert.js"></script>
     <script src="./js/new-student.js"></script>
     <script src="./js/logout.js"></script>
