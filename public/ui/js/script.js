@@ -3,13 +3,6 @@ var student_name = localStorage.getItem("student_name");
 nav_name.text(student_name);
 
 $(document).ready(function() {
-  var selectedPurpose = "personal";
-  var nos = 1;
-  $("span#email_error_message").hide();
-  var error_email = false;
-  var email2 = "abc@gmail.com";
-  var email3 = "abc@gmail.com";
-
   $("select.purpose").change(function() {
     selectedPurpose = $(this)
       .children("option:selected")
@@ -42,7 +35,7 @@ $(document).ready(function() {
       nos +
       '" name="email-' +
       nos +
-      '" placeholder="abc@abc.com"></td></tr>';
+      '" placeholder="abc@yahoo.com"></td></tr>';
     $(".apply-form table tbody").append(tr);
     $("div.hide-amount").text(nos);
     if (nos === 3) {
