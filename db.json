@@ -80,22 +80,10 @@
   ],
   "admin": [
     {
-      "id": 1,
-      "name": "mike",
-      "email": "text@example.com",
-      "password": "dsfdhfsdfdjk4343r"
-    },
-    {
-      "id": 2,
-      "name": "john",
-      "email": "john@doe.com",
-      "password": "dsfdhfsdfdjk4343r"
-    },
-    {
       "name": "ochuko",
       "email": "slimchukky@gmail.com",
       "password": "asdasdsad",
-      "id": 3
+      "id": 1
     }
   ],
   "logs": [
