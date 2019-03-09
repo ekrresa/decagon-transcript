@@ -47,9 +47,7 @@
               <a class="nav-link active" href="./student.html">Add Student</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./transcript.html"
-                >Transcripts History</a
-              >
+              <a class="nav-link" href="./transcript.html">Transcripts History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./payment.html">Payment History</a>
@@ -86,31 +84,21 @@
             <h4>Basic Information</h4>
           </div>
           <div class="row">
-            <form
-              class="student-form"
-              action="http://localhost:3000/students"
-              method="post"
-            >
+            <form class="student-form" action="http://localhost:3000/students" method="post">
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="firstname"
-                  >First Name</label
-                >
+                <label class="col-sm-2 col-form-label" for="firstname">First Name</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="firstname" />
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="lastname"
-                  >Last Name</label
-                >
+                <label class="col-sm-2 col-form-label" for="lastname">Last Name</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="lastname" />
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="matric"
-                  >Matric Number</label
-                >
+                <label class="col-sm-2 col-form-label" for="matric">Matric Number</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="matric" />
                 </div>
@@ -122,9 +110,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="gender"
-                  >Gender</label
-                >
+                <label class="col-sm-2 col-form-label" for="gender">Gender</label>
                 <div class="col-sm-9">
                   <select class="form-control" id="gender">
                     <option>Male</option>
@@ -136,33 +122,25 @@
                 <h4>Educational Information</h4>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="department"
-                  >Department</label
-                >
+                <label class="col-sm-2 col-form-label" for="department">Department</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="department" />
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="faculty"
-                  >Faculty</label
-                >
+                <label class="col-sm-2 col-form-label" for="faculty">Faculty</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="faculty" />
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="adm-year"
-                  >Admission Year</label
-                >
+                <label class="col-sm-2 col-form-label" for="adm-year">Admission Year</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="adm-year" />
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="grad-year"
-                  >Graduation Year</label
-                >
+                <label class="col-sm-2 col-form-label" for="grad-year">Graduation Year</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="grad-year" />
                 </div>
@@ -197,12 +175,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="logoutModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -210,11 +183,7 @@
             Click "Logout" below if you are ready to end your current session.
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
               Close
             </button>
             <button type="button" class="btn btn-primary logout">Logout</button>
@@ -231,6 +200,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/sweetalert.js"></script>
     <script src="./js/new-student.js"></script>
     <script src="./js/logout.js"></script>
   </body>
