@@ -43,13 +43,23 @@ $(document).ready(function() {
       const url = $(this).attr("action");
 
       let formData = {
-        firstname: $("#firstname").val(),
-        lastname: $("#lastname").val(),
+        firstname: $("#firstname")
+          .val()
+          .toLowerCase(),
+        lastname: $("#lastname")
+          .val()
+          .toLowerCase(),
         matric: $("#matric").val(),
         email: $("#email").val(),
-        gender: $("#gender").val(),
-        department: $("#department").val(),
-        faculty: $("#faculty").val(),
+        gender: $("#gender")
+          .val()
+          .toLowerCase(),
+        department: $("#department")
+          .val()
+          .toLowerCase(),
+        faculty: $("#faculty")
+          .val()
+          .toLowerCase(),
         adm_year: $("#adm-year").val(),
         grad_year: $("#grad-year").val(),
         cgpa: $("#cgpa").val(),
