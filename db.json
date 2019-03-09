@@ -3,7 +3,7 @@
     {
       "firstname": "ochuko",
       "lastname": "ekrresa",
-      "matric": "U2009:3015310",
+      "matric": "3015310",
       "email": "ekrresaochuko@gmail.com",
       "gender": "Female",
       "department": "electrical engineering",
@@ -12,7 +12,7 @@
       "grad_year": "2015",
       "cgpa": "4.8",
       "createdAt": "date",
-      "updatedAt": "Thu Feb 28 2019 01:21:23 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 19:26:05 GMT+0100 (West Africa Standard Time)",
       "id": 1
     },
     {
@@ -25,9 +25,9 @@
       "faculty": "Sciences",
       "adm_year": "2013",
       "grad_year": "2017",
-      "cgpa": "3.87",
+      "cgpa": "3.56",
       "createdAt": "Sat Mar 09 2019 13:20:16 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Sat Mar 09 2019 13:20:16 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 19:11:51 GMT+0100 (West Africa Standard Time)",
       "id": 2
     },
     {
@@ -80,10 +80,22 @@
   ],
   "admin": [
     {
+      "id": 1,
+      "name": "mike",
+      "email": "text@example.com",
+      "password": "dsfdhfsdfdjk4343r"
+    },
+    {
+      "id": 2,
+      "name": "john",
+      "email": "john@doe.com",
+      "password": "dsfdhfsdfdjk4343r"
+    },
+    {
       "name": "ochuko",
       "email": "slimchukky@gmail.com",
       "password": "asdasdsad",
-      "id": 1
+      "id": 3
     }
   ],
   "logs": [
