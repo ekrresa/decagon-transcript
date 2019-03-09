@@ -16,19 +16,64 @@
       "id": 1
     },
     {
-      "firstname": "Mark",
-      "lastname": "Benjamin",
-      "matric": "149634",
-      "email": "handsben12@gmail.com",
-      "gender": "Male",
-      "department": "electrical engineering",
-      "faculty": "engineering",
-      "adm_year": "2009",
-      "grad_year": "2015",
-      "cgpa": "4.9",
-      "createdAt": "date",
-      "updatedAt": "Thu Feb 28 2019 01:21:23 GMT+0100 (West Africa Standard Time)",
+      "firstname": "Truslynn",
+      "lastname": "Nwajei",
+      "matric": "555197",
+      "email": "trusline@gmail.com",
+      "gender": "Female",
+      "department": "Biochemistry",
+      "faculty": "Sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.87",
+      "createdAt": "Sat Mar 09 2019 13:20:16 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 13:20:16 GMT+0100 (West Africa Standard Time)",
       "id": 2
+    },
+    {
+      "firstname": "Truslynn",
+      "lastname": "Nwajei",
+      "matric": "555197",
+      "email": "trusline@gmail.com",
+      "gender": "Female",
+      "department": "Biochemistry",
+      "faculty": "Sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.87",
+      "createdAt": "Sat Mar 09 2019 13:20:22 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 13:20:22 GMT+0100 (West Africa Standard Time)",
+      "id": 3
+    },
+    {
+      "firstname": "Truslynn",
+      "lastname": "Nwajei",
+      "matric": "3015310",
+      "email": "kelvinekrresa@gmail.com",
+      "gender": "Female",
+      "department": "Biochemistry",
+      "faculty": "social sciences",
+      "adm_year": "2013",
+      "grad_year": "2015",
+      "cgpa": "3.87",
+      "createdAt": "Sat Mar 09 2019 13:22:49 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 13:22:49 GMT+0100 (West Africa Standard Time)",
+      "id": 4
+    },
+    {
+      "firstname": "Truslynn",
+      "lastname": "Nwajei",
+      "matric": "3015310",
+      "email": "kelvinekrresa@gmail.com",
+      "gender": "Female",
+      "department": "Biochemistry",
+      "faculty": "social sciences",
+      "adm_year": "2013",
+      "grad_year": "2015",
+      "cgpa": "3.87",
+      "createdAt": "Sat Mar 09 2019 13:26:22 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Sat Mar 09 2019 13:26:22 GMT+0100 (West Africa Standard Time)",
+      "id": 5
     }
   ],
   "transcripts": [
@@ -45,76 +90,6 @@
       "quantity": 1,
       "studentId": 1,
       "date_issued": "date"
-    },
-    {
-      "email_to": "b@c.com",
-      "quantity": "1",
-      "studentId": "1",
-      "date_issued": "Thu Feb 28 2019 16:59:32 GMT-0500 (Eastern Standard Time)",
-      "id": 3
-    },
-    {
-      "email_to": "b@c.commqu@gmail.com",
-      "quantity": "2",
-      "studentId": "1",
-      "date_issued": "Thu Feb 28 2019 17:02:11 GMT-0500 (Eastern Standard Time)",
-      "id": 4
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:52:02 GMT-0500 (Eastern Standard Time)",
-      "id": 5
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:56:11 GMT-0500 (Eastern Standard Time)",
-      "id": 6
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:58:57 GMT-0500 (Eastern Standard Time)",
-      "id": 7
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:00:31 GMT-0500 (Eastern Standard Time)",
-      "id": 8
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:03:08 GMT-0500 (Eastern Standard Time)",
-      "id": 9
-    },
-    {
-      "email_to": "b@c.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:05:04 GMT-0500 (Eastern Standard Time)",
-      "id": 10
-    },
-    {
-      "email_to": "ghf@kkkkk.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:56:00 GMT-0500 (Eastern Standard Time)",
-      "id": 11
-    },
-    {
-      "email_to": "dd@gf.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 04:10:07 GMT-0500 (Eastern Standard Time)",
-      "id": 12
     }
   ],
   "payments": [

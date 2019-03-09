@@ -1,10 +1,8 @@
 $(document).ready(function() {
-  let successDiv = $(".success");
-  let errorDiv = $(".error");
-
   const student_form = $("form");
   student_form.submit(function(e) {
     e.preventDefault();
+
     let firstname = $("#firstname").val();
     let lastname = $("#lastname").val();
     let matric = $("#matric").val();
@@ -38,10 +36,21 @@ $(document).ready(function() {
       data: formdata
     })
       .done(res => {
-        successDiv.fadeIn().text("Student Added Successfully");
+        $("form")[0].reset();
+        swal({
+          title: "Good job!",
+          text: "Student created successfully",
+          icon: "success",
+          button: "Close"
+        });
       })
       .fail(err => {
-        errorDiv.fadeIn().text("There was an error. Please try again");
+        eswal({
+          title: "Good job!",
+          text: "An error occurred. Please try again!",
+          icon: "error",
+          button: "Close"
+        });
       });
   });
 });
