@@ -59,22 +59,22 @@
   "payments": [
     {
       "id": 1,
-      "studentId": 1,
+      "studentId": 7,
       "amount": "3000.00",
       "payment_date": "Mon Mar 09 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
       "transcriptId": 1
     },
     {
       "id": 2,
-      "studentId": 1,
+      "studentId": 8,
       "amount": "6000.00",
-      "payment_date": "Mon Mar 10 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
+      "payment_date": "Mon Mar 10 2019 12:20:26 GMT+0100 (West Africa Standard Time)",
       "transcriptId": 2
     },
     {
-      "studentId": "4",
+      "studentId": 7,
       "amount": "90",
-      "payment_date": "Mon Mar 11 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
+      "payment_date": "Mon Mar 11 2019 12:25:26 GMT+0100 (West Africa Standard Time)",
       "transcriptId": 3,
       "id": 3
     }
@@ -93,54 +93,5 @@
       "id": 3
     }
   ],
-  "logs": [
-    {
-      "studentId": "1",
-      "login_time": "Thu Feb 28 2019 18:52:51 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Thu Feb 28 2019 18:54:33 GMT+0100 (West Africa Standard Time)",
-      "id": 10
-    },
-    {
-      "studentId": "1",
-      "login_time": "Thu Feb 28 2019 18:55:58 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Thu Feb 28 2019 18:56:07 GMT+0100 (West Africa Standard Time)",
-      "id": 11
-    },
-    {
-      "studentId": "1",
-      "login_time": "Thu Feb 28 2019 19:09:11 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "",
-      "id": 12
-    },
-    {
-      "studentId": "1",
-      "login_time": "Fri Mar 01 2019 09:26:09 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Fri Mar 01 2019 09:27:58 GMT+0100 (West Africa Standard Time)",
-      "id": 13
-    },
-    {
-      "studentId": "1",
-      "login_time": "Fri Mar 01 2019 09:53:06 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "",
-      "id": 14
-    },
-    {
-      "studentId": "1",
-      "login_time": "Mon Mar 11 2019 11:32:17 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "",
-      "id": 15
-    },
-    {
-      "studentId": "1",
-      "login_time": "Mon Mar 11 2019 11:41:51 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Mon Mar 11 2019 11:56:09 GMT+0100 (West Africa Standard Time)",
-      "id": 16
-    },
-    {
-      "studentId": "4",
-      "login_time": "Mon Mar 11 2019 12:16:26 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Mon Mar 11 2019 12:25:26 GMT+0100 (West Africa Standard Time)",
-      "id": 17
-    }
-  ]
+  "logs": []
 }

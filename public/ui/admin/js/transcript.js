@@ -2,10 +2,11 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
+  let serial = 0;
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.email_to);
     let quantity = createNode("td", row.quantity);

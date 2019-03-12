@@ -1,13 +1,14 @@
 $.get(
-  "http://localhost:3000/payments?_expand=transcript&_expand=student",
+  "http://localhost:3000/payments?_expand=transcript&_expand=student&_sort=payment_date&_order=desc",
   function(data) {
     let tableBody = $("#tableBody");
     let total = $(".numRows");
     total.text(data.length);
+    let serial = 0;
 
     for (const row of data) {
       let names = `${row.student.firstname} ${row.student.lastname}`;
-      let id = createNode("th", row.id);
+      let id = createNode("th", ++serial);
       let fullname = createNode("td", names);
       let matric = createNode("td", row.student.matric);
       let email = createNode("td", row.transcript.email_to);
