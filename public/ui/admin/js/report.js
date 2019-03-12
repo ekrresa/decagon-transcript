@@ -39,6 +39,7 @@ $.get("http://localhost:3000/students", function(data) {
 
 $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   let tableBody = $("#transcriptBody");
+  totalTranscripts.text(data.length);
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
@@ -62,36 +63,33 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   }
 });
 
-$.get(
-  "http://localhost:3000/payments?_expand=transcript&_expand=student",
-  function(data) {
-    let tableBody = $("#paymentBody");
-    let total = 0;
+$.get("http://localhost:3000/payments?_expand=transcript&_expand=student", function(data) {
+  let tableBody = $("#paymentBody");
+  let total = 0;
 
-    for (const row of data) {
-      total += Number(row.amount);
-      let names = `${row.student.firstname} ${row.student.lastname}`;
-      let id = createNode("th", row.id);
-      let fullname = createNode("td", names);
-      let matric = createNode("td", row.student.matric);
-      let email = createNode("td", row.transcript.email_to);
-      let amount = createNode("td", row.amount);
-      let date = createNode("td", row.payment_date);
+  for (const row of data) {
+    total += Number(row.amount);
+    let names = `${row.student.firstname} ${row.student.lastname}`;
+    let id = createNode("th", row.id);
+    let fullname = createNode("td", names);
+    let matric = createNode("td", row.student.matric);
+    let email = createNode("td", row.transcript.email_to);
+    let amount = createNode("td", row.amount);
+    let date = createNode("td", row.payment_date);
 
-      let tableRow = createNode("tr");
-      append(tableRow, id);
-      append(tableRow, fullname);
-      append(tableRow, matric);
-      append(tableRow, email);
-      append(tableRow, amount);
-      append(tableRow, date);
+    let tableRow = createNode("tr");
+    append(tableRow, id);
+    append(tableRow, fullname);
+    append(tableRow, matric);
+    append(tableRow, email);
+    append(tableRow, amount);
+    append(tableRow, date);
 
-      // Append row to table body
-      tableBody.append(tableRow);
-    }
-    totalAmount.text(total);
+    // Append row to table body
+    tableBody.append(tableRow);
   }
-);
+  totalAmount.text(total);
+});
 
 // Create html element with textContent
 function createNode(element, text) {
