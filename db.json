@@ -44,6 +44,51 @@
       "createdAt": "Sat Mar 09 2019 17:44:05 GMT+0100 (West Africa Standard Time)",
       "updatedAt": "Sat Mar 09 2019 17:44:05 GMT+0100 (West Africa Standard Time)",
       "id": 3
+    },
+    {
+      "firstname": "Mary",
+      "lastname": "Etokwudo",
+      "matric": "12345",
+      "email": "mary@gmail.com",
+      "gender": "Female",
+      "department": "Software Engineering",
+      "faculty": "Engineering",
+      "adm_year": "2012",
+      "grad_year": "2017",
+      "cgpa": "4.99",
+      "createdAt": "Mon Mar 11 2019 12:15:53 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Mon Mar 11 2019 12:15:53 GMT+0100 (West Africa Standard Time)",
+      "id": 4
+    },
+    {
+      "firstname": "ochuko",
+      "lastname": "ekrresa",
+      "matric": "555106",
+      "email": "ekrresa@gmail.com",
+      "gender": "male",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.87",
+      "createdAt": "Tue Mar 12 2019 11:03:21 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Tue Mar 12 2019 11:03:21 GMT+0100 (West Africa Standard Time)",
+      "id": 5
+    },
+    {
+      "firstname": "ochuko",
+      "lastname": "ekrresa",
+      "matric": "84654",
+      "email": "slim@gmail.com",
+      "gender": "male",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.87",
+      "createdAt": "Tue Mar 12 2019 11:12:16 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Tue Mar 12 2019 11:12:16 GMT+0100 (West Africa Standard Time)",
+      "id": 6
     }
   ],
   "transcripts": [
@@ -60,6 +105,13 @@
       "quantity": 1,
       "studentId": 1,
       "date_issued": "date"
+    },
+    {
+      "email_to": "j@h.com ,kelvinekrresa@gmail.com ,kelvinekrresa@gmail.com ,etokwudomary@gmail.com",
+      "quantity": "3",
+      "studentId": "4",
+      "date_issued": "Mon Mar 11 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
+      "id": 3
     }
   ],
   "payments": [
@@ -76,6 +128,13 @@
       "amount": "6000.00",
       "payment_date": "date",
       "transcriptId": 1
+    },
+    {
+      "studentId": "4",
+      "amount": "90",
+      "payment_date": "Mon Mar 11 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": "",
+      "id": 3
     }
   ],
   "admin": [
@@ -128,6 +187,31 @@
       "login_time": "Fri Mar 01 2019 09:53:06 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 14
+    },
+    {
+      "studentId": "1",
+      "login_time": "Mon Mar 11 2019 11:32:17 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "",
+      "id": 15
+    },
+    {
+      "studentId": "1",
+      "login_time": "Mon Mar 11 2019 11:41:51 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Mon Mar 11 2019 11:56:09 GMT+0100 (West Africa Standard Time)",
+      "id": 16
+    },
+    {
+      "studentId": "4",
+      "login_time": "Mon Mar 11 2019 12:16:26 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Mon Mar 11 2019 12:25:26 GMT+0100 (West Africa Standard Time)",
+      "id": 17
+    }
+  ],
+  "passwords": [
+    {
+      "password": "0yvqfgzo",
+      "studentId": "6",
+      "id": 1
     }
   ]
 }
