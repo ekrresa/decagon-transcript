@@ -106,3 +106,7 @@ thead th {
   font-weight: 400;
   margin-top: 2rem;
 }
+.table thead th {
+  text-transform: uppercase;
+  font-weight: 600;
+}
