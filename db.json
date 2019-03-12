@@ -38,20 +38,20 @@
       "id": 1,
       "email_to": "fasdasdas@gmail.com",
       "quantity": 2,
-      "studentId": 1,
-      "date_issued": "date"
+      "studentId": 7,
+      "date_issued": "Mon Mar 09 2019 12:21:26 GMT+0100 (West Africa Standard Time)"
     },
     {
       "id": 2,
       "email_to": "fasdasdas@gmail.com",
       "quantity": 1,
-      "studentId": 1,
-      "date_issued": "date"
+      "studentId": 7,
+      "date_issued": "Mon Mar 12 2019 12:21:26 GMT+0100 (West Africa Standard Time)"
     },
     {
-      "email_to": "j@h.com ,kelvinekrresa@gmail.com ,kelvinekrresa@gmail.com ,etokwudomary@gmail.com",
+      "email_to": "kelvinekrresa@gmail.com, etokwudomary@gmail.com",
       "quantity": "3",
-      "studentId": "4",
+      "studentId": 8,
       "date_issued": "Mon Mar 11 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
       "id": 3
     }
@@ -61,36 +61,30 @@
       "id": 1,
       "studentId": 1,
       "amount": "3000.00",
-      "payment_date": "date",
+      "payment_date": "Mon Mar 09 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
       "transcriptId": 1
     },
     {
       "id": 2,
       "studentId": 1,
       "amount": "6000.00",
-      "payment_date": "date",
-      "transcriptId": 1
+      "payment_date": "Mon Mar 10 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": 2
     },
     {
       "studentId": "4",
       "amount": "90",
       "payment_date": "Mon Mar 11 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": "",
+      "transcriptId": 3,
       "id": 3
     }
   ],
   "admin": [
     {
       "id": 1,
-      "name": "mike",
-      "email": "text@example.com",
-      "password": "dsfdhfsdfdjk4343r"
-    },
-    {
-      "id": 2,
-      "name": "john",
-      "email": "john@doe.com",
-      "password": "dsfdhfsdfdjk4343r"
+      "name": "benjamin",
+      "email": "ben@gmail.com",
+      "password": "benmark"
     },
     {
       "name": "ochuko",
