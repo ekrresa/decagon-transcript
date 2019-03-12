@@ -3,92 +3,18 @@
     {
       "firstname": "ochuko",
       "lastname": "ekrresa",
-      "matric": "3015310",
-      "email": "ekrresaochuko@gmail.com",
-      "gender": "Female",
-      "department": "electrical engineering",
-      "faculty": "engineering",
-      "adm_year": "2009",
-      "grad_year": "2015",
-      "cgpa": "4.8",
-      "createdAt": "date",
-      "updatedAt": "Sat Mar 09 2019 19:26:05 GMT+0100 (West Africa Standard Time)",
-      "id": 1
-    },
-    {
-      "firstname": "Truslynn",
-      "lastname": "Nwajei",
-      "matric": "555197",
-      "email": "trusline@gmail.com",
-      "gender": "Female",
-      "department": "Biochemistry",
-      "faculty": "Sciences",
-      "adm_year": "2013",
-      "grad_year": "2017",
-      "cgpa": "3.56",
-      "createdAt": "Sat Mar 09 2019 13:20:16 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Sat Mar 09 2019 19:11:51 GMT+0100 (West Africa Standard Time)",
-      "id": 2
-    },
-    {
-      "firstname": "benjamin",
-      "lastname": "Mark",
-      "matric": "12345",
-      "email": "ben@gmail.com",
-      "gender": "Male",
-      "department": "accounting",
-      "faculty": "fdfdsfdsf",
-      "adm_year": "2013",
-      "grad_year": "2017",
-      "cgpa": "2015",
-      "createdAt": "Sat Mar 09 2019 17:44:05 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Sat Mar 09 2019 17:44:05 GMT+0100 (West Africa Standard Time)",
-      "id": 3
-    },
-    {
-      "firstname": "Mary",
-      "lastname": "Etokwudo",
-      "matric": "12345",
-      "email": "mary@gmail.com",
-      "gender": "Female",
-      "department": "Software Engineering",
-      "faculty": "Engineering",
-      "adm_year": "2012",
-      "grad_year": "2017",
-      "cgpa": "4.99",
-      "createdAt": "Mon Mar 11 2019 12:15:53 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Mon Mar 11 2019 12:15:53 GMT+0100 (West Africa Standard Time)",
-      "id": 4
-    },
-    {
-      "firstname": "ochuko",
-      "lastname": "ekrresa",
-      "matric": "555106",
-      "email": "ekrresa@gmail.com",
+      "matric": "84374389",
+      "password": "wkrr0i9c",
+      "email": "kelvinekrresa@gmail.com",
       "gender": "male",
       "department": "accounting",
       "faculty": "social sciences",
       "adm_year": "2013",
       "grad_year": "2017",
       "cgpa": "3.87",
-      "createdAt": "Tue Mar 12 2019 11:03:21 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Tue Mar 12 2019 11:03:21 GMT+0100 (West Africa Standard Time)",
-      "id": 5
-    },
-    {
-      "firstname": "ochuko",
-      "lastname": "ekrresa",
-      "matric": "84654",
-      "email": "slim@gmail.com",
-      "gender": "male",
-      "department": "accounting",
-      "faculty": "social sciences",
-      "adm_year": "2013",
-      "grad_year": "2017",
-      "cgpa": "3.87",
-      "createdAt": "Tue Mar 12 2019 11:12:16 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Tue Mar 12 2019 11:12:16 GMT+0100 (West Africa Standard Time)",
-      "id": 6
+      "createdAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
+      "id": 7
     }
   ],
   "transcripts": [
@@ -205,13 +131,6 @@
       "login_time": "Mon Mar 11 2019 12:16:26 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Mon Mar 11 2019 12:25:26 GMT+0100 (West Africa Standard Time)",
       "id": 17
-    }
-  ],
-  "passwords": [
-    {
-      "password": "0yvqfgzo",
-      "studentId": "6",
-      "id": 1
     }
   ]
 }

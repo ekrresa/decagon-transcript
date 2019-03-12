@@ -51,6 +51,7 @@ $(document).ready(function() {
       ).then(function(res1, res2) {
         if (res1[0].length === 0 && res2[0].length === 0) {
           const url = "http://localhost:3000/students";
+          const password = generatePassword();
 
           // Get form values
           let formData = {
@@ -61,6 +62,7 @@ $(document).ready(function() {
               .val()
               .toLowerCase(),
             matric: matric_number,
+            password,
             email: student_email,
             gender: $("#gender")
               .val()
@@ -86,15 +88,19 @@ $(document).ready(function() {
           })
             .done(res => {
               $("form")[0].reset();
-              const password = generatePassword();
-              const studentId = res.id;
+              const email = res.email;
+              let name = res.firstname;
 
-              const newPassword = {
-                password,
-                studentId
-              };
-
-              $.post("http://localhost:3000/passwords", newPassword, function(res) {
+              Email.send({
+                Host: "smtp.gmail.com",
+                Username: "ekrresaochuko@gmail.com",
+                Password: "Aurora@845",
+                To: email,
+                From: "support@decagonuniversity.com",
+                Subject: "Decagon University: Transcript Request",
+                Body: `Hello ${name.toUpperCase()}, <br>You have been registered to use our online platform to request for your transcripts.<br>
+                Your password is <strong>${password}</strong><br>Please guard it closely as we will not be liable for any breach as a result of stolen password.<br><br>Regards,<br>Decagon University`
+              }).then(message => {
                 swal({
                   title: "Good job!",
                   text: "Student created successfully",
