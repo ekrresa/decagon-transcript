@@ -47,6 +47,13 @@
       "studentId": "2",
       "date_issued": "Tue Mar 12 2019 15:51:20 GMT-0400 (Eastern Daylight Time)",
       "id": 2
+    },
+    {
+      "email_to": "yam@yes.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "3/12/2019, 5:00:30 PM",
+      "id": 3
     }
   ],
   "payments": [
@@ -63,6 +70,13 @@
       "payment_date": "Tue Mar 12 2019 15:51:20 GMT-0400 (Eastern Daylight Time)",
       "transcriptId": "2",
       "id": 2
+    },
+    {
+      "studentId": "2",
+      "amount": "30",
+      "payment_date": "3/12/2019, 5:00:30 PM",
+      "transcriptId": "3",
+      "id": 3
     }
   ],
   "admin": [
