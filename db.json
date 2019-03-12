@@ -19,7 +19,7 @@
       "firstname": "Mark",
       "lastname": "Benjamin",
       "matric": "149634",
-      "email": "handsben12@gmail.com",
+      "email": "mquadrant@gmail.com",
       "gender": "Male",
       "department": "electrical engineering",
       "faculty": "engineering",
@@ -40,81 +40,214 @@
       "date_issued": "date"
     },
     {
-      "id": 2,
-      "email_to": "fasdasdas@gmail.com",
-      "quantity": 1,
-      "studentId": 1,
-      "date_issued": "date"
+      "email_to": "test@gmail.coom ,busineztrump@gmail.com",
+      "quantity": "2",
+      "studentId": "1",
+      "date_issued": "Sun Mar 03 2019 10:43:26 GMT-0500 (Eastern Standard Time)",
+      "id": 2
+    },
+    {
+      "email_to": "a@a.com ,b@b.com ,c@c.com",
+      "quantity": "3",
+      "studentId": "1",
+      "date_issued": "Sun Mar 03 2019 10:49:00 GMT-0500 (Eastern Standard Time)",
+      "id": 3
+    },
+    {
+      "email_to": "",
+      "quantity": "1",
+      "studentId": "1",
+      "date_issued": "Sun Mar 03 2019 10:53:23 GMT-0500 (Eastern Standard Time)",
+      "id": 4
+    },
+    {
+      "email_to": "e@e.com",
+      "quantity": "1",
+      "studentId": "1",
+      "date_issued": "Sun Mar 03 2019 10:54:16 GMT-0500 (Eastern Standard Time)",
+      "id": 5
     },
     {
       "email_to": "b@c.com",
       "quantity": "1",
       "studentId": "1",
-      "date_issued": "Thu Feb 28 2019 16:59:32 GMT-0500 (Eastern Standard Time)",
-      "id": 3
-    },
-    {
-      "email_to": "b@c.commqu@gmail.com",
-      "quantity": "2",
-      "studentId": "1",
-      "date_issued": "Thu Feb 28 2019 17:02:11 GMT-0500 (Eastern Standard Time)",
-      "id": 4
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:52:02 GMT-0500 (Eastern Standard Time)",
-      "id": 5
-    },
-    {
-      "email_to": "test@yahoo.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:56:11 GMT-0500 (Eastern Standard Time)",
+      "date_issued": "Tue Mar 12 2019 04:56:51 GMT-0400 (Eastern Daylight Time)",
       "id": 6
     },
     {
-      "email_to": "test@yahoo.com",
+      "email_to": "",
       "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 02:58:57 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "date_issued": "Tue Mar 12 2019 05:01:23 GMT-0400 (Eastern Daylight Time)",
       "id": 7
     },
     {
-      "email_to": "test@yahoo.com",
+      "email_to": "dd",
       "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:00:31 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "date_issued": "Tue Mar 12 2019 05:01:30 GMT-0400 (Eastern Daylight Time)",
       "id": 8
     },
     {
-      "email_to": "test@yahoo.com",
+      "email_to": "dddd@gmail.com",
       "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:03:08 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "date_issued": "Tue Mar 12 2019 05:01:47 GMT-0400 (Eastern Daylight Time)",
       "id": 9
     },
     {
       "email_to": "b@c.com",
       "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:05:04 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "date_issued": "Tue Mar 12 2019 05:03:57 GMT-0400 (Eastern Daylight Time)",
       "id": 10
     },
     {
-      "email_to": "ghf@kkkkk.com",
+      "email_to": "b@c.com",
       "quantity": "1",
-      "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 03:56:00 GMT-0500 (Eastern Standard Time)",
+      "studentId": "1",
+      "date_issued": "Tue Mar 12 2019 05:14:27 GMT-0400 (Eastern Daylight Time)",
       "id": 11
     },
     {
-      "email_to": "dd@gf.com",
+      "email_to": "b@c.com",
       "quantity": "1",
       "studentId": "2",
-      "date_issued": "Fri Mar 01 2019 04:10:07 GMT-0500 (Eastern Standard Time)",
+      "date_issued": "Tue Mar 12 2019 05:32:09 GMT-0400 (Eastern Daylight Time)",
       "id": 12
+    },
+    {
+      "email_to": "dfd@f.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 05:34:31 GMT-0400 (Eastern Daylight Time)",
+      "id": 13
+    },
+    {
+      "email_to": "b@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 05:35:31 GMT-0400 (Eastern Daylight Time)",
+      "id": 14
+    },
+    {
+      "email_to": "be@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 05:36:27 GMT-0400 (Eastern Daylight Time)",
+      "id": 15
+    },
+    {
+      "email_to": "uoa@gmail.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 05:37:01 GMT-0400 (Eastern Daylight Time)",
+      "id": 16
+    },
+    {
+      "email_to": "b@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 05:41:55 GMT-0400 (Eastern Daylight Time)",
+      "id": 17
+    },
+    {
+      "email_to": "bcd@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:05:20 GMT-0400 (Eastern Daylight Time)",
+      "id": 18
+    },
+    {
+      "email_to": "adc@gmail.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:13:06 GMT-0400 (Eastern Daylight Time)",
+      "id": 19
+    },
+    {
+      "email_to": "example@gm.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:16:33 GMT-0400 (Eastern Daylight Time)",
+      "id": 20
+    },
+    {
+      "email_to": "ju@gmai.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:20:18 GMT-0400 (Eastern Daylight Time)",
+      "id": 21
+    },
+    {
+      "email_to": "ju@gmai.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:20:24 GMT-0400 (Eastern Daylight Time)",
+      "id": 22
+    },
+    {
+      "email_to": "b@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:20:46 GMT-0400 (Eastern Daylight Time)",
+      "id": 23
+    },
+    {
+      "email_to": "bhh@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:21:47 GMT-0400 (Eastern Daylight Time)",
+      "id": 24
+    },
+    {
+      "email_to": "",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:39:54 GMT-0400 (Eastern Daylight Time)",
+      "id": 25
+    },
+    {
+      "email_to": "b@c.comb@c.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:45:07 GMT-0400 (Eastern Daylight Time)",
+      "id": 26
+    },
+    {
+      "email_to": "this@me.comthis@me.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 07:55:55 GMT-0400 (Eastern Daylight Time)",
+      "id": 27
+    },
+    {
+      "email_to": "hom@hg.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 08:03:49 GMT-0400 (Eastern Daylight Time)",
+      "id": 28
+    },
+    {
+      "email_to": "newwrk@gmail.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 08:06:21 GMT-0400 (Eastern Daylight Time)",
+      "id": 29
+    },
+    {
+      "email_to": "tega@tega.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 08:27:24 GMT-0400 (Eastern Daylight Time)",
+      "id": 30
+    },
+    {
+      "email_to": "yahoo@yahoo.com",
+      "quantity": "1",
+      "studentId": "2",
+      "date_issued": "Tue Mar 12 2019 08:32:44 GMT-0400 (Eastern Daylight Time)",
+      "id": 31
     }
   ],
   "payments": [
@@ -126,11 +259,104 @@
       "transcriptId": 1
     },
     {
-      "id": 2,
-      "studentId": 1,
-      "amount": "6000.00",
-      "payment_date": "date",
-      "transcriptId": 1
+      "studentId": "1",
+      "payment_date": "Sun Mar 03 2019 10:53:23 GMT-0500 (Eastern Standard Time)",
+      "transcriptId": "4",
+      "id": 2
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Sun Mar 03 2019 10:54:16 GMT-0500 (Eastern Standard Time)",
+      "transcriptId": "5",
+      "id": 3
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Tue Mar 12 2019 04:56:51 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "6",
+      "id": 4
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Tue Mar 12 2019 05:01:23 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "7",
+      "id": 5
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Tue Mar 12 2019 05:01:30 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "8",
+      "id": 6
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Tue Mar 12 2019 05:01:47 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "9",
+      "id": 7
+    },
+    {
+      "studentId": "1",
+      "payment_date": "Tue Mar 12 2019 05:14:27 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "11",
+      "id": 8
+    },
+    {
+      "studentId": "2",
+      "payment_date": "Tue Mar 12 2019 05:34:31 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "13",
+      "id": 9
+    },
+    {
+      "studentId": "2",
+      "payment_date": "Tue Mar 12 2019 05:36:27 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "15",
+      "id": 10
+    },
+    {
+      "studentId": "2",
+      "payment_date": "Tue Mar 12 2019 05:37:01 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "16",
+      "id": 11
+    },
+    {
+      "studentId": "2",
+      "payment_date": "Tue Mar 12 2019 05:41:55 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "17",
+      "id": 12
+    },
+    {
+      "studentId": "2",
+      "payment_date": "Tue Mar 12 2019 07:05:20 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "18",
+      "id": 13
+    },
+    {
+      "studentId": "2",
+      "amount": "20",
+      "payment_date": "Tue Mar 12 2019 08:03:49 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "28",
+      "id": 14
+    },
+    {
+      "studentId": "2",
+      "amount": "20",
+      "payment_date": "Tue Mar 12 2019 08:06:21 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "29",
+      "id": 15
+    },
+    {
+      "studentId": "2",
+      "amount": "20",
+      "payment_date": "Tue Mar 12 2019 08:27:24 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "30",
+      "id": 16
+    },
+    {
+      "studentId": "2",
+      "amount": "20",
+      "payment_date": "Tue Mar 12 2019 08:32:44 GMT-0400 (Eastern Daylight Time)",
+      "transcriptId": "31",
+      "id": 17
     }
   ],
   "admin": [
@@ -183,6 +409,72 @@
       "login_time": "Fri Mar 01 2019 09:53:06 GMT+0100 (West Africa Standard Time)",
       "logout_time": "",
       "id": 14
+    },
+    {
+      "studentId": "2",
+      "login_time": "Fri Mar 01 2019 13:25:44 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 15
+    },
+    {
+      "studentId": "2",
+      "login_time": "Fri Mar 01 2019 16:14:19 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 16
+    },
+    {
+      "studentId": "2",
+      "login_time": "Fri Mar 01 2019 16:14:55 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 17
+    },
+    {
+      "studentId": "2",
+      "login_time": "Fri Mar 01 2019 16:22:31 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 18
+    },
+    {
+      "studentId": "1",
+      "login_time": "Sun Mar 03 2019 09:36:42 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "",
+      "id": 19
+    },
+    {
+      "studentId": "1",
+      "login_time": "Sun Mar 03 2019 09:41:53 GMT-0500 (Eastern Standard Time)",
+      "logout_time": "Tue Mar 12 2019 05:31:46 GMT-0400 (Eastern Daylight Time)",
+      "id": 20
+    },
+    {
+      "studentId": "1",
+      "login_time": "Tue Mar 12 2019 04:56:28 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "",
+      "id": 21
+    },
+    {
+      "studentId": "2",
+      "login_time": "Tue Mar 12 2019 05:31:50 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "",
+      "id": 22
+    },
+    {
+      "studentId": "2",
+      "login_time": "Tue Mar 12 2019 07:04:54 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "",
+      "id": 23
+    },
+    {
+      "studentId": "2",
+      "login_time": "Tue Mar 12 2019 07:12:40 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "Tue Mar 12 2019 08:05:38 GMT-0400 (Eastern Daylight Time)",
+      "id": 24
+    },
+    {
+      "studentId": "2",
+      "login_time": "Tue Mar 12 2019 08:05:48 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "",
+      "id": 25
     }
   ]
 }
