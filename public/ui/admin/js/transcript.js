@@ -3,14 +3,24 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   let total = $(".numRows");
   total.text(data.length);
   let serial = 0;
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  };
 
   for (const row of data) {
+    let dateObj = new Date(row.date_issued);
     let names = `${row.student.firstname} ${row.student.lastname}`;
     let id = createNode("th", ++serial);
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.email_to);
     let quantity = createNode("td", row.quantity);
-    let date = createNode("td", row.date_issued);
+    let date = createNode("td", dateObj.toLocaleDateString("en-US", options));
     let fullname = createNode("td", names);
 
     let tableRow = createNode("tr");
