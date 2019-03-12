@@ -15,6 +15,22 @@
       "createdAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
       "updatedAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
       "id": 7
+    },
+    {
+      "firstname": "truslynn",
+      "lastname": "nwajei",
+      "matric": "3015310",
+      "password": "bqcn3bgk",
+      "email": "slimchukky@gmail.com",
+      "gender": "female",
+      "department": "biochemistry",
+      "faculty": "sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.56",
+      "createdAt": "Tue Mar 12 2019 12:20:43 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Tue Mar 12 2019 12:20:43 GMT+0100 (West Africa Standard Time)",
+      "id": 8
     }
   ],
   "transcripts": [

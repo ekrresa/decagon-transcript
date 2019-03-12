@@ -1,11 +1,12 @@
-$.get("http://localhost:3000/students", function(data) {
+$.get("http://localhost:3000/students?_sort=createdAt&_order=desc", function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
+  let serial = 0;
 
   for (const student of data) {
     // Create nodes for table
-    let id = createNode("th", student.id);
+    let id = createNode("th", ++serial);
     let firstname = createNode("td", student.firstname);
     let lastname = createNode("td", student.lastname);
     let email = createNode("td", student.email);
