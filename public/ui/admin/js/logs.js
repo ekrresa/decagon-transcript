@@ -2,13 +2,14 @@ $.get("http://localhost:3000/logs?_expand=student", function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
+  let serial = 0;
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let matric = createNode("td", row.student.matric);
-    let login_time = createNode("td", row.login_time);
-    let logout_time = createNode("td", row.logout_time);
+    let login_time = createNode("td", formatDate(row.login_time));
+    let logout_time = createNode("td", formatDate(row.logout_time));
     let fullname = createNode("td", names);
 
     let tableRow = createNode("tr");
@@ -34,4 +35,19 @@ function createNode(element, text) {
 // Append child to parent
 function append(parent, el) {
   return parent.appendChild(el);
+}
+// Format date
+function formatDate(date) {
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  };
+
+  let dateObj = new Date(date);
+  return dateObj.toLocaleDateString("en-US", options);
 }
