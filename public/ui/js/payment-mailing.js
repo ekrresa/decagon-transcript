@@ -24,7 +24,7 @@ $("select.purpose").change(function() {
     allemail = "";
   }
 });
-
+let isSuccessful = false;
 // // Render the PayPal button into #paypal-button-container
 paypal
   .Buttons({
@@ -43,49 +43,52 @@ paypal
       });
     },
     onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        var studentId = localStorage.getItem("student_Id");
-        var student_email = localStorage.getItem("student_email");
-        var student_name = localStorage.getItem("student_name");
-        var date_issued = new Date();
-        var transcriptId;
-        var quant = $(".hide-amount").text();
-        //Saving to transcript history
-        var transcript = {
-          email_to: allemail,
-          quantity: $(".hide-amount").text(),
-          studentId: studentId,
-          date_issued: date_issued
-        };
-        $.ajax({
-          type: "POST",
-          url: "http://localhost:3000/transcripts",
-          data: transcript,
-          success: function(data) {
-            transcriptId = data.id;
-            //Saving to payment history
-            var payment = {
-              studentId: studentId,
-              amount: amt,
-              payment_date: data.date_issued,
-              transcriptId: transcriptId
-            };
-            $.ajax({
-              type: "POST",
-              url: "http://localhost:3000/payments",
-              data: payment,
-              success: function(data) {},
-              complete: function() {
-                // Sending Receipt to student email
-                Email.send({
-                  Host: "smtp.gmail.com",
-                  Username: "ekrresaochuko@gmail.com",
-                  Password: "Aurora@845",
-                  To: student_email,
-                  From: "support@decagonuniversity.com",
-                  Subject: "Transcript Payment - Receipt",
-                  Body:
-                    `<!DOCTYPE html>
+      return actions.order
+        .capture()
+        .then(function(details) {
+          isSuccessful = true;
+          var studentId = localStorage.getItem("student_Id");
+          var student_email = localStorage.getItem("student_email");
+          var student_name = localStorage.getItem("student_name");
+          var date_issued = new Date();
+          var transcriptId;
+          var quant = $(".hide-amount").text();
+          //Saving to transcript history
+          var transcript = {
+            email_to: allemail,
+            quantity: $(".hide-amount").text(),
+            studentId: studentId,
+            date_issued: date_issued
+          };
+          $.ajax({
+            type: "POST",
+            url: "http://localhost:3000/transcripts",
+            data: transcript,
+            success: function(data) {
+              transcriptId = data.id;
+              //Saving to payment history
+              var payment = {
+                studentId: studentId,
+                amount: amt,
+                payment_date: data.date_issued,
+                transcriptId: transcriptId
+              };
+              $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/payments",
+                data: payment,
+                success: function(data) {},
+                complete: function() {
+                  // Sending Receipt to student email
+                  Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "ekrresaochuko@gmail.com",
+                    Password: "Aurora@845",
+                    To: student_email,
+                    From: "support@decagonuniversity.com",
+                    Subject: "Transcript Payment - Receipt",
+                    Body:
+                      `<!DOCTYPE html>
                                             <html lang="en">
                                             <head>
                                                 <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
@@ -456,13 +459,13 @@ table th, table td {
         <span>To:</span>
         <div>
         <span class="bold">Mr. ` +
-                    student_name +
-                    `</span>
+                      student_name +
+                      `</span>
         </div>
         <div>
         <span>` +
-                    student_email +
-                    `</span>
+                      student_email +
+                      `</span>
         </div>
     </section>
     
@@ -484,12 +487,12 @@ table th, table td {
             <td></td> <!-- Don't remove this column as it's needed for the row commands -->
             <td>1</td>
             <td>` +
-                    quant +
-                    `</td>
+                      quant +
+                      `</td>
             <td>#11,100</td>
             <td>#` +
-                    quant * 11100 +
-                    `</td>
+                      quant * 11100 +
+                      `</td>
         </tr>
         
         </table>
@@ -502,8 +505,8 @@ table th, table td {
         <tr class="amount-total">
             <th>TOTAL:</th>
             <td>#` +
-                    quant * 11100 +
-                    `</td>
+                      quant * 11100 +
+                      `</td>
         </tr>
         
         <!-- You can use attribute data-hide-on-quote="true" to hide specific information on quotes.
@@ -511,8 +514,8 @@ table th, table td {
         <tr data-hide-on-quote="true">
             <th>PAID:</th>
             <td>#` +
-                    quant * 11100 +
-                    `</td>
+                      quant * 11100 +
+                      `</td>
         </tr>
         
         </table>
@@ -526,8 +529,8 @@ table th, table td {
     <section id="invoice-info">
         <div>
         <span>Date issued</span> <span>` +
-                    date_issued.toLocaleString() +
-                    `</span>
+                      date_issued.toLocaleString() +
+                      `</span>
         </div>
     </section>
     
@@ -545,21 +548,29 @@ table th, table td {
     </div>
 </body>
 </html>`
-                });
-                // End of sending receipt to student email
-              }
-            });
-          },
-          complete: function() {}
+                  });
+                  // End of sending receipt to student email
+                }
+              });
+            },
+            complete: function() {}
+          });
+          // Show a success message to the buyer
+          swal({
+            title: "Thank you!",
+            text: "Payment completed. Invoice has been sent to your email: " + student_email,
+            icon: "success",
+            button: "Close"
+          });
+        })
+        .catch(err => {
+          swal({
+            title: "Error!",
+            text: "Payment was unsuccessful. Please try again later",
+            icon: "error",
+            button: "Close"
+          });
         });
-        // Show a success message to the buyer
-        swal({
-          title: "Thank you!",
-          text: "Payment completed. Invoice has been sent to your email: " + student_email,
-          icon: "success",
-          button: "Close"
-        });
-      });
     }
   })
   .render("#paypal-button-container");

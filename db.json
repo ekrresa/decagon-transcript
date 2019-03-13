@@ -34,6 +34,22 @@
     },
     {
       "id": 3
+    },
+    {
+      "firstname": "austine",
+      "lastname": "powers",
+      "matric": "8337328",
+      "password": "hy2hiuee",
+      "email": "diribe3000@gmail.com",
+      "gender": "male",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "adm_year": "2013",
+      "grad_year": "2017",
+      "cgpa": "3.87",
+      "createdAt": "Wed Mar 13 2019 12:31:22 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Wed Mar 13 2019 12:31:22 GMT+0100 (West Africa Standard Time)",
+      "id": 4
     }
   ],
   "transcripts": [
@@ -85,6 +101,13 @@
       "studentId": "1",
       "date_issued": "Wed Mar 13 2019 12:24:41 GMT+0100 (West Africa Standard Time)",
       "id": 7
+    },
+    {
+      "email_to": "abc@yahoo.com",
+      "quantity": "1",
+      "studentId": "4",
+      "date_issued": "Wed Mar 13 2019 12:47:46 GMT+0100 (West Africa Standard Time)",
+      "id": 8
     }
   ],
   "payments": [
@@ -122,6 +145,13 @@
       "payment_date": "Wed Mar 13 2019 12:24:41 GMT+0100 (West Africa Standard Time)",
       "transcriptId": "7",
       "id": 5
+    },
+    {
+      "studentId": "4",
+      "amount": "30",
+      "payment_date": "Wed Mar 13 2019 12:47:46 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": "8",
+      "id": 6
     }
   ],
   "admin": [
@@ -160,8 +190,14 @@
     {
       "studentId": "1",
       "login_time": "Wed Mar 13 2019 12:00:43 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "",
+      "logout_time": "Wed Mar 13 2019 12:29:26 GMT+0100 (West Africa Standard Time)",
       "id": 4
+    },
+    {
+      "studentId": "4",
+      "login_time": "Wed Mar 13 2019 12:32:48 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Wed Mar 13 2019 12:50:02 GMT+0100 (West Africa Standard Time)",
+      "id": 5
     }
   ]
 }
