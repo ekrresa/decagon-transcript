@@ -15,10 +15,20 @@ $(document).ready(function() {
       url
     })
       .done(res => {
-        console.log("student deleted");
+        swal({
+          title: "Sad Day at Decagon!",
+          text: "Student deleted",
+          icon: "success",
+          button: "Close"
+        });
       })
       .fail(err => {
-        console.log("There was an error. Please try again");
+        swal({
+          title: "Sad Day at Decagon!",
+          text: "There was an error! Please try again",
+          icon: "error",
+          button: "Close"
+        });
       });
   });
 });

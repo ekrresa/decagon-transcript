@@ -1,4 +1,4 @@
-$.get("http://localhost:3000/students?_sort=createdAt&_order=desc", function(data) {
+$.get("http://localhost:3000/students?_sort=createdAt&_order=asc", function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);

@@ -1,22 +1,6 @@
 {
   "students": [
     {
-      "firstname": "ochuko",
-      "lastname": "ekrresa",
-      "matric": "U2009:3015310",
-      "password": "bjuiow3e",
-      "email": "ekrresaochuko@gmail.com",
-      "gender": "Female",
-      "department": "electrical engineering",
-      "faculty": "engineering",
-      "adm_year": "2009",
-      "grad_year": "2015",
-      "cgpa": "4.8",
-      "createdAt": "date",
-      "updatedAt": "Thu Feb 28 2019 01:21:23 GMT+0100 (West Africa Standard Time)",
-      "id": 1
-    },
-    {
       "firstname": "Mark",
       "lastname": "Benjamin",
       "matric": "149634",
@@ -33,33 +17,22 @@
       "id": 2
     },
     {
-      "id": 3
-    },
-    {
       "firstname": "austine",
       "lastname": "powers",
       "matric": "8337328",
-      "password": "hy2hiuee",
       "email": "diribe3000@gmail.com",
-      "gender": "male",
+      "gender": "Male",
       "department": "accounting",
       "faculty": "social sciences",
       "adm_year": "2013",
       "grad_year": "2017",
-      "cgpa": "3.87",
+      "cgpa": "4.87",
       "createdAt": "Wed Mar 13 2019 12:31:22 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Wed Mar 13 2019 12:31:22 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Wed Mar 13 2019 13:02:42 GMT+0100 (West Africa Standard Time)",
       "id": 4
     }
   ],
   "transcripts": [
-    {
-      "id": 1,
-      "email_to": "fasdasdas@gmail.com",
-      "quantity": 2,
-      "studentId": 7,
-      "date_issued": "Mon Mar 09 2019 12:21:26 GMT+0100 (West Africa Standard Time)"
-    },
     {
       "email_to": "b@c.com",
       "quantity": "1",
@@ -68,92 +41,14 @@
       "id": 2
     },
     {
-      "email_to": "yam@yes.com",
-      "quantity": "1",
-      "studentId": "2",
-      "date_issued": "3/12/2019, 5:00:30 PM",
-      "id": 3
-    },
-    {
-      "email_to": "",
-      "quantity": "1",
-      "studentId": "1",
-      "date_issued": "3/13/2019, 12:40:37 AM",
-      "id": 4
-    },
-    {
-      "email_to": "yahoo@yahoo.com",
-      "quantity": "1",
-      "studentId": "1",
-      "date_issued": "3/13/2019, 12:41:48 AM",
-      "id": 5
-    },
-    {
-      "email_to": "abc@yahoo.com",
-      "quantity": "1",
-      "studentId": "",
-      "date_issued": "3/13/2019, 12:11:13 PM",
-      "id": 6
-    },
-    {
-      "email_to": "abc@yahoo.com",
-      "quantity": "1",
-      "studentId": "1",
-      "date_issued": "Wed Mar 13 2019 12:24:41 GMT+0100 (West Africa Standard Time)",
-      "id": 7
-    },
-    {
       "email_to": "abc@yahoo.com",
       "quantity": "1",
       "studentId": "4",
       "date_issued": "Wed Mar 13 2019 12:47:46 GMT+0100 (West Africa Standard Time)",
-      "id": 8
-    }
-  ],
-  "payments": [
-    {
-      "id": 1,
-      "studentId": 7,
-      "amount": "3000.00",
-      "payment_date": "Mon Mar 09 2019 12:21:26 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": 1
-    },
-    {
-      "id": 2,
-      "studentId": 8,
-      "amount": "6000.00",
-      "payment_date": "Mon Mar 10 2019 12:20:26 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": 2
-    },
-    {
-      "studentId": 7,
-      "amount": "90",
-      "payment_date": "Mon Mar 11 2019 12:25:26 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": 3,
       "id": 3
-    },
-    {
-      "studentId": "",
-      "amount": "30",
-      "payment_date": "3/13/2019, 12:11:13 PM",
-      "transcriptId": "6",
-      "id": 4
-    },
-    {
-      "studentId": "1",
-      "amount": "30",
-      "payment_date": "Wed Mar 13 2019 12:24:41 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": "7",
-      "id": 5
-    },
-    {
-      "studentId": "4",
-      "amount": "30",
-      "payment_date": "Wed Mar 13 2019 12:47:46 GMT+0100 (West Africa Standard Time)",
-      "transcriptId": "8",
-      "id": 6
     }
   ],
+  "payments": [],
   "admin": [
     {
       "id": 1,
@@ -169,30 +64,6 @@
     }
   ],
   "logs": [
-    {
-      "studentId": "",
-      "login_time": "Wed Mar 13 2019 11:27:52 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Wed Mar 13 2019 11:28:50 GMT+0100 (West Africa Standard Time)",
-      "id": 1
-    },
-    {
-      "studentId": "1",
-      "login_time": "Wed Mar 13 2019 11:36:42 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Wed Mar 13 2019 11:37:57 GMT+0100 (West Africa Standard Time)",
-      "id": 2
-    },
-    {
-      "studentId": "1",
-      "login_time": "Wed Mar 13 2019 11:45:19 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Wed Mar 13 2019 11:59:54 GMT+0100 (West Africa Standard Time)",
-      "id": 3
-    },
-    {
-      "studentId": "1",
-      "login_time": "Wed Mar 13 2019 12:00:43 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Wed Mar 13 2019 12:29:26 GMT+0100 (West Africa Standard Time)",
-      "id": 4
-    },
     {
       "studentId": "4",
       "login_time": "Wed Mar 13 2019 12:32:48 GMT+0100 (West Africa Standard Time)",
