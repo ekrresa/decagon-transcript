@@ -1,8 +1,8 @@
-const getUrl = `http://localhost:3000/students?email=${urlParams.get("email")}`;
+const getUrl = `${baseUrl}students?email=${urlParams.get("email")}`;
 const deleteForm = $("form");
 
 $.get(getUrl, function(data) {
-  deleteForm.attr("action", `http://localhost:3000/students/${data[0].id}`);
+  deleteForm.attr("action", `${baseUrl}students/${data[0].id}`);
 });
 
 $(document).ready(function() {
@@ -15,10 +15,20 @@ $(document).ready(function() {
       url
     })
       .done(res => {
-        console.log("student deleted");
+        swal({
+          title: "Sad Day at Decagon!",
+          text: "Student deleted",
+          icon: "success",
+          button: "Close"
+        });
       })
       .fail(err => {
-        console.log("There was an error. Please try again");
+        swal({
+          title: "Sad Day at Decagon!",
+          text: "There was an error! Please try again",
+          icon: "error",
+          button: "Close"
+        });
       });
   });
 });

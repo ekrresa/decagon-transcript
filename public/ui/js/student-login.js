@@ -1,52 +1,58 @@
 $(document).ready(function() {
-  $("#login").click(function() {
-    var user = $("#student").val();
-    var error = true;
+  $("#student-login").submit(function(e) {
+    e.preventDefault();
 
-    $("#loading")
-      .html('<img src="../ui/images/giphy.gif" width="40px">')
-      .fadeIn("fast");
-    let student_data;
-    let student_name;
-    let studentId;
-    $.ajax({
-      type: "GET",
-      url: "http://localhost:3000/students",
-      success: function(data) {
-        $("#loading").fadeOut("fast");
-        $.each(data, function(key, value) {
-          if (user == value.email || user == value.matric) {
-            error = false;
-            student_data = value.email;
-            student_name = value.firstname;
-            studentId = value.id;
-          }
+    let student_email = $("#student_email").val();
+    let student_password = $("#student_password").val();
+
+    if (!student_email || !student_password) {
+      swal({
+        title: "Error!",
+        text: "All fields are required!",
+        icon: "error",
+        button: "Close"
+      });
+      return;
+    }
+
+    const getUrl = baseUrl + `students?email=${student_email}`;
+
+    $.get(getUrl, function(data) {
+      if (data.length === 0) {
+        swal({
+          title: "Error!",
+          text: "Student doesn't exist",
+          icon: "error",
+          button: "Close"
         });
+      } else if (data[0].email === student_email && data[0].password === student_password) {
+        localStorage.setItem("student_email", student_email);
+        localStorage.setItem("student_name", data[0].firstname);
+        localStorage.setItem("student_Id", data[0].id);
 
-        if (error === false) {
-          localStorage.setItem("student_email", student_data);
-          localStorage.setItem("student_name", student_name);
-          localStorage.setItem("studentId", studentId);
-          let data = {
-            studentId,
-            login_time: new Date(),
-            logout_time: null
-          };
-          $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/logs",
-            data
-          }).done(res => {
-            localStorage.setItem("logId", res.id);
-            localStorage.setItem("loginTime", res.login_time);
-          });
-          window.location.href = "../ui/student/student-dashboard.html";
-        } else {
-          $(".login-text#student").val("");
-          swal ( "Oops" ,  "incorrect login details!" ,  "error" )
-        }
+        let log = {
+          studentId: data[0].id,
+          login_time: new Date(),
+          logout_time: null
+        };
+
+        $.ajax({
+          type: "POST",
+          url: `${baseUrl}logs`,
+          data: log
+        }).done(res => {
+          localStorage.setItem("logId", res.id);
+          localStorage.setItem("loginTime", res.login_time);
+          window.location.replace("../ui/student/student-dashboard.html");
+        });
+      } else {
+        swal({
+          title: "Error!",
+          text: "Incorrect email/password. Please try again",
+          icon: "error",
+          button: "Close"
+        });
       }
     });
-    return false;
   });
 });

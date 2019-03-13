@@ -1,18 +1,29 @@
 $.get(
-  "http://localhost:3000/payments?_expand=transcript&_expand=student",
+  `${baseUrl}payments?_expand=transcript&_expand=student&_sort=payment_date&_order=desc`,
   function(data) {
     let tableBody = $("#tableBody");
     let total = $(".numRows");
     total.text(data.length);
+    let serial = 0;
+    let options = {
+      weekday: "long",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric"
+    };
 
     for (const row of data) {
+      let dateObj = new Date(row.payment_date);
       let names = `${row.student.firstname} ${row.student.lastname}`;
-      let id = createNode("th", row.id);
+      let id = createNode("th", ++serial);
       let fullname = createNode("td", names);
       let matric = createNode("td", row.student.matric);
       let email = createNode("td", row.transcript.email_to);
       let amount = createNode("td", row.amount);
-      let date = createNode("td", row.payment_date);
+      let date = createNode("td", dateObj.toLocaleDateString("en-US", options));
 
       let tableRow = createNode("tr");
       append(tableRow, id);

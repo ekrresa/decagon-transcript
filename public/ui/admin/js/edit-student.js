@@ -1,4 +1,4 @@
-const getUrl = `http://localhost:3000/students?email=${urlParams.get("email")}`;
+const getUrl = `${baseUrl}students?email=${urlParams.get("email")}`;
 const student_form = $("form");
 let createDate;
 // Get student data, populate form fields
@@ -16,39 +16,27 @@ $.get(getUrl, function(data) {
   $("#adm-year").val(data[0].adm_year);
   $("#grad-year").val(data[0].grad_year);
   $("#cgpa").val(data[0].cgpa);
-  student_form.attr("action", `http://localhost:3000/students/${data[0].id}`);
+  student_form.attr("action", `${baseUrl}students/${data[0].id}`);
   createDate = data[0].createdAt;
 });
 
 $(document).ready(function() {
-  let successDiv = $(".success");
-  let errorDiv = $(".error");
-
   student_form.submit(function(e) {
     e.preventDefault();
-    let firstname = $("#firstname").val();
-    let lastname = $("#lastname").val();
-    let matric = $("#matric").val();
-    let email = $("#email").val();
-    let gender = $("#gender").val();
-    let department = $("#department").val();
-    let faculty = $("#faculty").val();
-    let adm_year = $("#adm-year").val();
-    let grad_year = $("#grad-year").val();
-    let cgpa = $("#cgpa").val();
+
     const url = $(this).attr("action");
 
     let formdata = {
-      firstname,
-      lastname,
-      matric,
-      email,
-      gender,
-      department,
-      faculty,
-      adm_year,
-      grad_year,
-      cgpa,
+      firstname: $("#firstname").val(),
+      lastname: $("#lastname").val(),
+      matric: $("#matric").val(),
+      email: $("#email").val(),
+      gender: $("#gender").val(),
+      department: $("#department").val(),
+      faculty: $("#faculty").val(),
+      adm_year: $("#adm-year").val(),
+      grad_year: $("#grad-year").val(),
+      cgpa: $("#cgpa").val(),
       createdAt: createDate,
       updatedAt: new Date()
     };
@@ -59,11 +47,21 @@ $(document).ready(function() {
       data: formdata
     })
       .done(res => {
-        successDiv.fadeIn().text("Student Updated Successfully");
-        //Empty form fields
+        $("form")[0].reset();
+        swal({
+          title: "Good job!",
+          text: "Student edited successfully",
+          icon: "success",
+          button: "Close"
+        });
       })
       .fail(err => {
-        errorDiv.fadeIn().text("There was an error. Please try again");
+        swal({
+          title: "Oops!",
+          text: "An error occurred. Please try again!",
+          icon: "error",
+          button: "Close"
+        });
       });
   });
 });
