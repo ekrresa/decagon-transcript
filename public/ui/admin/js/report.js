@@ -5,9 +5,11 @@ let totalStudents = $("#totalStudents");
 $.get("http://localhost:3000/students", function(data) {
   let tableBody = $("#studentBody");
   totalStudents.text(data.length);
+  let serial = 0;
+
   for (const row of data) {
     // Create nodes for table
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let firstname = createNode("td", row.firstname);
     let lastname = createNode("td", row.lastname);
     let email = createNode("td", row.email);
@@ -40,10 +42,11 @@ $.get("http://localhost:3000/students", function(data) {
 $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   let tableBody = $("#transcriptBody");
   totalTranscripts.text(data.length);
+  let serial = 0;
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.email_to);
     let quantity = createNode("td", row.quantity);
@@ -66,11 +69,12 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
 $.get("http://localhost:3000/payments?_expand=transcript&_expand=student", function(data) {
   let tableBody = $("#paymentBody");
   let total = 0;
+  let serial = 0;
 
   for (const row of data) {
     total += Number(row.amount);
     let names = `${row.student.firstname} ${row.student.lastname}`;
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let fullname = createNode("td", names);
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.transcript.email_to);

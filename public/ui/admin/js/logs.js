@@ -2,10 +2,11 @@ $.get("http://localhost:3000/logs?_expand=student", function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
+  let serial = 0;
 
   for (const row of data) {
     let names = `${row.student.firstname} ${row.student.lastname}`;
-    let id = createNode("th", row.id);
+    let id = createNode("th", ++serial);
     let matric = createNode("td", row.student.matric);
     let login_time = createNode("td", formatDate(row.login_time));
     let logout_time = createNode("td", formatDate(row.logout_time));
