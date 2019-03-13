@@ -42,10 +42,8 @@ $(document).ready(function() {
           });
           window.location.href = "../ui/student/student-dashboard.html";
         } else {
-          $(".student-login")
-            .slideUp("slow")
-            .slideDown("slow");
           $(".login-text#student").val("");
+          swal ( "Oops" ,  "incorrect login details!" ,  "error" )
         }
       }
     });
