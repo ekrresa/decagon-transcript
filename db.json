@@ -30,6 +30,22 @@
       "createdAt": "Wed Mar 13 2019 12:31:22 GMT+0100 (West Africa Standard Time)",
       "updatedAt": "Wed Mar 13 2019 13:02:42 GMT+0100 (West Africa Standard Time)",
       "id": 4
+    },
+    {
+      "firstname": "ochuko",
+      "lastname": "ekrresa",
+      "matric": "3015310",
+      "password": "k1vf105i",
+      "email": "kelvinekrresa@gmail.com",
+      "gender": "male",
+      "department": "electrical engineering",
+      "faculty": "engineering",
+      "adm_year": "2009",
+      "grad_year": "2015",
+      "cgpa": "3.45",
+      "createdAt": "Wed Mar 13 2019 15:30:25 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Wed Mar 13 2019 15:30:25 GMT+0100 (West Africa Standard Time)",
+      "id": 5
     }
   ],
   "transcripts": [
@@ -84,6 +100,12 @@
       "login_time": "Wed Mar 13 2019 12:32:48 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Wed Mar 13 2019 12:50:02 GMT+0100 (West Africa Standard Time)",
       "id": 5
+    },
+    {
+      "studentId": "5",
+      "login_time": "Wed Mar 13 2019 15:32:16 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "",
+      "id": 6
     }
   ]
 }
