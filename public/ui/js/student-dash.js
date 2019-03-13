@@ -10,7 +10,7 @@ $(document).ready(function() {
   let studentId = localStorage.getItem("student_Id");
   $.ajax({
     type: "GET",
-    url: `http://localhost:3000/students?id=${studentId}`,
+    url: `${baseUrl}students?id=${studentId}`,
     success: function(data) {
       let cgpa = data[0].cgpa;
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
   });
 
   //   Payments Data
-  $.get(`http://localhost:3000/payments?studentId=${studentId}&_expand=transcript`, function(data) {
+  $.get(`${baseUrl}payments?studentId=${studentId}&_expand=transcript`, function(data) {
     let tableBody = $("#payBody");
     let i = 0;
     for (const row of data) {
@@ -64,7 +64,7 @@ $(document).ready(function() {
   });
 
   // Transcripts Data
-  $.get(`http://localhost:3000/transcripts?studentId=${studentId}`, function(data) {
+  $.get(`${baseUrl}transcripts?studentId=${studentId}`, function(data) {
     let tableBody = $("#transBody");
     let i = 0;
     for (const row of data) {

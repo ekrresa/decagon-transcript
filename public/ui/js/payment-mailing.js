@@ -62,7 +62,7 @@ paypal
           };
           $.ajax({
             type: "POST",
-            url: "http://localhost:3000/transcripts",
+            url: `${baseUrl}transcripts`,
             data: transcript,
             success: function(data) {
               transcriptId = data.id;
@@ -75,7 +75,7 @@ paypal
               };
               $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/payments",
+                url: `${baseUrl}payments`,
                 data: payment,
                 success: function(data) {},
                 complete: function() {

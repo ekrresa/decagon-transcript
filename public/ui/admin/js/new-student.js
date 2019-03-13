@@ -46,11 +46,11 @@ $(document).ready(function() {
       const matric_number = $("#matric").val();
 
       $.when(
-        $.get(`http://localhost:3000/students?email=${student_email}`),
-        $.get(`http://localhost:3000/students?matric=${matric_number}`)
+        $.get(`${baseUrl}students?email=${student_email}`),
+        $.get(`${baseUrl}students?matric=${matric_number}`)
       ).then(function(res1, res2) {
         if (res1[0].length === 0 && res2[0].length === 0) {
-          const url = "http://localhost:3000/students";
+          const url = `${baseUrl}students`;
           const password = generatePassword();
 
           // Get form values
@@ -98,8 +98,8 @@ $(document).ready(function() {
                 To: email,
                 From: "support@decagonuniversity.com",
                 Subject: "Decagon University: Transcript Request",
-                Body: `Hello ${name.toUpperCase()}, <br>You have been registered to use our online platform to request for your transcripts.<br>
-                Your password is <strong>${password}</strong><br>Please guard it closely as we will not be liable for any breach as a result of stolen password.<br><br>Regards,<br>Decagon University`
+                Body: `Hello ${name.toUpperCase()},<p>You have been registered to use our online platform to request for your transcripts.</p>
+                <p>Your password is <strong>${password}</strong></p><p>Please guard it closely as we will not be liable for any breach as a result of stolen password.</p><p>Below is the link to sign in to apply for your transcripts.</p><br><a href="https://decagon-transcript.herokuapp.com/" target="_blank">https://decagon-transcript.herokuapp.com/</a><br><br>Regards,<br>Decagon University`
               }).then(message => {
                 swal({
                   title: "Good job!",

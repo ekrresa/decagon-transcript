@@ -1,8 +1,8 @@
-const getUrl = `http://localhost:3000/students?email=${urlParams.get("email")}`;
+const getUrl = `${baseUrl}students?email=${urlParams.get("email")}`;
 const deleteForm = $("form");
 
 $.get(getUrl, function(data) {
-  deleteForm.attr("action", `http://localhost:3000/students/${data[0].id}`);
+  deleteForm.attr("action", `${baseUrl}students/${data[0].id}`);
 });
 
 $(document).ready(function() {
