@@ -43,6 +43,7 @@ $(document).ready(function() {
           window.location.href = "../ui/student/student-dashboard.html";
         } else {
           $(".login-text#student").val("");
+          swal ( "Oops" ,  "incorrect login details!" ,  "error" )
         }
       }
     });
