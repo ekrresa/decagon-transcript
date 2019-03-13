@@ -13,7 +13,7 @@ $(document).ready(function() {
       return;
     }
 
-    const getUrl = $(this).attr("action") + `?email=${email}`;
+    const getUrl = baseUrl + `admin?email=${email}`;
 
     $.get(getUrl, function(data) {
       if (data.length === 0) {

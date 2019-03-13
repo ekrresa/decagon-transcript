@@ -13,14 +13,15 @@ $(document).ready(function() {
 
     $.ajax({
       type: "PUT",
-      url: `http://localhost:3000/logs/${logId}`,
+      url: `${baseUrl}logs/${logId}`,
       data: newData
+    }).done(function(data) {
+      localStorage.removeItem("student_email");
+      localStorage.removeItem("student_Id");
+      localStorage.removeItem("student_name");
+      localStorage.removeItem("logId");
+      localStorage.removeItem("loginTime");
+      location.replace("../../index.html");
     });
-    localStorage.removeItem("student_email");
-    localStorage.removeItem("student_Id");
-    localStorage.removeItem("student_name");
-    localStorage.removeItem("logId");
-    localStorage.removeItem("loginTime");
-    location.replace("../../index.html");
   });
 });

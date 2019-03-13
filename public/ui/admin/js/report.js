@@ -2,7 +2,7 @@ let totalAmount = $("#totalAmount");
 let totalTranscripts = $("#totalTranscripts");
 let totalStudents = $("#totalStudents");
 
-$.get("http://localhost:3000/students", function(data) {
+$.get(`${baseUrl}students`, function(data) {
   let tableBody = $("#studentBody");
   totalStudents.text(data.length);
   let serial = 0;
@@ -39,7 +39,7 @@ $.get("http://localhost:3000/students", function(data) {
   }
 });
 
-$.get("http://localhost:3000/transcripts?_expand=student", function(data) {
+$.get(`${baseUrl}transcripts?_expand=student`, function(data) {
   let tableBody = $("#transcriptBody");
   totalTranscripts.text(data.length);
   let serial = 0;
@@ -66,7 +66,7 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
   }
 });
 
-$.get("http://localhost:3000/payments?_expand=transcript&_expand=student", function(data) {
+$.get(`${baseUrl}payments?_expand=transcript&_expand=student`, function(data) {
   let tableBody = $("#paymentBody");
   let total = 0;
   let serial = 0;

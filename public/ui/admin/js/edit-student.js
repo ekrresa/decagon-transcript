@@ -1,4 +1,4 @@
-const getUrl = `http://localhost:3000/students?email=${urlParams.get("email")}`;
+const getUrl = `${baseUrl}students?email=${urlParams.get("email")}`;
 const student_form = $("form");
 let createDate;
 // Get student data, populate form fields
@@ -16,7 +16,7 @@ $.get(getUrl, function(data) {
   $("#adm-year").val(data[0].adm_year);
   $("#grad-year").val(data[0].grad_year);
   $("#cgpa").val(data[0].cgpa);
-  student_form.attr("action", `http://localhost:3000/students/${data[0].id}`);
+  student_form.attr("action", `${baseUrl}students/${data[0].id}`);
   createDate = data[0].createdAt;
 });
 

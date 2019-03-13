@@ -15,7 +15,7 @@ $(document).ready(function() {
       return;
     }
 
-    const getUrl = $(this).attr("action") + `?email=${student_email}`;
+    const getUrl = baseUrl + `students?email=${student_email}`;
 
     $.get(getUrl, function(data) {
       if (data.length === 0) {
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
         $.ajax({
           type: "POST",
-          url: "http://localhost:3000/logs",
+          url: `${baseUrl}logs`,
           data: log
         }).done(res => {
           localStorage.setItem("logId", res.id);
