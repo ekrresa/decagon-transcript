@@ -33,11 +33,8 @@ body{
   }
   .login {
     color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: center;
+    margin-top: 118px;
   }
   .page-title h1{
     text-align: center;
@@ -57,25 +54,30 @@ body{
     box-sizing: border-box;
     background: rgba(0, 0, 0, .5);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: 0.5s
+    padding: 30px 25px 25px;
+    transition: 0.5s;
 }
 .student-login input{
     display: block;
     width: 100%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    border-radius: 25px;
     outline: none;
     border: none;
     color: #444;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 1px;
     background: rgba(255, 255, 255, .9);
 }
+.student-login input#student_email{
+    border-bottom: 0.1px solid #000;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 .student-login input::placeholder{
     color: rgb(59, 59, 59);
+    font-family: fontawesome;
 }
 .student-login input[type="submit"]{
     color: #fff;
@@ -83,6 +85,8 @@ body{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .student-login input[type="submit"]:hover{
     color:#000;

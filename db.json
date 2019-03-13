@@ -96,18 +96,6 @@
   ],
   "logs": [
     {
-<<<<<<< HEAD
-      "studentId": "1",
-      "login_time": "Wed Mar 13 2019 00:39:01 GMT-0400 (Eastern Daylight Time)",
-      "logout_time": "",
-      "id": 1
-    },
-    {
-      "studentId": "1",
-      "login_time": "Wed Mar 13 2019 07:04:33 GMT-0400 (Eastern Daylight Time)",
-      "logout_time": "",
-      "id": 2
-=======
       "studentId": "4",
       "login_time": "Wed Mar 13 2019 12:32:48 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Wed Mar 13 2019 12:50:02 GMT+0100 (West Africa Standard Time)",
@@ -118,7 +106,6 @@
       "login_time": "Wed Mar 13 2019 15:32:16 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Wed Mar 13 2019 16:47:51 GMT+0100 (West Africa Standard Time)",
       "id": 6
->>>>>>> develop
     }
   ]
 }
