@@ -1,4 +1,90 @@
-<!DOCTYPE html>
+
+        var amt;
+        var allemail = "";
+        var paid = false;
+    //Hide the paypal button initially
+        $("#paypal-button-container").hide();
+    //Getting all the email(s) to send to
+        $('input[type="email"]#email-1').focusout(function(){
+            var email1 = $(this).val();
+            allemail += email1;
+        });
+        $(document).on('focusout',"#email-2" ,function() {
+            var email2 = $(this).val();
+            allemail += ' ,'+email2;
+        });
+        $(document).on('focusout',"#email-3" ,function() {
+            var email3 = $(this).val();
+            allemail += ' ,'+email3;
+        });
+        $("select.purpose").change(function(){
+        selectedPurpose = $(this).children("option:selected").val();
+        if(selectedPurpose == 'personal'){
+            allemail = "";
+        }
+    });
+
+        // // Render the PayPal button into #paypal-button-container
+                            paypal.Buttons({
+
+                    // Set up the transaction
+                    createOrder: function(data, actions) {
+                        var quant = $('.hide-amount').text();
+                        amt = quant * 30;
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: amt
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+
+                    var studentId = localStorage.getItem('studentId');
+                    var student_email = localStorage.getItem('student_email');
+                    var student_name = localStorage.getItem('student_name');
+                    var date_issued = new Date();
+                    var transcriptId;
+                    var quant = $('.hide-amount').text();
+            //Saving to transcript history
+                    var transcript = {
+                        "email_to": allemail,
+                        "quantity": $('.hide-amount').text(),
+                        "studentId": studentId,
+                        "date_issued": date_issued.toLocaleString()
+                        };
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:3000/transcripts",
+                        data: transcript,
+                        success: function(data){
+                            transcriptId = data.id;  
+                            //Saving to payment history
+                                var payment = {
+                                        "studentId": studentId,
+                                        "amount": amt,
+                                        "payment_date": date_issued.toLocaleString(),
+                                        "transcriptId": transcriptId
+                                        };
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "http://localhost:3000/payments",
+                                        data: payment,
+                                        success: function(data){
+                                            var paymentId = data.id;
+                                        },
+                                        complete: function(){
+                        // Sending Receipt to student email
+                            Email.send({
+                                Host : "smtp.gmail.com",
+                                Username : "ekrresaochuko@gmail.com",
+                                Password : "Aurora@845",
+                                To : student_email,
+                                From : "support@decagonuniversity.com",
+                                Subject : "Transcript Payment - Receipt",
+                                Body : `<!DOCTYPE html>
                                             <html lang="en">
                                             <head>
                                                 <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
@@ -394,7 +480,7 @@ table th, table td {
             <td>1</td>
             <td>`+quant+`</td>
             <td>#11,100</td>
-            <td>#`+(amt*11100)+`</td>
+            <td>#`+(quant*11100)+`</td>
         </tr>
         
         </table>
@@ -406,14 +492,14 @@ table th, table td {
         <table cellpadding="0" cellspacing="0">
         <tr class="amount-total">
             <th>TOTAL:</th>
-            <td>#`+(amt*11100)+`</td>
+            <td>#`+(quant*11100)+`</td>
         </tr>
         
         <!-- You can use attribute data-hide-on-quote="true" to hide specific information on quotes.
             For example Invoicebus doesn't need amount paid and amount due on quotes  -->
         <tr data-hide-on-quote="true">
             <th>PAID:</th>
-            <td>#`+(amt*11100)+`</td>
+            <td>#`+(quant*11100)+`</td>
         </tr>
         
         </table>
@@ -426,7 +512,7 @@ table th, table td {
 
     <section id="invoice-info">
         <div>
-        <span>Date issued</span> <span>`+date_issued+`</span>
+        <span>Date issued</span> <span>`+date_issued.toLocaleString()+`</span>
         </div>
     </section>
     
@@ -443,4 +529,22 @@ table th, table td {
     <div class="clearfix"></div>
     </div>
 </body>
-</html>
+</html>`
+                                        }).then(
+            message => alert("Just sent your receipt to "+student_email)
+            );  
+            // End of sending receipt to student email 
+                                        }
+                                    });
+                        },
+                        complete: function(){
+                        }
+                    }); 
+                    // Show a success message to the buyer
+                    // alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    swal("Thank you!", 'Transaction completed by ' + details.payer.name.given_name, "success");
+                });
+            }
+
+
+        }).render('#paypal-button-container');

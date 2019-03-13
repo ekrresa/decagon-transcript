@@ -38,9 +38,10 @@
                     <h1 class="title">Decagon University</h1>
                     <h3 class="sub-title">Transcipt Request</h3>
                 </div>
-                <div class="student-login">
+                <div class="student-login mx-auto">
                     <form action="" method="post" name="student-login">
-                        <input type="text" id="student" class="login-text" name="username" placeholder="Email/Matric No">
+                        <input type="text" id="student" class="login-text" name="username" placeholder="Email">
+                        <input type="password" id="student" class="login-text" name="password" placeholder="Password" required>
                         <input type="submit" id="login" class="login-button" value="Login">
                     </form>
                 <div class="mx-auto" id="loading"></div>
@@ -52,5 +53,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="./ui/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./ui/js/student-login.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
