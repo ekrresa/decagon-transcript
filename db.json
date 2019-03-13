@@ -48,7 +48,22 @@
       "id": 3
     }
   ],
-  "payments": [],
+  "payments": [
+    {
+      "id": 4,
+      "studentId": 2,
+      "amount": "3000.00",
+      "payment_date": "Wed Mar 13 2019 11:47:46 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": 2
+    },
+    {
+      "id": 2,
+      "studentId": 4,
+      "amount": "6000.00",
+      "payment_date": "Wed Mar 13 2019 12:57:46 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": 3
+    }
+  ],
   "admin": [
     {
       "id": 1,
