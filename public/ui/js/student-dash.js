@@ -1,13 +1,13 @@
 $(document).ready(function() {
   var user;
-  function processForm() {
-    var param = location.search.substring(1).split("&");
-    var temp = param[0].split("=");
-    user = unescape(temp[1]);
-  }
-  processForm();
+  // function processForm() {
+  //   var param = location.search.substring(1).split("&");
+  //   var temp = param[0].split("=");
+  //   user = unescape(temp[1]);
+  // }
+  // processForm();
   user = localStorage.getItem("student_email");
-  let studentId = localStorage.getItem("studentId");
+  let studentId = localStorage.getItem("student_Id");
   $.ajax({
     type: "GET",
     url: `http://localhost:3000/students?id=${studentId}`,
@@ -42,34 +42,29 @@ $(document).ready(function() {
   });
 
   //   Payments Data
-  $.get(
-    `http://localhost:3000/payments?studentId=${studentId}&_expand=transcript`,
-    function(data) {
-      let tableBody = $("#payBody");
-      let i = 0;
-      for (const row of data) {
-        let id = createNode("th", ++i);
-        let email = createNode("td", row.transcript.email_to);
-        let amount = createNode("td", row.amount);
-        let date = createNode("td", row.payment_date);
+  $.get(`http://localhost:3000/payments?studentId=${studentId}&_expand=transcript`, function(data) {
+    let tableBody = $("#payBody");
+    let i = 0;
+    for (const row of data) {
+      let id = createNode("th", ++i);
+      let email = createNode("td", row.transcript.email_to);
+      let amount = createNode("td", row.amount);
+      let date = createNode("td", row.payment_date);
 
-        let tableRow = createNode("tr");
+      let tableRow = createNode("tr");
 
-        append(tableRow, id);
-        append(tableRow, email);
-        append(tableRow, amount);
-        append(tableRow, date);
+      append(tableRow, id);
+      append(tableRow, email);
+      append(tableRow, amount);
+      append(tableRow, date);
 
-        // Append row to table body
-        tableBody.append(tableRow);
-      }
+      // Append row to table body
+      tableBody.append(tableRow);
     }
-  );
+  });
 
   // Transcripts Data
-  $.get(`http://localhost:3000/transcripts?studentId=${studentId}`, function(
-    data
-  ) {
+  $.get(`http://localhost:3000/transcripts?studentId=${studentId}`, function(data) {
     let tableBody = $("#transBody");
     let i = 0;
     for (const row of data) {
