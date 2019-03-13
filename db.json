@@ -54,6 +54,20 @@
       "studentId": "2",
       "date_issued": "3/12/2019, 5:00:30 PM",
       "id": 3
+    },
+    {
+      "email_to": "",
+      "quantity": "1",
+      "studentId": "1",
+      "date_issued": "3/13/2019, 12:40:37 AM",
+      "id": 4
+    },
+    {
+      "email_to": "yahoo@yahoo.com",
+      "quantity": "1",
+      "studentId": "1",
+      "date_issued": "3/13/2019, 12:41:48 AM",
+      "id": 5
     }
   ],
   "payments": [
@@ -77,6 +91,20 @@
       "payment_date": "3/12/2019, 5:00:30 PM",
       "transcriptId": "3",
       "id": 3
+    },
+    {
+      "studentId": "1",
+      "amount": "30",
+      "payment_date": "3/13/2019, 12:40:37 AM",
+      "transcriptId": "4",
+      "id": 4
+    },
+    {
+      "studentId": "1",
+      "amount": "30",
+      "payment_date": "3/13/2019, 12:41:48 AM",
+      "transcriptId": "5",
+      "id": 5
     }
   ],
   "admin": [
@@ -99,5 +127,12 @@
       "id": 3
     }
   ],
-  "logs": []
+  "logs": [
+    {
+      "studentId": "1",
+      "login_time": "Wed Mar 13 2019 00:39:01 GMT-0400 (Eastern Daylight Time)",
+      "logout_time": "",
+      "id": 1
+    }
+  ]
 }

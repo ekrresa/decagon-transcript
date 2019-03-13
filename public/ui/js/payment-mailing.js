@@ -541,7 +541,8 @@ table th, table td {
                         }
                     }); 
                     // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    // alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    swal("Thank you!", 'Transaction completed by ' + details.payer.name.given_name, "success");
                 });
             }
 
