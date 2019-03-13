@@ -31,6 +31,9 @@
       "createdAt": "date",
       "updatedAt": "Thu Feb 28 2019 01:21:23 GMT+0100 (West Africa Standard Time)",
       "id": 2
+    },
+    {
+      "id": 3
     }
   ],
   "transcripts": [
@@ -109,9 +112,9 @@
   ],
   "logs": [
     {
-      "studentId": "7",
-      "login_time": "Wed Mar 13 2019 08:06:48 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "Wed Mar 13 2019 08:07:36 GMT+0100 (West Africa Standard Time)",
+      "studentId": "",
+      "login_time": "Wed Mar 13 2019 11:27:52 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Wed Mar 13 2019 11:28:50 GMT+0100 (West Africa Standard Time)",
       "id": 1
     }
   ]
