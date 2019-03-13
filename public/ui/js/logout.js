@@ -2,7 +2,7 @@ $(document).ready(function() {
   let logout = $(".logout");
   logout.click(function() {
     let logId = localStorage.getItem("logId");
-    let studentId = localStorage.getItem("studentId");
+    let studentId = localStorage.getItem("student_Id");
     let loginTime = localStorage.getItem("loginTime");
 
     let newData = {
@@ -17,7 +17,7 @@ $(document).ready(function() {
       data: newData
     });
     localStorage.removeItem("student_email");
-    localStorage.removeItem("studentId");
+    localStorage.removeItem("student_Id");
     localStorage.removeItem("student_name");
     localStorage.removeItem("logId");
     localStorage.removeItem("loginTime");
