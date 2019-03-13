@@ -1,5 +1,5 @@
 $.get(
-  "http://localhost:3000/payments?_expand=transcript&_expand=student&_sort=payment_date&_order=desc",
+  `${baseUrl}payments?_expand=transcript&_expand=student&_sort=payment_date&_order=desc`,
   function(data) {
     let tableBody = $("#tableBody");
     let total = $(".numRows");

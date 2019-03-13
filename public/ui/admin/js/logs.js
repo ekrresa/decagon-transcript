@@ -1,4 +1,4 @@
-$.get("http://localhost:3000/logs?_expand=student", function(data) {
+$.get(`${baseUrl}logs?_expand=student`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
