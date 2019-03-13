@@ -47,7 +47,7 @@ $.get("http://localhost:3000/transcripts?_expand=student", function(data) {
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.email_to);
     let quantity = createNode("td", row.quantity);
-    let date = createNode("td", row.date_issued);
+    let date = createNode("td", formatDate(row.date_issued));
     let fullname = createNode("td", names);
 
     let tableRow = createNode("tr");
@@ -75,7 +75,7 @@ $.get("http://localhost:3000/payments?_expand=transcript&_expand=student", funct
     let matric = createNode("td", row.student.matric);
     let email = createNode("td", row.transcript.email_to);
     let amount = createNode("td", row.amount);
-    let date = createNode("td", row.payment_date);
+    let date = createNode("td", formatDate(row.payment_date));
 
     let tableRow = createNode("tr");
     append(tableRow, id);
@@ -102,4 +102,20 @@ function createNode(element, text) {
 // Append child to parent
 function append(parent, el) {
   return parent.appendChild(el);
+}
+
+// Format date
+function formatDate(date) {
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  };
+
+  let dateObj = new Date(date);
+  return dateObj.toLocaleDateString("en-US", options);
 }

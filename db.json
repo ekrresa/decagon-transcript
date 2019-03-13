@@ -3,17 +3,16 @@
     {
       "firstname": "ochuko",
       "lastname": "ekrresa",
-      "matric": "84374389",
-      "password": "wkrr0i9c",
+      "matric": "12345",
       "email": "kelvinekrresa@gmail.com",
-      "gender": "male",
+      "gender": "Male",
       "department": "accounting",
       "faculty": "social sciences",
       "adm_year": "2013",
       "grad_year": "2017",
       "cgpa": "3.87",
       "createdAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
-      "updatedAt": "Tue Mar 12 2019 12:15:13 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Tue Mar 12 2019 14:24:40 GMT+0100 (West Africa Standard Time)",
       "id": 7
     },
     {
@@ -93,5 +92,12 @@
       "id": 3
     }
   ],
-  "logs": []
+  "logs": [
+    {
+      "studentId": "7",
+      "login_time": "Wed Mar 13 2019 08:06:48 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Wed Mar 13 2019 08:07:36 GMT+0100 (West Africa Standard Time)",
+      "id": 1
+    }
+  ]
 }

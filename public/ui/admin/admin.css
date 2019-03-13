@@ -110,3 +110,7 @@ thead th {
   text-transform: uppercase;
   font-weight: 600;
 }
+#btn-pdf {
+  background-color: #44a711;
+  border-color: #44a711;
+}
