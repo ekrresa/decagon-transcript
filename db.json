@@ -78,6 +78,13 @@
       "studentId": "4",
       "date_issued": "Wed Mar 13 2019 12:47:46 GMT+0100 (West Africa Standard Time)",
       "id": 3
+    },
+    {
+      "email_to": "abc@gmail.comabc@gmail.comkelvinekrresa@gmail.com",
+      "quantity": "1",
+      "studentId": "6",
+      "date_issued": "Thu Mar 14 2019 19:19:17 GMT+0100 (West Africa Standard Time)",
+      "id": 4
     }
   ],
   "payments": [
@@ -94,6 +101,13 @@
       "amount": "6000.00",
       "payment_date": "Wed Mar 13 2019 12:57:46 GMT+0100 (West Africa Standard Time)",
       "transcriptId": 3
+    },
+    {
+      "studentId": "6",
+      "amount": "11100.00",
+      "payment_date": "Thu Mar 14 2019 19:19:17 GMT+0100 (West Africa Standard Time)",
+      "transcriptId": "4",
+      "id": 5
     }
   ],
   "admin": [
@@ -128,6 +142,12 @@
       "login_time": "Thu Mar 14 2019 18:13:09 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Thu Mar 14 2019 18:40:49 GMT+0100 (West Africa Standard Time)",
       "id": 7
+    },
+    {
+      "studentId": "6",
+      "login_time": "Thu Mar 14 2019 19:18:02 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Thu Mar 14 2019 19:21:23 GMT+0100 (West Africa Standard Time)",
+      "id": 8
     }
   ]
 }
