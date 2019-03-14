@@ -471,4 +471,38 @@ input[type="submit"].transcript-button{
   .login100-form-btn:hover:before {
     opacity: 1;
   }
+  #paypal-button-container{
+      display: inline-block;
+      margin-top: 8px;
+  }
+#payment-button-container{
+    display: none;
+    width:40%;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 10px;
+    margin-top: -30px;
+}
+#paystack-pay{
+    display: inline-block;
+    float: left;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+#paystack-pay img{
+    vertical-align: inherit !important;
+}
+@media (max-width:1100px){
+    #payment-button-container{
+        width:40%;
+    }
+    #paystack-pay{
+        display: block;
+        float: none;
+    }
+}
+@media (max-width:700px){
+    #payment-button-container{
+        width:70%;
+    }
+}
   

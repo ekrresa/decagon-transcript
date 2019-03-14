@@ -27,7 +27,7 @@ $("select.purpose").change(function() {
 
 function payWithPaystack(){
     var quant = $(".hide-amount").text();
-      amt_2 = quant * 1110000;
+      amt_2 = quant * 11100;
       var studentId = localStorage.getItem("student_Id");
       var student_email = localStorage.getItem("student_email");
       var student_name = localStorage.getItem("student_name");
@@ -37,7 +37,7 @@ function payWithPaystack(){
     var handler = PaystackPop.setup({
       key: 'pk_test_0cd240ad68becfbfb59b23da9483a7d6e9a756ec',
       email: student_email,
-      amount: amt_2,
+      amount: quant * 1110000,
       currency: "NGN",
       ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
       firstname: student_name,
@@ -69,7 +69,7 @@ function payWithPaystack(){
               //Saving to payment history
               var payment = {
                 studentId: studentId,
-                amount: amt,
+                amount: amt_2,
                 payment_date: data.date_issued,
                 transcriptId: transcriptId
               };

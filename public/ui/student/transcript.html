@@ -51,7 +51,7 @@
             <li class="breadcrumb-item active" aria-current="page">Transcript</li>
         </ol>
         <div class="scroll-box">
-            <h5 class="scroll-text"><span>Note that the cost for a transcript request per email is $30....</span></h5>
+            <h5 class="scroll-text"><span>Note that the cost for a transcript request per email is $30.00(#11,100.00)....</span></h5>
         </div>
         </nav>
     </div>
@@ -78,10 +78,14 @@
                         
                     </table>
                     <div class="error"><span class="error-form" id="email_error_message"></span></div>
-                    <center><button type="button" id="get-link" class="btn btn-success">Get Link to Pay</button><br>
-                        <div id="paypal-button-container" onclick="javascript:this.parentNode.submit()"></div></center>
+                    <div class="mx-auto" ><button type="button" id="get-link" class="btn btn-success">Get Link to Pay</button><br>
+                        <div id="payment-button-container" class="mx-auto">
+                            <div id="paystack-pay"><img src="../images/paystact-icon.png" onclick="payWithPaystack()" ></div>
+                            <div id="paypal-button-container" class="paypal-pay" onclick="javascript:this.parentNode.submit()"></div>
+                        </div>
+                    </div>
             </form>
-            <button onclick="payWithPaystack()">Pay</button>
+
         </div>
     </div>
     <div class="hide-amount">1</div>

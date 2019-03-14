@@ -85,6 +85,7 @@ $(document).ready(function() {
     error_email = false;
     check_email();
     if (error_email === false) {
+      $("#payment-button-container").show();
       $("#paypal-button-container").show();
       $("#get-link").hide();
     } else {
