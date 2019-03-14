@@ -10,11 +10,11 @@ $('input[type="email"]#email-1').focusout(function() {
 });
 $(document).on("focusout", "#email-2", function() {
   var email2 = $(this).val();
-  allemail_2 += " ," + email2;
+  allemail_2 += ", " + email2;
 });
 $(document).on("focusout", "#email-3", function() {
   var email3 = $(this).val();
-  allemail_2 += " ," + email3;
+  allemail_2 += ", " + email3;
 });
 $("select.purpose").change(function() {
   selectedPurpose = $(this)
@@ -69,7 +69,7 @@ function payWithPaystack(){
               //Saving to payment history
               var payment = {
                 studentId: studentId,
-                amount: quant * 11100.00,
+                amount: quant * 11100+'.00',
                 payment_date: data.date_issued,
                 transcriptId: transcriptId
               };

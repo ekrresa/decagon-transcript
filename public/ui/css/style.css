@@ -477,17 +477,11 @@ input[type="submit"].transcript-button{
   }
 #payment-button-container{
     display: none;
-    width:40%;
+    width:220px;
     border: 1px solid rgb(153, 153, 153);
     border-radius: 10px;
     margin-top: -30px;
 }
-/* #paystack-pay{
-    display: inline-block;
-    float: left;
-    margin-left: 35px;
-    margin-top: 15px;
-} */
 #paystack-pay:hover{
     background: azure;
     border-radius: 10px;
@@ -497,7 +491,7 @@ input[type="submit"].transcript-button{
     vertical-align: inherit !important;
     cursor: pointer;
 }
-@media (max-width:1100px){
+/* @media (max-width:1100px){
     #payment-button-container{
         width:40%;
     }
@@ -510,5 +504,27 @@ input[type="submit"].transcript-button{
     #payment-button-container{
         width:70%;
     }
+} */
+
+footer .footer{
+    position: absolute;
+    bottom: 0;
+    background: #343a40;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.about-us{
+    margin-top: 60px;
+    text-align: center;
+}
+.about-us .title{
+    margin-bottom: 20px;
+    text-align: left;
+}
+.about-us .sub-title{
+    font-size: 18px;
+    text-align: justify
 }
   

@@ -8,7 +8,7 @@ $(document).ready(function() {
   $("span#email_error_message").hide();
   var error_email = false;
   var email2 = "abc@gmail.com";
-  var email3 = "abc@gmail.com";
+  var email3 = "abw@gmail.com";
 
   $("select.purpose").change(function() {
     selectedPurpose = $(this)
@@ -65,11 +65,11 @@ $(document).ready(function() {
   function check_email() {
     var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     var email = $('input[type="email"]').val();
-    if (
-      pattern.test(email) &&
-      email !== "" &&
+    if ((
+      (pattern.test(email) &&
+      email !== "") &&
       (pattern.test(email2) && email2 !== "") &&
-      (pattern.test(email3) && email3 !== "")
+      (pattern.test(email3) && email3 !== "")) && ((email!=email2)&&(email2!=email3)&&(email!=email3))
     ) {
       $("span#email_error_message").hide();
       $('input[type="email"]').css("border-bottom", "2px solid #34f458");
