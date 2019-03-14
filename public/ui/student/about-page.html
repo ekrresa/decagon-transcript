@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Student Dashboard</title>
+    <title>About Us</title>
     <script>
         if(!localStorage.student_email){
             window.location = "../../index.html";
@@ -48,47 +48,10 @@
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../student/student-dashboard.html">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Transcript</li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
         </ol>
-        <div class="scroll-box">
-            <h5 class="scroll-text"><span>Note that the cost for a transcript request per email is #11,100.00 ....</span></h5>
-        </div>
         </nav>
     </div>
-    <div class="apply-content">
-        <h2>Transcript Application</h2>
-        <h4 class="transcript-instruct">kindly select the purpose of your request application</h4>
-        <div class="apply-form">
-            <form action="" method="POST">
-                <table class="table table-borderless" align="center">
-                        <tbody>
-                            <tr>
-                            <td id="right"><label>Transcript Purpose</label></td>
-                            <td id="left"><select class="purpose">
-                                    <option value="personal">Personal</option>
-                                    <option value="academic">Academic/Company</option>
-                                </select></td>
-                            </tr>
-                            <tr id="academic">
-                                <td id="right"><label id="label">Email</label></td>
-                                <td id="left"><input type="email" id="email-1" name="personal-email-1" placeholder="abc@yahoo.com">
-                                    <button type="button" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
-                            </tr>
-                        </tbody>
-                        
-                    </table>
-                    <div class="error"><span class="error-form" id="email_error_message"></span></div>
-                    <div class="mx-auto" ><button type="button" id="get-link" class="btn btn-success">Get Link to Pay</button><br>
-                        <div id="payment-button-container" class="mx-auto">
-                            <div id="paystack-pay"><img src="../images/paystact-icon.png" onclick="payWithPaystack()" ></div>
-                            <!-- <div id="paypal-button-container" class="paypal-pay" onclick="javascript:this.parentNode.submit()"></div> -->
-                        </div>
-                    </div>
-            </form>
-
-        </div>
-    </div>
-    <div class="hide-amount">1</div>
     <!-- Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
         aria-hidden="true">
@@ -118,11 +81,7 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
     <script src="../js/logout.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>
-    <script type="text/javascript" src="../js/paystack-pay.js"></script>
 </body>
 
 </html>

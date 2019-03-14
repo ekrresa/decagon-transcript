@@ -69,7 +69,7 @@ function payWithPaystack(){
               //Saving to payment history
               var payment = {
                 studentId: studentId,
-                amount: quant * 30,
+                amount: quant * 11100.00,
                 payment_date: data.date_issued,
                 transcriptId: transcriptId
               };
