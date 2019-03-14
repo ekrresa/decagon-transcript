@@ -77,7 +77,6 @@ body{
 }
 .student-login input::placeholder{
     color: rgb(59, 59, 59);
-    font-family: fontawesome;
 }
 .student-login input[type="submit"]{
     color: #fff;
