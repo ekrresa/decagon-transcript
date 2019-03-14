@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Admin | Login</title>
+    <script>
+      if (localStorage.admin_email && localStorage.admin_name) {
+        window.location.href = "./ui/admin/dashboard.html";
+      }
+    </script>
     <link rel="stylesheet" href="./ui/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./ui/admin/admin.css" />
   </head>
