@@ -46,6 +46,22 @@
       "createdAt": "Wed Mar 13 2019 15:30:25 GMT+0100 (West Africa Standard Time)",
       "updatedAt": "Wed Mar 13 2019 15:30:25 GMT+0100 (West Africa Standard Time)",
       "id": 5
+    },
+    {
+      "firstname": "victor",
+      "lastname": "omolayo",
+      "matric": "8425432",
+      "password": "U2FsdGVkX1/HeUXaT3Rw6XK1mJ4GkqAO6pv4OvlQs00=",
+      "email": "ekrresaochuko@gmail.com",
+      "gender": "male",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "adm_year": "2009",
+      "grad_year": "2014",
+      "cgpa": "4.87",
+      "createdAt": "Thu Mar 14 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Thu Mar 14 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
+      "id": 6
     }
   ],
   "transcripts": [
@@ -106,6 +122,12 @@
       "login_time": "Wed Mar 13 2019 15:32:16 GMT+0100 (West Africa Standard Time)",
       "logout_time": "Wed Mar 13 2019 16:47:51 GMT+0100 (West Africa Standard Time)",
       "id": 6
+    },
+    {
+      "studentId": "6",
+      "login_time": "Thu Mar 14 2019 18:13:09 GMT+0100 (West Africa Standard Time)",
+      "logout_time": "Thu Mar 14 2019 18:40:49 GMT+0100 (West Africa Standard Time)",
+      "id": 7
     }
   ]
 }

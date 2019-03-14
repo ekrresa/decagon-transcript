@@ -52,6 +52,7 @@ $(document).ready(function() {
         if (res1[0].length === 0 && res2[0].length === 0) {
           const url = `${baseUrl}students`;
           const password = generatePassword();
+          const encrypted = CryptoJS.AES.encrypt(password, student_email);
 
           // Get form values
           let formData = {
@@ -62,7 +63,7 @@ $(document).ready(function() {
               .val()
               .toLowerCase(),
             matric: matric_number,
-            password,
+            password: encrypted.toString(),
             email: student_email,
             gender: $("#gender")
               .val()

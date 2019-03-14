@@ -18,6 +18,9 @@ $(document).ready(function() {
     const getUrl = baseUrl + `students?email=${student_email}`;
 
     $.get(getUrl, function(data) {
+      const decrypted = CryptoJS.AES.decrypt(data[0].password, data[0].email);
+      const decryptedPassword = decrypted.toString(CryptoJS.enc.Utf8);
+
       if (data.length === 0) {
         swal({
           title: "Error!",
@@ -25,7 +28,7 @@ $(document).ready(function() {
           icon: "error",
           button: "Close"
         });
-      } else if (data[0].email === student_email && data[0].password === student_password) {
+      } else if (data[0].email === student_email && decryptedPassword === student_password) {
         localStorage.setItem("student_email", student_email);
         localStorage.setItem("student_name", data[0].firstname);
         localStorage.setItem("student_Id", data[0].id);
