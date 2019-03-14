@@ -1,6 +1,8 @@
 const getUrl = `${baseUrl}students?email=${urlParams.get("email")}`;
 const student_form = $("form");
 let createDate;
+let password;
+
 // Get student data, populate form fields
 $.get(getUrl, function(data) {
   let student = data[0];
@@ -18,6 +20,7 @@ $.get(getUrl, function(data) {
   $("#cgpa").val(data[0].cgpa);
   student_form.attr("action", `${baseUrl}students/${data[0].id}`);
   createDate = data[0].createdAt;
+  password = data[0].password;
 });
 
 $(document).ready(function() {
@@ -29,6 +32,7 @@ $(document).ready(function() {
     let formdata = {
       firstname: $("#firstname").val(),
       lastname: $("#lastname").val(),
+      password,
       matric: $("#matric").val(),
       email: $("#email").val(),
       gender: $("#gender").val(),
