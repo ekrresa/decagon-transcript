@@ -69,7 +69,7 @@ function payWithPaystack(){
               //Saving to payment history
               var payment = {
                 studentId: studentId,
-                amount: amt_2,
+                amount: quant * 30,
                 payment_date: data.date_issued,
                 transcriptId: transcriptId
               };
@@ -449,7 +449,7 @@ table th, table td {
     <section id="invoice-title-number">
     
         <span id="title">Transcript Receipt</span>
-        <span id="number">`(Math.floor((Math.random() * 1000000000) + 1))`</span>
+        <span id="number">${Math.floor((Math.random() * 1000000000) + 1)}</span>
         
     </section>
     
@@ -562,8 +562,6 @@ table th, table td {
             icon: "success",
             button: "Close"
           });
-
-          alert('success. transaction ref is ' + response.reference);
       },
       onClose: function(){
           alert('window closed');

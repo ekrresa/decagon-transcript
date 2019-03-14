@@ -490,6 +490,7 @@ input[type="submit"].transcript-button{
 }
 #paystack-pay img{
     vertical-align: inherit !important;
+    cursor: pointer;
 }
 @media (max-width:1100px){
     #payment-button-container{

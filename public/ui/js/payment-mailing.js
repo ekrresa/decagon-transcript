@@ -548,7 +548,14 @@ table th, table td {
     </div>
 </body>
 </html>`
-                  });
+                  }).then(function (msg) {
+                    swal({
+                      title: "Thank you!",
+                      text: "Payment completed. Invoice has been sent to your email: " + student_email,
+                      icon: "success",
+                      button: "Close"
+                    });
+                  })
                   // End of sending receipt to student email
                 }
               });
@@ -556,12 +563,7 @@ table th, table td {
             complete: function() {}
           });
           // Show a success message to the buyer
-          swal({
-            title: "Thank you!",
-            text: "Payment completed. Invoice has been sent to your email: " + student_email,
-            icon: "success",
-            button: "Close"
-          });
+          
         })
         .catch(err => {
           swal({
