@@ -15,6 +15,22 @@
       "createdAt": "Thu Mar 14 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
       "updatedAt": "Thu Mar 14 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
       "id": 1
+    },
+    {
+      "firstname": "zootopia",
+      "lastname": "omolayo",
+      "matric": "8425432",
+      "password": "U2FsdGVkX1/HeUXaT3Rw6XK1mJ4GkqAO6pv4OvlQs00=",
+      "email": "ekrresaochuko@gmail.com",
+      "gender": "male",
+      "department": "accounting",
+      "faculty": "social sciences",
+      "adm_year": "2009",
+      "grad_year": "2014",
+      "cgpa": "4.87",
+      "createdAt": "Thu Mar 15 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
+      "updatedAt": "Thu Mar 15 2019 17:58:52 GMT+0100 (West Africa Standard Time)",
+      "id": 2
     }
   ],
   "transcripts": [
@@ -73,7 +89,7 @@
     {
       "studentId": "1",
       "login_time": "Fri Mar 15 2019 07:35:55 GMT+0100 (West Africa Standard Time)",
-      "logout_time": "",
+      "logout_time": "Fri Mar 15 2019 09:09:31 GMT+0100 (West Africa Standard Time)",
       "id": 2
     }
   ]

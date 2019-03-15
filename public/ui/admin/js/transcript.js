@@ -1,4 +1,4 @@
-$.get(`${baseUrl}transcripts?_expand=student`, function(data) {
+$.get(`${baseUrl}transcripts?_expand=student&_sort=date_issued&_order=asc`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);

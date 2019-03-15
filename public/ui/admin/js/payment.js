@@ -1,5 +1,5 @@
 $.get(
-  `${baseUrl}payments?_expand=transcript&_expand=student&_sort=payment_date&_order=desc`,
+  `${baseUrl}payments?_expand=transcript&_expand=student&_sort=payment_date&_order=asc`,
   function(data) {
     let tableBody = $("#tableBody");
     let total = $(".numRows");

@@ -42,29 +42,34 @@ $(document).ready(function() {
   });
 
   //   Payments Data
-  $.get(`${baseUrl}payments?studentId=${studentId}&_expand=transcript`, function(data) {
-    let tableBody = $("#payBody");
-    let i = 0;
-    for (const row of data) {
-      let id = createNode("th", ++i);
-      let email = createNode("td", row.transcript.email_to);
-      let amount = createNode("td", formatAmt(row.amount));
-      let date = createNode("td", formatDate(row.payment_date));
+  $.get(
+    `${baseUrl}payments?studentId=${studentId}&_expand=transcript&_sort=payment_date&_order=asc`,
+    function(data) {
+      let tableBody = $("#payBody");
+      let i = 0;
+      for (const row of data) {
+        let id = createNode("th", ++i);
+        let email = createNode("td", row.transcript.email_to);
+        let amount = createNode("td", formatAmt(row.amount));
+        let date = createNode("td", formatDate(row.payment_date));
 
-      let tableRow = createNode("tr");
+        let tableRow = createNode("tr");
 
-      append(tableRow, id);
-      append(tableRow, email);
-      append(tableRow, amount);
-      append(tableRow, date);
+        append(tableRow, id);
+        append(tableRow, email);
+        append(tableRow, amount);
+        append(tableRow, date);
 
-      // Append row to table body
-      tableBody.append(tableRow);
+        // Append row to table body
+        tableBody.append(tableRow);
+      }
     }
-  });
+  );
 
   // Transcripts Data
-  $.get(`${baseUrl}transcripts?studentId=${studentId}`, function(data) {
+  $.get(`${baseUrl}transcripts?studentId=${studentId}&_sort=date_issued&_order=asc`, function(
+    data
+  ) {
     let tableBody = $("#transBody");
     let i = 0;
     for (const row of data) {
