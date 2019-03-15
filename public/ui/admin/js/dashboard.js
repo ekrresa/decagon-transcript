@@ -1,4 +1,4 @@
-$.get(`${baseUrl}students?_sort=createdAt&_order=asc`, function(data) {
+$.get(`${baseUrl}students?_sort=id&_order=desc`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
@@ -11,7 +11,6 @@ $.get(`${baseUrl}students?_sort=createdAt&_order=asc`, function(data) {
     let lastname = createNode("td", student.lastname);
     let email = createNode("td", student.email);
     let matric = createNode("td", student.matric);
-    let gender = createNode("td", student.gender);
     let dept = createNode("td", student.department);
     let faculty = createNode("td", student.faculty);
     let adm = createNode("td", student.adm_year);

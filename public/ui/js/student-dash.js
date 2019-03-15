@@ -1,11 +1,5 @@
 $(document).ready(function() {
   var user;
-  // function processForm() {
-  //   var param = location.search.substring(1).split("&");
-  //   var temp = param[0].split("=");
-  //   user = unescape(temp[1]);
-  // }
-  // processForm();
   user = localStorage.getItem("student_email");
   let studentId = localStorage.getItem("student_Id");
   $.ajax({
@@ -42,29 +36,32 @@ $(document).ready(function() {
   });
 
   //   Payments Data
-  $.get(`${baseUrl}payments?studentId=${studentId}&_expand=transcript`, function(data) {
-    let tableBody = $("#payBody");
-    let i = 0;
-    for (const row of data) {
-      let id = createNode("th", ++i);
-      let email = createNode("td", row.transcript.email_to);
-      let amount = createNode("td", row.amount);
-      let date = createNode("td", formatDate(row.payment_date));
+  $.get(
+    `${baseUrl}payments?studentId=${studentId}&_expand=transcript&_sort=id&_order=desc`,
+    function(data) {
+      let tableBody = $("#payBody");
+      let i = 0;
+      for (const row of data) {
+        let id = createNode("th", ++i);
+        let email = createNode("td", row.transcript.email_to);
+        let amount = createNode("td", formatAmt(row.amount));
+        let date = createNode("td", formatDate(row.payment_date));
 
-      let tableRow = createNode("tr");
+        let tableRow = createNode("tr");
 
-      append(tableRow, id);
-      append(tableRow, email);
-      append(tableRow, amount);
-      append(tableRow, date);
+        append(tableRow, id);
+        append(tableRow, email);
+        append(tableRow, amount);
+        append(tableRow, date);
 
-      // Append row to table body
-      tableBody.append(tableRow);
+        // Append row to table body
+        tableBody.append(tableRow);
+      }
     }
-  });
+  );
 
   // Transcripts Data
-  $.get(`${baseUrl}transcripts?studentId=${studentId}`, function(data) {
+  $.get(`${baseUrl}transcripts?studentId=${studentId}&_sort=id&_order=desc`, function(data) {
     let tableBody = $("#transBody");
     let i = 0;
     for (const row of data) {
@@ -105,6 +102,12 @@ function append(parent, el) {
 }
 // Format date
 function formatDate(date) {
+  if (date === "") {
+    return "USER STILL LOGGED IN!";
+  }
+  if (date === undefined) {
+    return;
+  }
   let options = {
     weekday: "long",
     year: "numeric",
@@ -117,4 +120,9 @@ function formatDate(date) {
 
   let dateObj = new Date(date);
   return dateObj.toLocaleDateString("en-US", options);
+}
+// Format payments
+function formatAmt(amt) {
+  let currency = amt.slice(0, amt.length - 3);
+  return currency.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
