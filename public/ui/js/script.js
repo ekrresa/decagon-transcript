@@ -7,8 +7,8 @@ $(document).ready(function() {
   var nos = 1;
   $("span#email_error_message").hide();
   var error_email = false;
-  var email2 = "abc@gmail.com";
-  var email3 = "abc@gmail.com";
+  var email2 = "b@b.com";
+  var email3 = "a@a.com";
 
   $("select.purpose").change(function() {
     selectedPurpose = $(this)
@@ -42,12 +42,15 @@ $(document).ready(function() {
       nos +
       '" name="email-' +
       nos +
-      '" placeholder="abc@yahoo.com"></td></tr>';
+      '" placeholder="abc@yahoo.com" autofocus></td></tr>';
     $(".apply-form table tbody").append(tr);
     $("div.hide-amount").text(nos);
     if (nos === 3) {
       $("#add-btn").attr("disabled", "disabled");
     }
+
+    $("#payment-button-container").hide();
+      $("#get-link").show();
   });
 
   $('input[type="email"]').focusout(function() {
@@ -55,21 +58,31 @@ $(document).ready(function() {
   });
   $(document).on("focusout", "#email-2", function() {
     email2 = $(this).val();
+    $("#payment-button-container").hide();
+      $("#get-link").show();
     check_email();
   });
   $(document).on("focusout", "#email-3", function() {
     email3 = $(this).val();
+    $("#payment-button-container").hide();
+      $("#get-link").show();
     check_email();
   });
 
   function check_email() {
     var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     var email = $('input[type="email"]').val();
-    if (
-      pattern.test(email) &&
-      email !== "" &&
+
+    if(gomail){
+      email2 = "b@b.com";
+      email3 = "a@a.com";
+    }
+
+    if ((
+      (pattern.test(email) &&
+      email !== "") &&
       (pattern.test(email2) && email2 !== "") &&
-      (pattern.test(email3) && email3 !== "")
+      (pattern.test(email3) && email3 !== "")) && ((email!=email2)&&(email2!=email3)&&(email!=email3))
     ) {
       $("span#email_error_message").hide();
       $('input[type="email"]').css("border-bottom", "2px solid #34f458");
@@ -77,6 +90,9 @@ $(document).ready(function() {
       $("span#email_error_message").html("Invalid Email");
       $("span#email_error_message").show();
       $('input[type="email"]').css("border-bottom", "2px solid #F90A0A");
+
+      $("#payment-button-container").hide();
+      $("#get-link").show();
       error_email = true;
     }
   }
@@ -85,10 +101,21 @@ $(document).ready(function() {
     error_email = false;
     check_email();
     if (error_email === false) {
-      $("#paypal-button-container").show();
+      $("#payment-button-container").show();
       $("#get-link").hide();
     } else {
-      alert("Please fill the form correctly");
+      swal({
+        title: "Error!",
+        text: "Invalid email(s) Please check and try again",
+        icon: "error",
+        button: "Close"
+      });
     }
   });
+
+  $('#trans-form :input').keyup(function(){
+    $("#payment-button-container").hide();
+      $("#get-link").show();
+  });
+
 });

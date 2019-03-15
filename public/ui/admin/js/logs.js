@@ -1,4 +1,4 @@
-$.get(`${baseUrl}logs?_expand=student`, function(data) {
+$.get(`${baseUrl}logs?_expand=student&_sort=id&_order=desc`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);
@@ -38,6 +38,12 @@ function append(parent, el) {
 }
 // Format date
 function formatDate(date) {
+  if (date === "") {
+    return "USER STILL LOGGED IN!";
+  }
+  if (date === undefined) {
+    return;
+  }
   let options = {
     weekday: "long",
     year: "numeric",

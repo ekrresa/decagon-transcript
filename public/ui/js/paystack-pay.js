@@ -1,62 +1,74 @@
-var amt;
-var allemail = "";
-var paid = false;
+var amt_2;
+var allemail_2 = "";
+var gomail = false;
+
+var email2 = "";
+var email3 = "";
 //Hide the paypal button initially
 $("#paypal-button-container").hide();
 //Getting all the email(s) to send to
 $('input[type="email"]#email-1').focusout(function() {
-  var email1 = $(this).val();
-  allemail += email1;
+  email1 = $(this).val();
 });
 $(document).on("focusout", "#email-2", function() {
-  var email2 = $(this).val();
-  allemail += " ," + email2;
+  email2 = ", "+$(this).val();
 });
 $(document).on("focusout", "#email-3", function() {
-  var email3 = $(this).val();
-  allemail += " ," + email3;
+  email3 = ", "+$(this).val();
 });
 $("select.purpose").change(function() {
   selectedPurpose = $(this)
     .children("option:selected")
     .val();
   if (selectedPurpose == "personal") {
-    allemail = "";
+    allemail_2 = "";
+    email2 = "";
+    email3 = "";
+    gomail = true;
+    $("#payment-button-container").hide();
+      $("#get-link").show();
+  }else{
+    $("#payment-button-container").hide();
+      $("#get-link").show();
   }
 });
-let isSuccessful = false;
-// // Render the PayPal button into #paypal-button-container
-paypal
-  .Buttons({
-    // Set up the transaction
-    createOrder: function(data, actions) {
-      var quant = $(".hide-amount").text();
-      amt = quant * 30;
-      return actions.order.create({
-        purchase_units: [
-          {
-            amount: {
-              value: amt
+
+$("#get-link").click(function() {
+  allemail_2 = email1+''+email2+''+email3;
+});
+
+function payWithPaystack(){
+    var quant = $(".hide-amount").text();
+      amt_2 = quant * 11100;
+      var studentId = localStorage.getItem("student_Id");
+      var student_email = localStorage.getItem("student_email");
+      var student_name = localStorage.getItem("student_name");
+      var date_issued = new Date();
+      var transcriptId;
+
+    var handler = PaystackPop.setup({
+      key: 'pk_test_0cd240ad68becfbfb59b23da9483a7d6e9a756ec',
+      email: student_email,
+      amount: quant * 1110000,
+      currency: "NGN",
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      firstname: student_name,
+      lastname: '',
+      // label: "Optional string that replaces customer email"
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
             }
-          }
-        ]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order
-        .capture()
-        .then(function(details) {
-          isSuccessful = true;
-          var studentId = localStorage.getItem("student_Id");
-          var student_email = localStorage.getItem("student_email");
-          var student_name = localStorage.getItem("student_name");
-          var date_issued = new Date();
-          var transcriptId;
-          var quant = $(".hide-amount").text();
-          //Saving to transcript history
-          var transcript = {
-            email_to: allemail,
-            quantity: $(".hide-amount").text(),
+         ]
+      },
+      callback: function(response){
+
+        var transcript = {
+            email_to: allemail_2,
+            quantity: quant,
             studentId: studentId,
             date_issued: date_issued
           };
@@ -69,7 +81,7 @@ paypal
               //Saving to payment history
               var payment = {
                 studentId: studentId,
-                amount: amt,
+                amount: quant * 11100+'.00',
                 payment_date: data.date_issued,
                 transcriptId: transcriptId
               };
@@ -449,7 +461,7 @@ table th, table td {
     <section id="invoice-title-number">
     
         <span id="title">Transcript Receipt</span>
-        <span id="number">04567223</span>
+        <span id="number">${Math.floor((Math.random() * 1000000000) + 1)}</span>
         
     </section>
     
@@ -562,15 +574,10 @@ table th, table td {
             icon: "success",
             button: "Close"
           });
-        })
-        .catch(err => {
-          swal({
-            title: "Error!",
-            text: "Payment was unsuccessful. Please try again later",
-            icon: "error",
-            button: "Close"
-          });
-        });
-    }
-  })
-  .render("#paypal-button-container");
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
