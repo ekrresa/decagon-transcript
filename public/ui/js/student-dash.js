@@ -1,11 +1,5 @@
 $(document).ready(function() {
   var user;
-  // function processForm() {
-  //   var param = location.search.substring(1).split("&");
-  //   var temp = param[0].split("=");
-  //   user = unescape(temp[1]);
-  // }
-  // processForm();
   user = localStorage.getItem("student_email");
   let studentId = localStorage.getItem("student_Id");
   $.ajax({
@@ -43,7 +37,7 @@ $(document).ready(function() {
 
   //   Payments Data
   $.get(
-    `${baseUrl}payments?studentId=${studentId}&_expand=transcript&_sort=payment_date&_order=asc`,
+    `${baseUrl}payments?studentId=${studentId}&_expand=transcript&_sort=id&_order=desc`,
     function(data) {
       let tableBody = $("#payBody");
       let i = 0;
@@ -67,9 +61,7 @@ $(document).ready(function() {
   );
 
   // Transcripts Data
-  $.get(`${baseUrl}transcripts?studentId=${studentId}&_sort=date_issued&_order=asc`, function(
-    data
-  ) {
+  $.get(`${baseUrl}transcripts?studentId=${studentId}&_sort=id&_order=desc`, function(data) {
     let tableBody = $("#transBody");
     let i = 0;
     for (const row of data) {
