@@ -1,4 +1,4 @@
-$.get(`${baseUrl}logs?_expand=student`, function(data) {
+$.get(`${baseUrl}logs?_expand=student&_sort=id&_order=desc`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);

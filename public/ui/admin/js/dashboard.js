@@ -1,4 +1,4 @@
-$.get(`${baseUrl}students?_sort=createdAt&_order=desc`, function(data) {
+$.get(`${baseUrl}students?_sort=id&_order=desc`, function(data) {
   let tableBody = $("#tableBody");
   let total = $(".numRows");
   total.text(data.length);

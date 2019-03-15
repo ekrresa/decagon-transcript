@@ -1,33 +1,30 @@
-$.get(
-  `${baseUrl}payments?_expand=transcript&_expand=student&_sort=payment_date&_order=asc`,
-  function(data) {
-    let tableBody = $("#tableBody");
-    let total = $(".numRows");
-    total.text(data.length);
-    let serial = 0;
+$.get(`${baseUrl}payments?_expand=transcript&_expand=student&_sort=id&_order=desc`, function(data) {
+  let tableBody = $("#tableBody");
+  let total = $(".numRows");
+  total.text(data.length);
+  let serial = 0;
 
-    for (const row of data) {
-      let names = `${row.student.firstname} ${row.student.lastname}`;
-      let id = createNode("th", ++serial);
-      let fullname = createNode("td", names);
-      let matric = createNode("td", row.student.matric);
-      let email = createNode("td", row.transcript.email_to);
-      let amount = createNode("td", formatAmt(row.amount));
-      let date = createNode("td", formatDate(row.payment_date));
+  for (const row of data) {
+    let names = `${row.student.firstname} ${row.student.lastname}`;
+    let id = createNode("th", ++serial);
+    let fullname = createNode("td", names);
+    let matric = createNode("td", row.student.matric);
+    let email = createNode("td", row.transcript.email_to);
+    let amount = createNode("td", formatAmt(row.amount));
+    let date = createNode("td", formatDate(row.payment_date));
 
-      let tableRow = createNode("tr");
-      append(tableRow, id);
-      append(tableRow, fullname);
-      append(tableRow, matric);
-      append(tableRow, email);
-      append(tableRow, amount);
-      append(tableRow, date);
+    let tableRow = createNode("tr");
+    append(tableRow, id);
+    append(tableRow, fullname);
+    append(tableRow, matric);
+    append(tableRow, email);
+    append(tableRow, amount);
+    append(tableRow, date);
 
-      // Append row to table body
-      tableBody.append(tableRow);
-    }
+    // Append row to table body
+    tableBody.append(tableRow);
   }
-);
+});
 
 // Create html element with textContent
 function createNode(element, text) {
