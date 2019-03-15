@@ -12,7 +12,7 @@ $(document).ready(function() {
       printDelay: 333, // variable print delay
       header: null, // prefix to html
       footer: null, // postfix to html
-      base: "http://localhost:3000/ui/admin/", // preserve the BASE tag or accept a string for the URL
+      base: `http://localhost:3000/ui/admin/`, // preserve the BASE tag or accept a string for the URL
       formValues: true, // preserve input/form values
       canvas: true, // copy canvas content
       doctypeString: "<!DOCTYPE html>", // enter a different doctype for older markup
