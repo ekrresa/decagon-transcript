@@ -12,7 +12,7 @@ $.get(
       let fullname = createNode("td", names);
       let matric = createNode("td", row.student.matric);
       let email = createNode("td", row.transcript.email_to);
-      let amount = createNode("td", row.amount);
+      let amount = createNode("td", formatAmt(row.amount));
       let date = createNode("td", formatDate(row.payment_date));
 
       let tableRow = createNode("tr");
@@ -61,4 +61,9 @@ function formatDate(date) {
 
   let dateObj = new Date(date);
   return dateObj.toLocaleDateString("en-US", options);
+}
+// Format payments
+function formatAmt(amt) {
+  let currency = amt.slice(0, amt.length - 3);
+  return currency.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
