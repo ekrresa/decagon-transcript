@@ -38,6 +38,12 @@ function append(parent, el) {
 }
 // Format date
 function formatDate(date) {
+  if (date === "") {
+    return "USER STILL LOGGED IN!";
+  }
+  if (date === undefined) {
+    return;
+  }
   let options = {
     weekday: "long",
     year: "numeric",

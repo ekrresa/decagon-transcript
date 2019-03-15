@@ -5,25 +5,15 @@ $.get(
     let total = $(".numRows");
     total.text(data.length);
     let serial = 0;
-    let options = {
-      weekday: "long",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric"
-    };
 
     for (const row of data) {
-      let dateObj = new Date(row.payment_date);
       let names = `${row.student.firstname} ${row.student.lastname}`;
       let id = createNode("th", ++serial);
       let fullname = createNode("td", names);
       let matric = createNode("td", row.student.matric);
       let email = createNode("td", row.transcript.email_to);
       let amount = createNode("td", row.amount);
-      let date = createNode("td", dateObj.toLocaleDateString("en-US", options));
+      let date = createNode("td", formatDate(row.payment_date));
 
       let tableRow = createNode("tr");
       append(tableRow, id);
@@ -50,4 +40,25 @@ function createNode(element, text) {
 // Append child to parent
 function append(parent, el) {
   return parent.appendChild(el);
+}
+// Format Date
+function formatDate(date) {
+  if (date === "") {
+    return "USER STILL LOGGED IN!";
+  }
+  if (date === undefined) {
+    return;
+  }
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  };
+
+  let dateObj = new Date(date);
+  return dateObj.toLocaleDateString("en-US", options);
 }
