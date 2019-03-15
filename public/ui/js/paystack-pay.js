@@ -1,20 +1,20 @@
 var amt_2;
 var allemail_2 = "";
-var paid = false;
+var gomail = false;
+
+var email2 = "";
+var email3 = "";
 //Hide the paypal button initially
 $("#paypal-button-container").hide();
 //Getting all the email(s) to send to
 $('input[type="email"]#email-1').focusout(function() {
-  var email1 = $(this).val();
-  allemail_2 += email1;
+  email1 = $(this).val();
 });
 $(document).on("focusout", "#email-2", function() {
-  var email2 = $(this).val();
-  allemail_2 += ", " + email2;
+  email2 = ", "+$(this).val();
 });
 $(document).on("focusout", "#email-3", function() {
-  var email3 = $(this).val();
-  allemail_2 += ", " + email3;
+  email3 = ", "+$(this).val();
 });
 $("select.purpose").change(function() {
   selectedPurpose = $(this)
@@ -22,7 +22,19 @@ $("select.purpose").change(function() {
     .val();
   if (selectedPurpose == "personal") {
     allemail_2 = "";
+    email2 = "";
+    email3 = "";
+    gomail = true;
+    $("#payment-button-container").hide();
+      $("#get-link").show();
+  }else{
+    $("#payment-button-container").hide();
+      $("#get-link").show();
   }
+});
+
+$("#get-link").click(function() {
+  allemail_2 = email1+''+email2+''+email3;
 });
 
 function payWithPaystack(){
